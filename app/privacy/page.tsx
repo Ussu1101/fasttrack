@@ -183,7 +183,7 @@ export default function PrivacyPage() {
             <p className="text-on-surface-variant">
               Web Contact Form:{" "}
               <Link href="/contact" className="text-primary font-medium hover:underline">
-                fasttrackfasting.com/contact
+                fasttrackfastingcalculator.com/contact
               </Link>
             </p>
           </div>

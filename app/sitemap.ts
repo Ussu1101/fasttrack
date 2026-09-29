@@ -1,9 +1,10 @@
 import { MetadataRoute } from "next";
 import { PROTOCOL_LIST } from "@/lib/calculator/protocols";
 import { GUIDES } from "@/lib/content/guidesData";
+import { getSiteUrl } from "@/lib/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://fasttrackfasting.com";
+  const baseUrl = getSiteUrl();
   const now = new Date();
 
   // Core static pages

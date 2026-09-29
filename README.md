@@ -228,7 +228,7 @@ Protocols are defined in [`lib/calculator/protocols.ts`](file:///E:/fast%20track
 ## 9. Environment Variables & Transferability
 
 - **No API Keys or Secrets Required**: The application runs completely client-side without third-party API dependencies or subscription keys.
-- **Base Domain**: When transferring to a new domain, update the default domain in `app/layout.tsx`, `app/sitemap.ts`, and `app/robots.ts` from `https://fasttrackfasting.com` to your target domain.
+- **Base Domain**: Configured centrally via `NEXT_PUBLIC_SITE_URL` (defaults to `https://www.fasttrackfastingcalculator.com` in `lib/config/site.ts`). All sitemaps, robots, metadataBase, and OpenGraph URLs automatically sync with this configuration.
 
 ---
 

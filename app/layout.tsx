@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/navigation/Footer";
+import { getSiteUrl } from "@/lib/config/site";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fasttrackfasting.com"),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: "FastTrack — Intermittent Fasting Calculator & Circadian Schedule Builder",
     template: "%s | FastTrack",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://fasttrackfasting.com",
+    url: getSiteUrl(),
     title: "FastTrack — Intermittent Fasting Calculator & Circadian Schedule Builder",
     description:
       "Calculate your personalized fasting and eating windows tailored to your daily routine and circadian rhythm. Private, local-first, zero login.",
@@ -67,7 +68,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "FastTrack Intermittent Fasting Calculator",
-    "url": "https://fasttrackfasting.com",
+    "url": getSiteUrl(),
     "applicationCategory": "HealthApplication",
     "operatingSystem": "All",
     "offers": {

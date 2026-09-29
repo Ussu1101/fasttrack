@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { GUIDES, GuideArticle } from "@/lib/content/guidesData";
+import { getSiteUrl } from "@/lib/config/site";
 import { ArrowLeft, Clock, Calendar, User, ShieldAlert, Sparkles } from "lucide-react";
 
 interface Props {
@@ -60,7 +61,7 @@ export default function GuideDetailPage({ params }: Props) {
     "publisher": {
       "@type": "Organization",
       "name": "FastTrack",
-      "url": "https://fasttrackfasting.com",
+      "url": getSiteUrl(),
     },
   };
 

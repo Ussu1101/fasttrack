@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { getSiteUrl } from "@/lib/config/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://fasttrackfasting.com";
+  const baseUrl = getSiteUrl();
 
   return {
     rules: {
