@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  body {
+    background-color: #faf8ff;
+    color: #131b2e;
+    font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Accessible visible focus states */
+  *:focus-visible {
+    outline: 2px solid #38a169;
+    outline-offset: 2px;
+  }
+}
+
+/* Tabular figures for time numbers to prevent jitter */
+.tabular-numbers {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Print Stylesheet for clean physical/PDF printing */
+@media print {
+  header, footer, nav, button, .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+}
