@@ -25,8 +25,8 @@ export const GUIDES: GuideArticle[] = [
     shortDescription: "A comprehensive evidence-based breakdown of water, black coffee, teas, electrolytes, and zero-calorie sweeteners during fasting windows.",
     category: "Hydration",
     readTime: "6 min read",
-    publishedAt: "2024-03-15",
-    updatedAt: "2024-03-15",
+    publishedAt: "2026-09-30",
+    updatedAt: "2026-09-30",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
@@ -44,7 +44,7 @@ export const GUIDES: GuideArticle[] = [
           heading: "2. Black Coffee & Espresso",
           body: [
             "Black coffee contains roughly 2–5 calories per cup from trace micronutrients, which is metabolically negligible and does not break a fast.",
-            "Polyphenols such as chlorogenic acid found in dark roast coffee have been observed in animal and human cell trials to support cellular autophagy.",
+            "Polyphenols such as chlorogenic acid found in coffee have been studied in preliminary laboratory models for potential cellular maintenance pathways, though human evidence remains an active area of investigation.",
             "Crucially, avoid milk, half-and-half, oat milk, sugar, or flavored coffee syrups, all of which trigger immediate insulin secretion.",
           ],
           keyTakeaway: "Keep coffee strictly black without dairy or sweeteners.",
@@ -59,14 +59,14 @@ export const GUIDES: GuideArticle[] = [
         {
           heading: "4. Electrolytes & Sodium",
           body: [
-            "As insulin drops during fasting, the kidneys excrete sodium more readily (natriuresis).",
-            "Consuming pure salt water or unsweetened electrolyte powders (sodium, potassium, magnesium without maltodextrin or sugar) prevents muscle cramps, fatigue, and headaches.",
+            "During fasting, reduced insulin levels can lead to increased renal sodium excretion.",
+            "For some individuals, maintaining adequate hydration and modest electrolyte intake (such as sodium, potassium, or magnesium from unsweetened sources) may help reduce feelings of fatigue or mild lightheadedness.",
           ],
         },
         {
           heading: "5. What to Strictly Avoid",
           body: [
-            "Bone broth (contains protein and amino acids which activate mTOR).",
+            "Bone broth (contains calories, protein, and amino acids that stimulate digestive processing).",
             "Fruit juices, soda, alcohol, and branch-chain amino acids (BCAAs).",
             "Dairy and plant milks with added sugars or emulsifiers.",
           ],
@@ -82,8 +82,8 @@ export const GUIDES: GuideArticle[] = [
     shortDescription: "Understand the episodic nature of ghrelin hormone pulses and psychological vs. physiological hunger during your fasting window.",
     category: "Physiology",
     readTime: "7 min read",
-    publishedAt: "2024-03-14",
-    updatedAt: "2024-03-14",
+    publishedAt: "2026-09-30",
+    updatedAt: "2026-09-30",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
@@ -92,10 +92,10 @@ export const GUIDES: GuideArticle[] = [
         {
           heading: "1. The Ghrelin Wave Principle",
           body: [
-            "Ghrelin peaks around your accustomed habitual meal times. If you normally eat breakfast at 8:00 AM, ghrelin will surge around that hour regardless of energy balance.",
-            "If you do not eat, ghrelin drops back down spontaneously within 30 to 45 minutes as counter-regulatory hormones stabilize.",
+            "Ghrelin often rises in anticipation of habitual meal times. If you normally eat at a set hour, hormonal cues and conditioned hunger signals frequently peak around that window.",
+            "For many people, hunger sensations do not rise indefinitely; they often peak and then subside over time as internal regulatory mechanisms adapt.",
           ],
-          keyTakeaway: "Hunger comes in brief 30-minute waves. Riding out the peak allows it to subside naturally.",
+          keyTakeaway: "Hunger often presents in episodic waves rather than a constant climb, frequently subsiding if you allow time to pass.",
         },
         {
           heading: "2. The Stomach Expansion Signal",
@@ -121,25 +121,25 @@ export const GUIDES: GuideArticle[] = [
     shortDescription: "Strategic timing guidelines for resistance training, cardio workouts, electrolyte replacement, and muscle mass retention.",
     category: "Movement",
     readTime: "8 min read",
-    publishedAt: "2024-03-12",
-    updatedAt: "2024-03-12",
+    publishedAt: "2026-09-30",
+    updatedAt: "2026-09-30",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "Training in a fasted state can be safe and highly effective when matched with the appropriate workout intensity and meal timing.",
+        "Training in a fasted state can be safe and practical when matched with appropriate workout intensity and thoughtful meal timing.",
       sections: [
         {
           heading: "1. Low-Intensity Steady State (Zone 2 Cardio)",
           body: [
-            "Brisk walking, casual cycling, and easy jogging are ideal during fasted hours. In the absence of elevated insulin, intramuscular and subcutaneous fat oxidation is optimized.",
+            "Low-intensity aerobic activities such as brisk walking or easy cycling are often well tolerated during fasted hours, as the body tends to rely proportionally more on lipid fuel sources when circulating insulin levels are low.",
           ],
-          keyTakeaway: "Zone 2 aerobic exercise thrives in a fasted state with adequate hydration.",
+          keyTakeaway: "Low-intensity aerobic movement can often be performed comfortably while fasted if properly hydrated, though individual energy and tolerance vary.",
         },
         {
           heading: "2. Heavy Resistance Training & Hypertrophy",
           body: [
-            "For heavy weightlifting, training near the end of your fasting window is often optimal. This allows you to transition directly into your eating window for post-workout protein synthesis.",
-            "Consuming 30–40g of protein within 1–2 hours following resistance training ensures muscle protein synthesis exceeds protein breakdown.",
+            "For demanding strength sessions, some individuals prefer scheduling workouts near the end of the fasting window to allow a prompt post-workout meal.",
+            "Consuming an adequate source of protein as part of your overall daily nutrition helps support muscle recovery, with exact requirements depending on body size, training volume, and individual goals.",
           ],
         },
         {
@@ -159,25 +159,25 @@ export const GUIDES: GuideArticle[] = [
     shortDescription: "How aligning meal windows with circadian biology protects melatonin secretion, core body temperature, and deep restorative sleep.",
     category: "Recovery",
     readTime: "6 min read",
-    publishedAt: "2024-03-10",
-    updatedAt: "2024-03-10",
+    publishedAt: "2026-09-30",
+    updatedAt: "2026-09-30",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "Meal timing exerts a profound influence on sleep latency, nocturnal heart rate variability (HRV), and stage 3/4 deep restorative sleep.",
+        "Meal timing can influence sleep comfort, nocturnal resting heart rate patterns, and overall sleep quality.",
       sections: [
         {
           heading: "1. The Thermic Cost of Late Digestion",
           body: [
-            "Digesting complex macronutrients raises core body temperature. For sleep onset to occur normally, circadian biology requires a drop of approximately 1°C in core body temperature.",
-            "Finishing dinner 3 to 4 hours before bedtime permits gastric emptying, allowing resting heart rate to lower earlier in the night.",
+            "Digesting a substantial meal close to bedtime requires active gastrointestinal processing and can elevate metabolic heat production. Sleep onset is naturally facilitated by the body's evening core temperature decline.",
+            "Allowing 2 to 3 hours between your final meal and bedtime gives the digestive system time to settle, which many individuals find promotes more restful sleep.",
           ],
-          keyTakeaway: "A 3-hour digestive buffer before sleep improves sleep latency and nocturnal HRV.",
+          keyTakeaway: "A comfortable buffer between your last meal and bedtime may support easier sleep onset and nocturnal comfort.",
         },
         {
           heading: "2. Gastroesophageal Reflux Prevention",
           body: [
-            "Lying supine with a full stomach causes nocturnal acid reflux and micro-arousals that fragment sleep architecture.",
+            "Lying supine soon after a heavy meal can increase the risk of acid reflux and sleep disruptions for sensitive individuals.",
           ],
         },
       ],
@@ -189,27 +189,27 @@ export const GUIDES: GuideArticle[] = [
     shortDescription: "Protect your digestive tract by choosing the right foods, avoiding insulin spikes, and pacing your initial refeeding meal.",
     category: "Nutrition",
     readTime: "5 min read",
-    publishedAt: "2024-03-08",
-    updatedAt: "2024-03-08",
+    publishedAt: "2026-09-30",
+    updatedAt: "2026-09-30",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "After 16 to 24 hours of digestive stillness, your stomach enzymes, pancreatic juices, and gut microbiome have down-regulated. How you break your fast sets the tone for digestion and energy for the remainder of the day.",
+        "Following an extended fasting period, transitioning gently into eating can help maintain digestive comfort and steady post-meal energy.",
       sections: [
         {
           heading: "1. Start With Gentle Foods",
           body: [
-            "Warm bone or vegetable broth with a pinch of sea salt.",
+            "Warm vegetable or light broth with a pinch of sea salt.",
             "Soft-boiled or scrambled eggs with a slice of avocado.",
-            "Steamed greens with extra virgin olive oil and wild-caught salmon or grilled chicken.",
+            "Steamed greens with extra virgin olive oil and grilled chicken or tofu.",
           ],
-          keyTakeaway: "Prioritize warm, easily absorbed whole foods rich in amino acids and clean lipids.",
+          keyTakeaway: "Prioritize warm, easily absorbed whole foods rich in quality protein and healthy fats.",
         },
         {
           heading: "2. What NOT to Break With",
           body: [
-            "Avoid high-glycemic carbohydrates like croissants, donuts, or sweetened smoothies. These provoke reactive hypoglycemia, leaving you sleepy and famished within 90 minutes.",
-            "Avoid very spicy or deep-fried foods which can irritate the resting stomach lining.",
+            "Consuming concentrated refined sugars or rapid-digesting carbohydrates right after a fast may lead to rapid glucose fluctuations in some individuals, potentially contributing to post-meal sluggishness or renewed hunger.",
+            "Very spicy or heavily deep-fried foods can also cause mild gastrointestinal irritation after a prolonged digestive pause.",
           ],
         },
       ],
@@ -221,29 +221,29 @@ export const GUIDES: GuideArticle[] = [
     shortDescription: "Avoid the traps that cause burnout, nutrient deficiencies, binge eating, and stalled progress.",
     category: "Best Practices",
     readTime: "7 min read",
-    publishedAt: "2024-03-05",
-    updatedAt: "2024-03-05",
+    publishedAt: "2026-09-30",
+    updatedAt: "2026-09-30",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "While intermittent fasting is structurally straightforward, small behavioral missteps can derail metabolic benefits and cause unnecessary fatigue.",
+        "While intermittent fasting is structurally straightforward, small behavioral missteps can derail comfort, consistency, and daily energy.",
       sections: [
         {
           heading: "1. Treating the Eating Window as a Caloric Free-for-All",
           body: [
-            "Fasting does not negate the laws of thermodynamics. Consuming ultra-processed, calorie-dense junk food during your feeding window undermines cardiovascular and metabolic health.",
+            "Fasting does not negate the laws of energy balance. Consuming predominantly ultra-processed, highly refined foods during your feeding window can leave you nutrient-depleted and fatigued.",
           ],
         },
         {
           heading: "2. Chronically Inadequate Protein Intake",
           body: [
-            "Limiting your meals to an 8-hour or 4-hour window requires deliberate planning to consume sufficient dietary protein (aim for 1.6–2.2g per kg of body weight) to protect lean skeletal muscle.",
+            "Limiting your meals to a condensed window requires deliberate planning to ensure adequate overall protein intake suited to your body weight, activity level, and lean tissue preservation goals.",
           ],
         },
         {
           heading: "3. Skipping Electrolyte Replacement",
           body: [
-            "Water alone is insufficient. If you experience dizziness, mental haze, or leg cramps, sodium, potassium, and magnesium supplementation is often the missing link.",
+            "Paying attention to both fluid and mineral balance is helpful during extended fasts. If mild sluggishness arises, ensuring adequate dietary electrolytes alongside water may support overall well-being. Persistent dizziness or discomfort should be evaluated by a healthcare professional.",
           ],
         },
         {

@@ -53,7 +53,7 @@ export default function GuideDetailPage({ params }: Props) {
     "headline": guide.title,
     "description": guide.shortDescription,
     "author": {
-      "@type": "Organization",
+      "@type": "Person",
       "name": guide.author,
     },
     "datePublished": guide.publishedAt,

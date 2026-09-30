@@ -56,7 +56,7 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
     type: "daily",
     difficulty: "Accelerated",
     description: "Extends daily fasting to 18 hours, typically supporting two wholesome meals without snacking between.",
-    detailedOverview: "With an 18-hour fast and a compact 6-hour window (e.g., 1:00 PM to 7:00 PM), glycogen stores are depleted more thoroughly, signaling deeper cellular energy regulation.",
+    detailedOverview: "With an 18-hour fast and a compact 6-hour window (e.g., 1:00 PM to 7:00 PM), hepatic glycogen stores are typically drawn down further, often encouraging greater reliance on lipid metabolism.",
     exampleSchedule: "Fast 7:00 PM – 1:00 PM next day; Eat 1:00 PM – 7:00 PM",
     bestFor: "Individuals adapted to 16:8 seeking a more condensed daily feeding window.",
     cellularMarker: "Provides an extended window of baseline insulin and increased reliance on stored fuel."
@@ -86,7 +86,7 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
     type: "daily",
     difficulty: "Intensive",
     description: "One concentrated, nutrient-dense feast consumed within an approximate 1-hour window each day.",
-    detailedOverview: "OMAD pushes daily time-restricted eating to its biological limit. With 23 hours of fasting, attention shifts to consuming sufficient calories, vitamins, and protein in a single sit-down meal.",
+    detailedOverview: "OMAD represents one of the most condensed time-restricted eating formats. With 23 hours between meals, attention shifts to consuming sufficient calories, micronutrients, and protein in a single meal.",
     exampleSchedule: "Fast 7:00 PM – 6:00 PM next day; Eat 6:00 PM – 7:00 PM",
     bestFor: "Advanced fasting practitioners with experience managing electrolytes and nutrient density.",
     cellularMarker: "An intensive single-window protocol requiring careful nutritional planning."

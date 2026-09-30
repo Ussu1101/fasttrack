@@ -148,7 +148,7 @@ export function OptionalBiometrics({
           </div>
 
           <p className="font-body-sm text-[11px] text-on-surface-variant italic">
-            * Note: FastTrack calculates biological timing schedules. Weight metrics are kept strictly in your local browser session and are never uploaded or used for guaranteed weight-loss claims.
+            * Note: FastTrack calculates fasting time windows. Optional parameters stay strictly in your local browser session and are never transmitted to our servers or used for guaranteed weight-loss claims.
           </p>
         </div>
       )}

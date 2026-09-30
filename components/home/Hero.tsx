@@ -52,8 +52,8 @@ export function Hero() {
             {/* Truthful Product Highlights (NO fake stats!) */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-4 w-full max-w-lg border-t border-surface-container/60">
               <div className="flex flex-col">
-                <span className="font-headline text-xl sm:text-2xl text-primary font-bold">100%</span>
-                <span className="font-label-sm text-xs text-on-surface-variant">Private & Local</span>
+                <span className="font-headline text-xl sm:text-2xl text-primary font-bold">Client-Side</span>
+                <span className="font-label-sm text-xs text-on-surface-variant">Local Calculator</span>
               </div>
               <div className="flex flex-col">
                 <span className="font-headline text-xl sm:text-2xl text-secondary font-bold">7 Protocols</span>

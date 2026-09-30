@@ -223,7 +223,7 @@ export function ResultDashboard({ schedule }: ResultDashboardProps) {
 
         <span className="font-label-sm text-xs text-on-surface-variant flex items-center gap-1">
           <CheckCircle2 className="w-3.5 h-3.5 text-secondary" />
-          <span>Local execution • Zero data collected</span>
+          <span>Calculator inputs stay in your browser and are not sent to our servers</span>
         </span>
       </div>
     </div>

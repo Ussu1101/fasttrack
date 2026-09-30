@@ -24,7 +24,7 @@ export function ProtocolCard({ protocol, isFeatured = false, onSelect }: Protoco
     >
       {isFeatured && (
         <div className="absolute -top-3 right-6 bg-primary text-on-primary text-[11px] font-semibold px-3 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
-          Most Popular
+          Featured
         </div>
       )}
 

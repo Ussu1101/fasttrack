@@ -7,7 +7,7 @@ import { BookOpen, Clock, ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Fasting Guides & Evidence-Based Articles",
   description:
-    "Explore clinical, practical guides to intermittent fasting: beverages, hunger management, workouts, sleep quality, and healthy refeeding.",
+    "Explore practical, evidence-informed guides to intermittent fasting: beverages, hunger management, workouts, sleep quality, and healthy refeeding.",
   alternates: {
     canonical: "/guides",
   },

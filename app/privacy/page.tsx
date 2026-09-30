@@ -106,7 +106,7 @@ export default function PrivacyPage() {
             <li>Your message subject and text content</li>
           </ul>
           <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed mt-2">
-            <strong>How We Use Contact Data:</strong> This information is transmitted over encrypted HTTPS to be delivered to Muhammad Usama at <code>Usssamaa@gmail.com</code> solely to respond to your specific question, feedback, or inquiry.
+            <strong>How We Use Contact Data:</strong> This information is transmitted over encrypted HTTPS to process your inquiry for Muhammad Usama at <code>Usssamaa@gmail.com</code> solely to respond to your specific question, feedback, or inquiry.
           </p>
           <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed">
             <strong>What We Never Do:</strong> We do not add contact form emails to promotional newsletters, sell contact data to third parties, or share your messages with advertisers.

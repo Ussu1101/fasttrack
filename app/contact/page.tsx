@@ -59,7 +59,7 @@ export default function ContactPage() {
               Usssamaa@gmail.com
             </a>
             <span className="font-body-sm text-xs text-on-surface-variant mt-0.5 block">
-              Standard response within 1–2 business days
+              Direct contact for feedback &amp; platform inquiries
             </span>
           </div>
         </div>

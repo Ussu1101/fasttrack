@@ -312,7 +312,7 @@ export function ContactForm() {
 
             <span className="font-label-sm text-[11px] text-on-surface-variant flex items-center gap-1.5">
               <ShieldAlert className="w-3.5 h-3.5 text-secondary flex-shrink-0" />
-              <span>Direct delivery to site owner: Usssamaa@gmail.com</span>
+              <span>Inquiries routed to Muhammad Usama (Usssamaa@gmail.com)</span>
             </span>
           </div>
         </form>
