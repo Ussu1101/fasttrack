@@ -17,6 +17,7 @@ const DEDICATED_GUIDE_SLUGS = [
   "how-to-choose-a-fasting-window",
   "what-breaks-a-fast",
   "what-can-you-drink-while-fasting",
+  "exercise-while-fasting",
 ];
 
 export function generateStaticParams() {

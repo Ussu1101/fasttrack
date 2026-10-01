@@ -208,41 +208,36 @@ export const GUIDES: GuideArticle[] = [
     },
   },
   {
-    slug: "fasting-and-exercise",
-    title: "Intermittent Fasting and Exercise: How to Train Safely",
-    shortDescription: "Strategic timing guidelines for resistance training, cardio workouts, electrolyte replacement, and muscle mass retention.",
+    slug: "exercise-while-fasting",
+    title: "Exercise While Fasting: Workouts, Timing & Practical Tips",
+    shortDescription:
+      "Learn how to exercise while fasting, including workout timing, hydration, intensity, cardio, and strength training. Build a fasting and exercise routine that fits your schedule.",
     category: "Movement",
-    readTime: "8 min read",
-    publishedAt: "2026-09-30",
-    updatedAt: "2026-09-30",
+    readTime: "10 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "Training in a fasted state can be safe and practical when matched with appropriate workout intensity and thoughtful meal timing.",
+        "Yes, many people can exercise during an intermittent fasting routine. The more useful question is not simply whether exercise and fasting can be combined, but how you schedule your workouts around your fasting and eating windows.",
       sections: [
         {
-          heading: "1. Low-Intensity Steady State (Zone 2 Cardio)",
+          heading: "Exercise and Fasting: The Simple Rule",
           body: [
-            "Low-intensity aerobic activities such as brisk walking or easy cycling are often well tolerated during fasted hours, as the body tends to rely proportionally more on lipid fuel sources when circulating insulin levels are low.",
-          ],
-          keyTakeaway: "Low-intensity aerobic movement can often be performed comfortably while fasted if properly hydrated, though individual energy and tolerance vary.",
-        },
-        {
-          heading: "2. Heavy Resistance Training & Hypertrophy",
-          body: [
-            "For demanding strength sessions, some individuals prefer scheduling workouts near the end of the fasting window to allow a prompt post-workout meal.",
-            "Consuming an adequate source of protein as part of your overall daily nutrition helps support muscle recovery, with exact requirements depending on body size, training volume, and individual goals.",
+            "Choose a workout time that fits your routine and allows you to manage hydration, food, training, and recovery appropriately.",
+            "Some people prefer exercising during the fasting window. Others feel more comfortable training after eating. Your preferred timing depends on the type of exercise, workout intensity, and how you feel during training.",
           ],
         },
         {
-          heading: "3. Hydration & Intra-Workout Electrolytes",
+          heading: "When Should You Exercise During Intermittent Fasting?",
           body: [
-            "When exercising while fasted, you lose additional sodium and water through sweat. Ensure you drink electrolyte-supplemented water before and during demanding training sessions.",
+            "Common timing options include exercising near the end of the fasting window, exercising during the eating window, or exercising after a meal.",
+            "There is no single best time that applies to everyone; choose a schedule you can maintain consistently while staying hydrated and recovering adequately.",
           ],
         },
       ],
       clinicalNotice:
-        "Diabetic individuals or those on glucose-regulating medication should never exercise fasted without direct clinical supervision.",
+        "If you feel dizzy, faint, unusually weak, or unwell during exercise, stop the workout. Individuals with diabetes, medication affected by food timing, pregnancy, or eating disorder history should discuss fasting with a physician.",
     },
   },
   {
