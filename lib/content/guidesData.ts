@@ -60,6 +60,44 @@ export const GUIDES: GuideArticle[] = [
     },
   },
   {
+    slug: "how-to-choose-a-fasting-window",
+    title: "How to Choose a Fasting Window: A Practical Guide",
+    shortDescription:
+      "Learn how to choose a fasting window around your meals, work, sleep, exercise, and social schedule. Compare common fasting schedules and build a practical routine with FastTrack.",
+    category: "Best Practices",
+    readTime: "9 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "Choosing a fasting window is less about finding a perfect number and more about finding a schedule that fits the way you actually live.",
+      sections: [
+        {
+          heading: "What Is a Fasting Window?",
+          body: [
+            "A fasting window is the period when you are not eating. The eating window is the period when you have your meals.",
+            "In a daily time-restricted schedule, the first number describes the fasting hours and the second describes the eating hours. For example, 16:8 means 16 hours without food followed by an 8-hour eating window.",
+          ],
+        },
+        {
+          heading: "Compare the Common Fasting Windows",
+          body: [
+            "There is no requirement to jump directly into a long fasting period. The common schedules mainly differ in how much of the day is available for eating.",
+          ],
+        },
+        {
+          heading: "Start With Your Real Schedule",
+          body: [
+            "Before choosing a fasting window, look at when you normally eat. The goal is not to force your day around a fasting timer, but to place the timer around a routine you can actually follow.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Intermittent fasting is not appropriate for everyone. Individuals who are pregnant or nursing, under 18, or managing chronic conditions should consult a physician.",
+    },
+  },
+  {
     slug: "what-can-you-drink-while-fasting",
     title: "What Can You Drink While Intermittent Fasting?",
     shortDescription: "A comprehensive evidence-based breakdown of water, black coffee, teas, electrolytes, and zero-calorie sweeteners during fasting windows.",

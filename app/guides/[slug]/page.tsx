@@ -12,14 +12,19 @@ interface Props {
   };
 }
 
+const DEDICATED_GUIDE_SLUGS = [
+  "intermittent-fasting-for-beginners",
+  "how-to-choose-a-fasting-window",
+];
+
 export function generateStaticParams() {
-  return GUIDES.filter((g) => g.slug !== "intermittent-fasting-for-beginners").map((g) => ({
+  return GUIDES.filter((g) => !DEDICATED_GUIDE_SLUGS.includes(g.slug)).map((g) => ({
     slug: g.slug,
   }));
 }
 
 export function generateMetadata({ params }: Props): Metadata {
-  if (params.slug === "intermittent-fasting-for-beginners") {
+  if (DEDICATED_GUIDE_SLUGS.includes(params.slug)) {
     return { title: "Guide Not Found" };
   }
   const guide = GUIDES.find((g) => g.slug === params.slug);
@@ -45,7 +50,7 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 export default function GuideDetailPage({ params }: Props) {
-  if (params.slug === "intermittent-fasting-for-beginners") {
+  if (DEDICATED_GUIDE_SLUGS.includes(params.slug)) {
     notFound();
   }
   const guide = GUIDES.find((g) => g.slug === params.slug);
