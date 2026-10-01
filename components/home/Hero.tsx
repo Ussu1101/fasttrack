@@ -134,30 +134,42 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* State Summary Pills (Full-width on mobile to prevent truncation; 2 columns on desktop) */}
+              {/* State Summary Pills */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-left">
-                <div className="p-2.5 sm:p-3 rounded-lg bg-surface-container flex items-center justify-between sm:justify-start gap-2">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0" />
-                    <span className="font-label-sm text-xs text-on-surface font-semibold whitespace-nowrap">
-                      Fast: 8:00 PM – 12:00 PM
+                {/* Fasting Schedule Pill */}
+                <div className="p-2.5 sm:p-3 rounded-lg bg-surface-container flex flex-col gap-1">
+                  <div className="flex items-center justify-between gap-x-2 gap-y-0.5 flex-wrap">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <span className="w-2.5 h-2.5 rounded-full bg-primary flex-shrink-0" />
+                      <span className="font-label-sm text-xs text-on-surface font-semibold">
+                        Fast:
+                      </span>
+                    </div>
+                    <span className="font-body-sm text-[11px] text-on-surface-variant">
+                      16 hrs metabolic rest
                     </span>
                   </div>
-                  <span className="font-body-sm text-[11px] text-on-surface-variant flex-shrink-0">
-                    16 hrs metabolic rest
-                  </span>
+                  <div className="pl-4 font-headline text-xs sm:text-sm font-semibold text-primary tabular-numbers tracking-tight">
+                    8:00 PM – 12:00 PM
+                  </div>
                 </div>
 
-                <div className="p-2.5 sm:p-3 rounded-lg bg-tertiary-fixed/30 flex items-center justify-between sm:justify-start gap-2">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <span className="w-2.5 h-2.5 rounded-full bg-on-tertiary-container flex-shrink-0" />
-                    <span className="font-label-sm text-xs text-on-surface font-semibold whitespace-nowrap">
-                      Eat: 12:00 PM – 8:00 PM
+                {/* Eating Schedule Pill */}
+                <div className="p-2.5 sm:p-3 rounded-lg bg-tertiary-fixed/30 flex flex-col gap-1">
+                  <div className="flex items-center justify-between gap-x-2 gap-y-0.5 flex-wrap">
+                    <div className="flex items-center gap-1.5 min-w-0">
+                      <span className="w-2.5 h-2.5 rounded-full bg-on-tertiary-container flex-shrink-0" />
+                      <span className="font-label-sm text-xs text-on-surface font-semibold">
+                        Eat:
+                      </span>
+                    </div>
+                    <span className="font-body-sm text-[11px] text-on-surface-variant">
+                      8 hrs nourishment
                     </span>
                   </div>
-                  <span className="font-body-sm text-[11px] text-on-surface-variant flex-shrink-0">
-                    8 hrs nourishment
-                  </span>
+                  <div className="pl-4 font-headline text-xs sm:text-sm font-semibold text-on-tertiary-container tabular-numbers tracking-tight">
+                    12:00 PM – 8:00 PM
+                  </div>
                 </div>
               </div>
 
