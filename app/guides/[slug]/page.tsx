@@ -15,6 +15,7 @@ interface Props {
 const DEDICATED_GUIDE_SLUGS = [
   "intermittent-fasting-for-beginners",
   "how-to-choose-a-fasting-window",
+  "what-breaks-a-fast",
 ];
 
 export function generateStaticParams() {

@@ -98,6 +98,45 @@ export const GUIDES: GuideArticle[] = [
     },
   },
   {
+    slug: "what-breaks-a-fast",
+    title: "What Breaks a Fast? A Practical Guide to Food, Drinks, and Common Add-Ins",
+    shortDescription:
+      "Find out what breaks a fast, including coffee, tea, milk, sugar, gum, sweeteners, electrolytes, and common supplements. Learn the practical difference between a strict fast and intermittent fasting.",
+    category: "Nutrition",
+    readTime: "9 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "“What breaks a fast?” sounds like a simple yes-or-no question, but the answer depends on what you mean by fasting. For a strict zero-calorie fast, consuming calories means you are no longer fasting. For everyday intermittent fasting, water, black coffee, and unsweetened teas are commonly used.",
+      sections: [
+        {
+          heading: "The Simple Rule",
+          body: [
+            "If your goal is to keep a strict zero-calorie fasting window, the simplest rule is: no food and no calorie-containing drinks during the fasting window.",
+            "If something provides meaningful calories or is being consumed as food, it belongs in the eating window rather than the fasting window.",
+          ],
+        },
+        {
+          heading: "What Usually Does and Does Not Break a Fast?",
+          body: [
+            "Plain water, unsweetened sparkling water, black coffee, and unsweetened teas contain zero or negligible calories and are standard during fasting windows.",
+            "Sugar, milk, cream, juice, protein shakes, and bone broth add calories and break a strict fast.",
+          ],
+        },
+        {
+          heading: "Strict Fast vs Practical Intermittent Fasting",
+          body: [
+            "A strict zero-calorie fast excludes all calories. Typical time-restricted eating allows low-energy beverages like black coffee and unsweetened tea during the fasting window. Medical or laboratory fasting requires following clinical instructions strictly.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Medical or laboratory fasting instructions take priority over general lifestyle fasting guidelines. Individuals with diabetes, history of disordered eating, or pregnancy should consult a healthcare provider.",
+    },
+  },
+  {
     slug: "what-can-you-drink-while-fasting",
     title: "What Can You Drink While Intermittent Fasting?",
     shortDescription: "A comprehensive evidence-based breakdown of water, black coffee, teas, electrolytes, and zero-calorie sweeteners during fasting windows.",
