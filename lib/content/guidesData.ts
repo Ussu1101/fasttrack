@@ -138,59 +138,34 @@ export const GUIDES: GuideArticle[] = [
   },
   {
     slug: "what-can-you-drink-while-fasting",
-    title: "What Can You Drink While Intermittent Fasting?",
-    shortDescription: "A comprehensive evidence-based breakdown of water, black coffee, teas, electrolytes, and zero-calorie sweeteners during fasting windows.",
+    title: "What Can You Drink While Fasting? A Practical Guide to Fasting Beverages",
+    shortDescription:
+      "Learn what you can drink while fasting, including water, sparkling water, black coffee, plain tea, electrolytes, and common flavored drinks. Understand which choices contain calories and when the rules change.",
     category: "Hydration",
-    readTime: "6 min read",
-    publishedAt: "2026-09-30",
-    updatedAt: "2026-09-30",
+    readTime: "9 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "One of the most frequent questions for intermittent fasting practitioners is what beverages are permitted during fasting hours without disrupting metabolic rest. The primary biochemical goal is to avoid stimulating cephalic or digestive insulin release.",
+        "For a typical intermittent fasting routine, the simplest choices during the fasting window are water and other zero-calorie beverages such as plain black coffee and unsweetened tea.",
       sections: [
         {
-          heading: "1. Pure Water & Mineral Water",
+          heading: "The Simple Rule for Fasting Drinks",
           body: [
-            "Still and naturally sparkling mineral waters are completely non-caloric and essential for maintaining vascular volume during a fast.",
-            "Mineral waters rich in calcium, magnesium, and sodium provide natural electrolytic support without any caloric penalty.",
-          ],
-          keyTakeaway: "Unflavored water is the gold standard for every intermittent fasting protocol.",
-        },
-        {
-          heading: "2. Black Coffee & Espresso",
-          body: [
-            "Black coffee contains roughly 2–5 calories per cup from trace micronutrients, which is metabolically negligible and does not break a fast.",
-            "Polyphenols such as chlorogenic acid found in coffee have been studied in preliminary laboratory models for potential cellular maintenance pathways, though human evidence remains an active area of investigation.",
-            "Crucially, avoid milk, half-and-half, oat milk, sugar, or flavored coffee syrups, all of which trigger immediate insulin secretion.",
-          ],
-          keyTakeaway: "Keep coffee strictly black without dairy or sweeteners.",
-        },
-        {
-          heading: "3. Green, Black, and Herbal Teas",
-          body: [
-            "Unsweetened green tea (rich in epigallocatechin gallate, or EGCG) and black tea are outstanding fasting accompaniments.",
-            "Herbal infusions like chamomile, peppermint, and rooibos are naturally caffeine-free options for evening fasting hours.",
+            "During a strict zero-calorie fast, choose drinks that contain no meaningful calories.",
+            "Water is the clearest example. Zero-calorie beverages such as black coffee and plain tea can also fit a typical intermittent fasting routine.",
           ],
         },
         {
-          heading: "4. Electrolytes & Sodium",
+          heading: "What Drinks Break a Fast?",
           body: [
-            "During fasting, reduced insulin levels can lead to increased renal sodium excretion.",
-            "For some individuals, maintaining adequate hydration and modest electrolyte intake (such as sodium, potassium, or magnesium from unsweetened sources) may help reduce feelings of fatigue or mild lightheadedness.",
-          ],
-        },
-        {
-          heading: "5. What to Strictly Avoid",
-          body: [
-            "Bone broth (contains calories, protein, and amino acids that stimulate digestive processing).",
-            "Fruit juices, soda, alcohol, and branch-chain amino acids (BCAAs).",
-            "Dairy and plant milks with added sugars or emulsifiers.",
+            "Once you add sugar, milk, cream, juice, syrup, protein powder, or another calorie-containing ingredient, the drink is no longer zero-calorie and belongs in the eating window.",
           ],
         },
       ],
       clinicalNotice:
-        "Individuals with cardiovascular hypertension or kidney disease should review electrolyte supplementation with their doctor.",
+        "Medical or laboratory fasting instructions take priority over general intermittent-fasting advice. Always follow instructions from your healthcare professional.",
     },
   },
   {

@@ -16,6 +16,7 @@ const DEDICATED_GUIDE_SLUGS = [
   "intermittent-fasting-for-beginners",
   "how-to-choose-a-fasting-window",
   "what-breaks-a-fast",
+  "what-can-you-drink-while-fasting",
 ];
 
 export function generateStaticParams() {
