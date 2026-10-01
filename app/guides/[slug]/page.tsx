@@ -18,6 +18,7 @@ const DEDICATED_GUIDE_SLUGS = [
   "what-breaks-a-fast",
   "what-can-you-drink-while-fasting",
   "exercise-while-fasting",
+  "how-does-intermittent-fasting-work",
 ];
 
 export function generateStaticParams() {

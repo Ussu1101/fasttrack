@@ -342,4 +342,37 @@ export const GUIDES: GuideArticle[] = [
       ],
     },
   },
+  {
+    slug: "how-does-intermittent-fasting-work",
+    title: "How Does Intermittent Fasting Work? A Simple Explanation",
+    shortDescription:
+      "Learn how intermittent fasting works, what fasting and eating windows mean, how the body uses stored fuel, and how common fasting schedules fit into a daily routine.",
+    category: "Physiology",
+    readTime: "8 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "Intermittent fasting is an eating pattern that alternates between periods when you eat and periods when you do not eat. Unlike a diet that mainly focuses on specific foods, intermittent fasting primarily changes when you eat.",
+      sections: [
+        {
+          heading: "How Does Intermittent Fasting Work?",
+          body: [
+            "At a simple level, intermittent fasting extends the amount of time between meals.",
+            "After you eat, your body has energy available from the food you recently consumed. As the fasting period continues, that readily available energy is used and the body increasingly draws on stored energy.",
+          ],
+        },
+        {
+          heading: "What Is Metabolic Switching?",
+          body: [
+            "Metabolic switching is a term used to describe a shift in the body's energy use as fasting continues, moving from readily accessible, sugar-based fuel toward using stored fat for energy.",
+            "It is useful to think of metabolic switching as a gradual process, not a precise clock event.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Intermittent fasting is not appropriate for everyone. Pregnant or breastfeeding individuals, children and teenagers, and people with certain medical conditions or medications should seek medical guidance.",
+    },
+  },
 ];
