@@ -13,12 +13,15 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return GUIDES.map((g) => ({
+  return GUIDES.filter((g) => g.slug !== "intermittent-fasting-for-beginners").map((g) => ({
     slug: g.slug,
   }));
 }
 
 export function generateMetadata({ params }: Props): Metadata {
+  if (params.slug === "intermittent-fasting-for-beginners") {
+    return { title: "Guide Not Found" };
+  }
   const guide = GUIDES.find((g) => g.slug === params.slug);
   if (!guide) {
     return { title: "Guide Not Found" };
@@ -42,6 +45,9 @@ export function generateMetadata({ params }: Props): Metadata {
 }
 
 export default function GuideDetailPage({ params }: Props) {
+  if (params.slug === "intermittent-fasting-for-beginners") {
+    notFound();
+  }
   const guide = GUIDES.find((g) => g.slug === params.slug);
   if (!guide) {
     notFound();

@@ -20,6 +20,46 @@ export interface GuideArticle {
 
 export const GUIDES: GuideArticle[] = [
   {
+    slug: "intermittent-fasting-for-beginners",
+    title: "Intermittent Fasting for Beginners: A Simple Guide",
+    shortDescription:
+      "Learn how intermittent fasting works, understand fasting and eating windows, compare common fasting schedules, and calculate a schedule that fits your routine.",
+    category: "Best Practices",
+    readTime: "8 min read",
+    publishedAt: "2026-10-01",
+    updatedAt: "2026-10-01",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "Intermittent fasting is an eating pattern that alternates between periods when you eat and periods when you do not eat. Unlike many diets, the main focus is when you eat, rather than following one specific list of foods.",
+      sections: [
+        {
+          heading: "What Is Intermittent Fasting?",
+          body: [
+            "Intermittent fasting is a pattern of alternating between eating periods and fasting periods.",
+            "One common form is time-restricted eating, where food is consumed within a set number of hours each day and the remaining hours make up the fasting period. Other approaches use different schedules, such as alternate-day fasting or the 5:2 pattern.",
+            "The simplest way to understand the idea is: Fasting window → Eating window → Fasting window → repeat.",
+          ],
+        },
+        {
+          heading: "How Do Fasting and Eating Windows Work?",
+          body: [
+            "The fasting window is the period between the end of one eating period and the beginning of the next. The eating window is the period during which your planned meals and snacks fit into your daily schedule.",
+            "Thinking in terms of windows can make an intermittent fasting schedule much easier to understand than thinking only in terms of individual meals.",
+          ],
+        },
+        {
+          heading: "Common Intermittent Fasting Schedules",
+          body: [
+            "There is no single intermittent fasting schedule used by everyone. Common methods include 12:12, 14:10, 16:8, 18:6, 20:4, OMAD (one meal a day), and the weekly 5:2 pattern.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Intermittent fasting is not appropriate for everyone, and individual circumstances can matter. When appropriate, consider discussing it with a healthcare professional.",
+    },
+  },
+  {
     slug: "what-can-you-drink-while-fasting",
     title: "What Can You Drink While Intermittent Fasting?",
     shortDescription: "A comprehensive evidence-based breakdown of water, black coffee, teas, electrolytes, and zero-calorie sweeteners during fasting windows.",
