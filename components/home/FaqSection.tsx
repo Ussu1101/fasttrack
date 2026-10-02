@@ -41,7 +41,7 @@ export const FAQS: FaqItem[] = [
   },
 ];
 
-export function FaqSection() {
+export function FaqSection({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" }) {
   const [openIndices, setOpenIndices] = useState<number[]>([0]);
 
   const toggleFaq = (index: number) => {
@@ -52,6 +52,8 @@ export function FaqSection() {
     }
   };
 
+  const HeadingTag = headingLevel;
+
   return (
     <section id="faq" className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-16">
 
@@ -60,9 +62,9 @@ export function FaqSection() {
           <HelpCircle className="w-4 h-4" />
           <span>Evidence-Based Answers</span>
         </span>
-        <h2 className="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight mt-1">
+        <HeadingTag className="font-headline text-2xl sm:text-3xl lg:text-4xl text-primary font-bold tracking-tight mt-1">
           Frequently Asked Questions
-        </h2>
+        </HeadingTag>
         <p className="font-body-md text-sm sm:text-base text-on-surface-variant mt-2 leading-relaxed">
           Clear, scientifically supported answers to common intermittent fasting questions.
         </p>

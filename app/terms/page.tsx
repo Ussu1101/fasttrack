@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service & Usage Agreement",
   description: "Terms and conditions of use for the FastTrack website and calculation utility.",
   alternates: {
     canonical: "/terms",

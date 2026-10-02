@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ShieldCheck, Lock, EyeOff, ServerOff, Mail, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — FastTrack Local-First Data Commitment",
+  title: "Privacy Policy — Local-First Data Commitment",
   description:
-    "FastTrack privacy policy accurately detailing our local-first calculator architecture, contact form data handling, zero tracking cookies, and owner information.",
+    "FastTrack privacy policy detailing our local-first calculator architecture, contact form handling, zero tracking cookies, and owner information.",
   alternates: {
     canonical: "/privacy",
   },

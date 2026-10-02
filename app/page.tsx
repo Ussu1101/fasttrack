@@ -12,9 +12,9 @@ import { FinalCta } from "@/components/home/FinalCta";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FastTrack — Intermittent Fasting Calculator & Circadian Schedule Builder",
+  title: "FastTrack — Intermittent Fasting Calculator & Planner",
   description:
-    "Free, private, circadian-aligned intermittent fasting calculator. Calculate personalized 16:8, 14:10, 18:6, 20:4, OMAD, and 5:2 fasting schedules without an account.",
+    "Free, private intermittent fasting calculator. Calculate personalized 16:8, 14:10, 18:6, 20:4, OMAD, and 5:2 fasting schedules without an account.",
   alternates: {
     canonical: "/",
   },

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Compass, Sparkles, ShieldCheck, HeartHandshake, Mail, User, AlertCircle, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About FastTrack — Independent Fasting Calculator & Educational Platform",
+  title: "About FastTrack — Independent Fasting Platform",
   description:
     "Learn about FastTrack, an independent, private intermittent fasting schedule calculator founded and maintained by Muhammad Usama.",
   alternates: {

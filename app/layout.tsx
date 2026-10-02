@@ -22,11 +22,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "FastTrack — Intermittent Fasting Calculator & Circadian Schedule Builder",
+    default: "FastTrack — Intermittent Fasting Calculator & Planner",
     template: "%s | FastTrack",
   },
   description:
-    "Free, private, circadian-aligned intermittent fasting calculator. Calculate personalized 16:8, 14:10, 18:6, 20:4, OMAD, and 5:2 fasting schedules without an account.",
+    "Free, private intermittent fasting calculator. Calculate personalized 16:8, 14:10, 18:6, 20:4, OMAD, and 5:2 fasting schedules without an account.",
   keywords: [
     "intermittent fasting calculator",
     "fasting schedule",

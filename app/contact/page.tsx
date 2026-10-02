@@ -4,7 +4,7 @@ import { Mail, User, ShieldCheck } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact FastTrack — Site Owner & Support Inquiries",
+  title: "Contact FastTrack — Support & Inquiries",
   description:
     "Get in touch with FastTrack site owner Muhammad Usama for questions regarding the fasting calculator, calculation methodology, or platform inquiries.",
   alternates: {
@@ -66,7 +66,12 @@ export default function ContactPage() {
       </div>
 
       {/* Interactive Form Component */}
-      <ContactForm />
+      <div className="space-y-4">
+        <h2 className="font-headline text-2xl font-bold text-primary tracking-tight">
+          Send a Direct Message
+        </h2>
+        <ContactForm />
+      </div>
 
       {/* Privacy Notice */}
       <div className="mt-8 p-4 rounded-xl bg-surface-container-low/50 border border-surface-container flex items-start gap-2.5 text-xs text-on-surface-variant">
