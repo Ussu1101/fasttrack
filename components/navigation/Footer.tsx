@@ -55,23 +55,23 @@ export function Footer() {
             <span className="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-bold">
               Fasting Guides
             </span>
-            <Link href="/guides/what-can-you-drink-while-fasting" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
+            <Link href="/guides/what-breaks-a-fast" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
               What Breaks a Fast?
             </Link>
-            <Link href="/guides/how-to-handle-hunger" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
-              Managing Fasting Hunger
+            <Link href="/guides/what-can-you-drink-while-fasting" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
+              What Can You Drink While Fasting?
             </Link>
-            <Link href="/guides/fasting-and-exercise" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
-              Fasting & Exercise
+            <Link href="/guides/exercise-while-fasting" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
+              Exercise While Fasting
             </Link>
-            <Link href="/guides/fasting-and-sleep" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
-              Fasting & Sleep Quality
+            <Link href="/guides/how-does-intermittent-fasting-work" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
+              How Intermittent Fasting Works
             </Link>
-            <Link href="/guides/how-to-break-a-fast" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
-              How to Break a Fast
+            <Link href="/guides/how-to-choose-a-fasting-window" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
+              How to Choose a Window
             </Link>
-            <Link href="/guides/common-fasting-mistakes" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
-              Common Mistakes
+            <Link href="/guides/intermittent-fasting-for-beginners" className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors">
+              Beginners Fasting Guide
             </Link>
           </div>
 

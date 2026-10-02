@@ -78,6 +78,80 @@ export default function FastingMethodsIndexPage() {
           </div>
         ))}
       </div>
+
+      {/* Relevant Guides Cross-Linking */}
+      <div className="mt-16 pt-10 border-t border-surface-container">
+        <h2 className="font-headline text-2xl font-bold text-primary tracking-tight mb-4">
+          Understanding Fasting Physiology &amp; Routine Design
+        </h2>
+        <p className="font-body-md text-sm sm:text-base text-on-surface-variant max-w-3xl mb-6 leading-relaxed">
+          Before committing to a specific daily hourly window or weekly routine, explore our foundational guides on biological mechanisms, exercise timing, and window selection:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Link
+            href="/guides/how-does-intermittent-fasting-work"
+            className="p-4 rounded-xl bg-surface-container-low border border-surface-container hover:border-surface-container-high transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <span className="font-label-sm text-xs text-secondary font-bold uppercase tracking-wider block mb-1">
+                Metabolic Science
+              </span>
+              <span className="font-headline text-base font-bold text-on-surface group-hover:text-primary transition-colors block">
+                How Does Fasting Work?
+              </span>
+              <p className="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                Learn the shift from glucose to fat burning and how metabolic switching operates.
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-3">
+              <span>Read Science Guide</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
+
+          <Link
+            href="/guides/exercise-while-fasting"
+            className="p-4 rounded-xl bg-surface-container-low border border-surface-container hover:border-surface-container-high transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <span className="font-label-sm text-xs text-secondary font-bold uppercase tracking-wider block mb-1">
+                Movement &amp; Training
+              </span>
+              <span className="font-headline text-base font-bold text-on-surface group-hover:text-primary transition-colors block">
+                Exercise While Fasting
+              </span>
+              <p className="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                Timing workouts around fasting windows, cardio vs. strength, and hydration tips.
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-3">
+              <span>Read Exercise Guide</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
+
+          <Link
+            href="/guides/how-to-choose-a-fasting-window"
+            className="p-4 rounded-xl bg-surface-container-low border border-surface-container hover:border-surface-container-high transition-all flex flex-col justify-between group"
+          >
+            <div>
+              <span className="font-label-sm text-xs text-secondary font-bold uppercase tracking-wider block mb-1">
+                Practical Planning
+              </span>
+              <span className="font-headline text-base font-bold text-on-surface group-hover:text-primary transition-colors block">
+                Choosing Your Window
+              </span>
+              <p className="font-body-sm text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                How to align fasting and eating intervals with work, sleep, and social commitments.
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-3">
+              <span>Read Planning Guide</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </span>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

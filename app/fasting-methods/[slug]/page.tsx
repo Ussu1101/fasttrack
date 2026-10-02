@@ -5,7 +5,8 @@ import type { Metadata } from "next";
 import { PROTOCOLS, PROTOCOL_LIST } from "@/lib/calculator/protocols";
 import { ProtocolId } from "@/lib/calculator/types";
 import { Calculator } from "@/components/calculator/Calculator";
-import { ArrowLeft, Clock, Activity, CheckCircle, ShieldAlert } from "lucide-react";
+import { getSiteUrl } from "@/lib/config/site";
+import { ArrowLeft, Clock, Activity, CheckCircle, ShieldAlert, BookOpen, ArrowRight } from "lucide-react";
 
 interface Props {
   params: {
@@ -25,9 +26,20 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Protocol Not Found" };
   }
 
+  // Ensure title includes ratio only once (e.g. avoid "OMAD (23:1) (23:1)")
+  const titleDisplay = protocol.name.includes(protocol.ratio)
+    ? `${protocol.name} — Schedule Calculator & Guide`
+    : `${protocol.name} (${protocol.ratio}) — Schedule Calculator & Guide`;
+
+  // Provide accurate description for daily vs weekly (5:2) protocols
+  const descriptionDisplay =
+    protocol.type === "weekly"
+      ? "Learn how the 5:2 fasting method works, how its weekly structure differs from daily fasting schedules, and how to plan it around your routine."
+      : `Calculate your personalized ${protocol.name} intermittent fasting schedule. Fast duration: ${protocol.fastHours}h, Eating window: ${protocol.eatingHours}h. Evidence-based guide.`;
+
   return {
-    title: `${protocol.name} (${protocol.ratio}) — Schedule Calculator & Guide`,
-    description: `Calculate your personalized ${protocol.name} intermittent fasting schedule. Fast duration: ${protocol.fastHours}h, Eating window: ${protocol.eatingHours}h. Evidence-based guide.`,
+    title: titleDisplay,
+    description: descriptionDisplay,
     alternates: {
       canonical: `/fasting-methods/${protocol.id}`,
     },
@@ -45,9 +57,39 @@ export default function ProtocolDetailPage({ params }: Props) {
   }
 
   const isWeekly = protocol.type === "weekly";
+  const siteUrl = getSiteUrl();
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Fasting Methods",
+        "item": `${siteUrl}/fasting-methods`,
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": protocol.name,
+        "item": `${siteUrl}/fasting-methods/${protocol.id}`,
+      },
+    ],
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-10 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Back Link */}
       <div className="mb-6">
         <Link
@@ -170,6 +212,39 @@ export default function ProtocolDetailPage({ params }: Props) {
             <p className="font-body-sm text-xs text-on-surface-variant leading-relaxed">
               If at any point during your fast you experience extreme dizziness, nausea, or shaking, break your fast immediately. Fasting is not advised for pregnant/nursing mothers or individuals with eating disorders.
             </p>
+          </div>
+
+          {/* Contextual Guides */}
+          <div className="bg-surface-container-lowest p-6 rounded-2xl border border-surface-container shadow-sm space-y-3">
+            <span className="font-label-sm text-xs text-secondary font-bold uppercase tracking-wider block">
+              Related Guides
+            </span>
+            <div className="space-y-2.5">
+              <Link
+                href="/guides/how-does-intermittent-fasting-work"
+                className="group block text-xs"
+              >
+                <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
+                  How Does Fasting Work?
+                </span>
+                <span className="text-on-surface-variant text-[11px] leading-relaxed block">
+                  Understand metabolic switching &amp; fat utilization during {protocol.ratio}.
+                </span>
+              </Link>
+              <div className="border-t border-surface-container/60 pt-2">
+                <Link
+                  href="/guides/exercise-while-fasting"
+                  className="group block text-xs"
+                >
+                  <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
+                    Exercise While Fasting
+                  </span>
+                  <span className="text-on-surface-variant text-[11px] leading-relaxed block">
+                    Timing workouts, strength training, and hydration around your fasting window.
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

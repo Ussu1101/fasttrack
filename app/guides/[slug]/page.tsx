@@ -62,7 +62,9 @@ export default function GuideDetailPage({ params }: Props) {
     notFound();
   }
 
-  const jsonLd = {
+  const siteUrl = getSiteUrl();
+
+  const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": guide.title,
@@ -76,15 +78,48 @@ export default function GuideDetailPage({ params }: Props) {
     "publisher": {
       "@type": "Organization",
       "name": "FastTrack",
-      "url": getSiteUrl(),
+      "url": siteUrl,
     },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/guides/${guide.slug}`,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": guide.title,
+        "item": `${siteUrl}/guides/${guide.slug}`,
+      },
+    ],
   };
 
   return (
     <article className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Back Link */}

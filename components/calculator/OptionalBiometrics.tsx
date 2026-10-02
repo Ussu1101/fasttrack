@@ -49,6 +49,10 @@ export function OptionalBiometrics({
 
       {isOpen && (
         <div className="pt-4 flex flex-col gap-3.5 border-t border-surface-container/60 mt-3 animate-in fade-in-50">
+          <div className="p-2.5 rounded-lg bg-surface-container border border-surface-container-high text-[11px] text-on-surface-variant leading-relaxed">
+            <strong>Note on Calculation:</strong> These optional personal parameters are recorded for your own reference and are not currently used to calculate or alter your fasting and eating schedule. FastTrack calculates schedules strictly based on your selected protocol duration and meal start time.
+          </div>
+
           <div>
             <label
               htmlFor="objectiveSelect"

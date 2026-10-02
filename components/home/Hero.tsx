@@ -129,7 +129,7 @@ export function Hero() {
                     8:00 PM – 12:00 PM
                   </span>
                   <span className="font-label-sm text-[10px] sm:text-xs text-on-surface-variant font-medium">
-                    Rest &amp; Renewal
+                    Fasting Window
                   </span>
                 </div>
               </div>
@@ -146,11 +146,11 @@ export function Hero() {
                       </span>
                     </div>
                     <span className="font-body-sm text-[11px] text-on-surface-variant">
-                      16 hrs metabolic rest
+                      16 hrs fasting
                     </span>
                   </div>
                   <div className="pl-4 font-headline text-xs sm:text-sm font-semibold text-primary tabular-numbers tracking-tight">
-                    8:00 PM – 12:00 PM
+                    8:00 PM – 12:00 PM (Next Day)
                   </div>
                 </div>
 
@@ -164,7 +164,7 @@ export function Hero() {
                       </span>
                     </div>
                     <span className="font-body-sm text-[11px] text-on-surface-variant">
-                      8 hrs nourishment
+                      8 hrs eating window
                     </span>
                   </div>
                   <div className="pl-4 font-headline text-xs sm:text-sm font-semibold text-on-tertiary-container tabular-numbers tracking-tight">
@@ -177,9 +177,9 @@ export function Hero() {
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between text-on-surface-variant pt-1 text-xs gap-1">
                 <span className="flex items-center gap-1 font-medium">
                   <Moon className="w-3.5 h-3.5 text-secondary flex-shrink-0" />
-                  <span>Sleep Window Aligned (11 PM – 7 AM)</span>
+                  <span>Overnight Schedule (11 PM – 7 AM)</span>
                 </span>
-                <span className="text-secondary font-semibold text-[11px] sm:text-xs">Circadian Harmony</span>
+                <span className="text-secondary font-semibold text-[11px] sm:text-xs">Schedule Overview</span>
               </div>
             </div>
           </div>
