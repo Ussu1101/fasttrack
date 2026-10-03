@@ -613,4 +613,103 @@ export const GUIDES: GuideArticle[] = [
         "Intermittent fasting is not appropriate for everyone. Pregnant or breastfeeding individuals, children and teenagers, and people with certain medical conditions or medications should seek medical guidance.",
     },
   },
+  {
+    slug: "16-8-intermittent-fasting-guide",
+    title: "16:8 Intermittent Fasting: A Practical Guide",
+    shortDescription:
+      "Learn how 16:8 fasting works, explore realistic schedule options, compare fasting windows, and build a sustainable routine that fits your life.",
+    category: "Nutrition",
+    readTime: "11 min read",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "The 16:8 intermittent fasting schedule is one of the most widely recognized forms of time-restricted eating in modern lifestyle nutrition. By dividing the 24-hour day into a 16-hour fasting window and an 8-hour eating window, this approach establishes a structured daily cadence without requiring complicated food eliminations.",
+      sections: [
+        {
+          heading: "What Is 16:8 Intermittent Fasting?",
+          body: [
+            "At its core, 16:8 intermittent fasting is a structured model of time-restricted eating. You consume all of your daily caloric intake within a continuous 8-hour window each day, while refraining from calorie-containing food and drinks for the remaining 16 hours.",
+            "Unlike traditional diets that dictate macronutrient ratios or exclude whole food groups, 16:8 focuses on timing, aligning energy intake with daytime activity and providing a consistent overnight digestive rest.",
+          ],
+        },
+        {
+          heading: "How the 16:8 Fasting Window Works",
+          body: [
+            "During the 16-hour fast, digestive processes conclude and the body gradually shifts from utilizing immediate dietary glucose toward mobilizing stored liver glycogen and free fatty acids.",
+            "Because 7 to 9 hours of the fast occur during sleep, you are only awake in a fasted state for roughly 7 to 8 hours, making 16:8 sustainable for everyday routines.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Fasting is not suitable for everyone. Individuals who are pregnant or nursing, underweight, have a history of eating disorders, or manage diabetes or other medical conditions requiring medication should consult a healthcare professional before fasting.",
+    },
+  },
+  {
+    slug: "14-10-intermittent-fasting-guide",
+    title: "14:10 Intermittent Fasting: A Practical Guide",
+    shortDescription:
+      "Discover how 14:10 fasting works. Explore practical schedule examples, compare 14:10 to 12:12 and 16:8, and build a sustainable daily routine.",
+    category: "Best Practices",
+    readTime: "10 min read",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "The 14:10 intermittent fasting schedule offers one of the gentlest, most sustainable approaches to time-restricted eating. By establishing a 14-hour overnight fasting pause and a generous 10-hour daytime eating window, 14:10 curbs late-night snacking while comfortably accommodating three wholesome daily meals.",
+      sections: [
+        {
+          heading: "What Is 14:10 Intermittent Fasting?",
+          body: [
+            "In a 14:10 routine, you allocate 14 continuous hours of the day to fasting and condense all food consumption into the remaining 10 hours. For example, finishing dinner by 7:00 PM means breakfast begins at 9:00 AM.",
+            "By setting a clear boundary against late-night snacking, 14:10 helps establish circadian stability and healthy meal spacing without requiring you to skip breakfast or dinner.",
+          ],
+        },
+        {
+          heading: "Why Choose 14:10 Over Shorter Eating Windows?",
+          body: [
+            "A 10-hour eating window accommodates three balanced meals, making it ideal for beginners, active individuals with high training volumes, and those who prefer low social friction.",
+            "Clinical research indicates high long-term adherence rates for 10-hour eating windows, making 14:10 an effective and sustainable lifelong lifestyle baseline.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Individuals with diabetes, medication affected by meal timing, pregnancy, nursing, or a history of disordered eating should consult a physician before fasting.",
+    },
+  },
+  {
+    slug: "18-6-intermittent-fasting-guide",
+    title: "18:6 Intermittent Fasting: A Practical Guide",
+    shortDescription:
+      "Learn how 18:6 intermittent fasting works, explore 6-hour eating window schedules, meal planning strategies, and practical tips for intermediate fasters.",
+    category: "Nutrition",
+    readTime: "11 min read",
+    publishedAt: "2026-10-04",
+    updatedAt: "2026-10-04",
+    author: "Muhammad Usama",
+    content: {
+      leadParagraph:
+        "The 18:6 intermittent fasting schedule represents an intermediate step in time-restricted eating. By extending the daily fast to 18 hours and condensing meals into a focused 6-hour window, 18:6 deepens daily digestive rest and fat oxidation while requiring thoughtful meal planning to ensure balanced, sufficient nutrition.",
+      sections: [
+        {
+          heading: "What Is 18:6 Intermittent Fasting?",
+          body: [
+            "In an 18:6 protocol, the day is divided into an 18-hour continuous fast and a 6-hour feeding window. It is commonly adopted by practitioners who have adapted to 16:8 and seek an accelerated daytime routine.",
+            "Because the window is compressed to 6 hours, it generally accommodates two substantial, nutrient-dense meals rather than three, demanding disciplined food quality.",
+          ],
+        },
+        {
+          heading: "Structuring Nutrition in a 6-Hour Eating Window",
+          body: [
+            "Meeting daily protein, healthy fat, and micronutrient requirements within two structured meals is critical on 18:6. Break the fast mindfully with easily digestible whole foods and close with a balanced, fiber-rich dinner.",
+            "Research cautions that extending fasting hours does not linearly multiply benefits; overall dietary quality and energy balance remain the primary determinants of health outcomes.",
+          ],
+        },
+      ],
+      clinicalNotice:
+        "Fasting for 18 hours carries increased risks of hypoglycemia for individuals taking glucose-lowering medications. Pregnant or nursing women, underweight individuals, and those with an eating disorder history should avoid this protocol.",
+    },
+  },
 ];

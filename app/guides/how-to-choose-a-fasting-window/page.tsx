@@ -174,13 +174,13 @@ export default function HowToChooseAFastingWindowPage() {
               <strong><Link href="/fasting-methods/12-12" className="text-primary hover:underline">12:12</Link></strong> = 12 hours fasting + 12 hours eating
             </li>
             <li>
-              <strong><Link href="/fasting-methods/14-10" className="text-primary hover:underline">14:10</Link></strong> = 14 hours fasting + 10 hours eating
+              <strong><Link href="/fasting-methods/14-10" className="text-primary hover:underline">14:10</Link></strong> = 14 hours fasting + 10 hours eating (see our <Link href="/guides/14-10-intermittent-fasting-guide" className="text-primary hover:underline">14:10 practical guide</Link>)
             </li>
             <li>
-              <strong><Link href="/fasting-methods/16-8" className="text-primary hover:underline">16:8</Link></strong> = 16 hours fasting + 8 hours eating
+              <strong><Link href="/fasting-methods/16-8" className="text-primary hover:underline">16:8</Link></strong> = 16 hours fasting + 8 hours eating (see our <Link href="/guides/16-8-intermittent-fasting-guide" className="text-primary hover:underline">16:8 practical guide</Link>)
             </li>
             <li>
-              <strong><Link href="/fasting-methods/18-6" className="text-primary hover:underline">18:6</Link></strong> = 18 hours fasting + 6 hours eating
+              <strong><Link href="/fasting-methods/18-6" className="text-primary hover:underline">18:6</Link></strong> = 18 hours fasting + 6 hours eating (see our <Link href="/guides/18-6-intermittent-fasting-guide" className="text-primary hover:underline">18:6 practical guide</Link>)
             </li>
             <li>
               <strong><Link href="/fasting-methods/20-4" className="text-primary hover:underline">20:4</Link></strong> = 20 hours fasting + 4 hours eating

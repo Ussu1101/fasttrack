@@ -29,6 +29,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
     ],
     relatedGuides: [
       {
+        title: "16:8 Intermittent Fasting Guide",
+        href: "/guides/16-8-intermittent-fasting-guide",
+        description: "Comprehensive practical guide to schedules, meal timing, and evidence."
+      },
+      {
         title: "Intermittent Fasting for Beginners",
         href: "/guides/intermittent-fasting-for-beginners",
         description: "The complete step-by-step primer on launching your first 16:8 fasting schedule."
@@ -80,6 +85,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
       }
     ],
     relatedGuides: [
+      {
+        title: "14:10 Intermittent Fasting Guide",
+        href: "/guides/14-10-intermittent-fasting-guide",
+        description: "A gentle beginner-friendly guide to establishing a sustainable 14-hour fasting pause."
+      },
       {
         title: "Intermittent Fasting and Sleep Quality",
         href: "/guides/fasting-and-sleep",
@@ -166,6 +176,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
       }
     ],
     relatedGuides: [
+      {
+        title: "18:6 Intermittent Fasting Guide",
+        href: "/guides/18-6-intermittent-fasting-guide",
+        description: "Practical strategies for intermediate fasters managing a 6-hour eating window."
+      },
       {
         title: "How to Manage Fasting Hunger",
         href: "/guides/how-to-handle-hunger",

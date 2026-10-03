@@ -19,6 +19,9 @@ const DEDICATED_GUIDE_SLUGS = [
   "what-can-you-drink-while-fasting",
   "exercise-while-fasting",
   "how-does-intermittent-fasting-work",
+  "16-8-intermittent-fasting-guide",
+  "14-10-intermittent-fasting-guide",
+  "18-6-intermittent-fasting-guide",
 ];
 
 export function generateStaticParams() {
