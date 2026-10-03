@@ -84,12 +84,34 @@ export default function ProtocolDetailPage({ params }: Props) {
     ],
   };
 
+  const faqJsonLd =
+    protocol.faqs && protocol.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: protocol.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-10 sm:py-16">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       {/* Back Link */}
       <div className="mb-6">
         <Link
@@ -176,6 +198,85 @@ export default function ProtocolDetailPage({ params }: Props) {
               </div>
             </div>
           </div>
+
+          {/* Meal Planning & Window Structuring */}
+          {protocol.mealStructureGuide && (
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-surface-container shadow-sm">
+              <h2 className="font-headline text-xl sm:text-2xl font-bold text-on-surface mb-3">
+                Meal Planning &amp; Window Structuring
+              </h2>
+              <p className="font-body-md text-base text-on-surface-variant leading-relaxed">
+                {protocol.mealStructureGuide}
+              </p>
+            </div>
+          )}
+
+          {/* Who Should Choose */}
+          {protocol.whoShouldChoose && (
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-surface-container shadow-sm">
+              <h2 className="font-headline text-xl sm:text-2xl font-bold text-on-surface mb-3">
+                Who Should Choose the {protocol.name}?
+              </h2>
+              <p className="font-body-md text-base text-on-surface-variant leading-relaxed">
+                {protocol.whoShouldChoose}
+              </p>
+            </div>
+          )}
+
+          {/* Frequently Asked Questions */}
+          {protocol.faqs && protocol.faqs.length > 0 && (
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-surface-container shadow-sm">
+              <h2 className="font-headline text-xl sm:text-2xl font-bold text-on-surface mb-6">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {protocol.faqs.map((faq, idx) => (
+                  <div
+                    key={idx}
+                    className="border-b border-surface-container/60 pb-4 last:border-0 last:pb-0"
+                  >
+                    <h3 className="font-headline text-base font-semibold text-primary mb-1.5">
+                      {faq.question}
+                    </h3>
+                    <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Related Protocols to Consider */}
+          {protocol.relatedProtocols && protocol.relatedProtocols.length > 0 && (
+            <div className="bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-surface-container shadow-sm">
+              <h2 className="font-headline text-xl sm:text-2xl font-bold text-on-surface mb-4">
+                Related Protocols to Consider
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {protocol.relatedProtocols.map((rp) => (
+                  <Link
+                    key={rp.id}
+                    href={`/fasting-methods/${rp.id}`}
+                    className="p-4 rounded-xl bg-surface-container-low border border-surface-container hover:border-surface-container-high transition-all group flex flex-col justify-between"
+                  >
+                    <div>
+                      <span className="font-headline text-base font-bold text-on-surface group-hover:text-primary transition-colors block">
+                        {rp.name}
+                      </span>
+                      <p className="font-body-sm text-xs text-on-surface-variant mt-1 leading-relaxed">
+                        {rp.relation}
+                      </p>
+                    </div>
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary mt-3">
+                      <span>View Calculator &amp; Guide</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Sidebar Info & Safety */}
@@ -220,30 +321,50 @@ export default function ProtocolDetailPage({ params }: Props) {
               Related Guides
             </span>
             <div className="space-y-2.5">
-              <Link
-                href="/guides/how-does-intermittent-fasting-work"
-                className="group block text-xs"
-              >
-                <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
-                  How Does Fasting Work?
-                </span>
-                <span className="text-on-surface-variant text-[11px] leading-relaxed block">
-                  Understand metabolic switching &amp; fat utilization during {protocol.ratio}.
-                </span>
-              </Link>
-              <div className="border-t border-surface-container/60 pt-2">
-                <Link
-                  href="/guides/exercise-while-fasting"
-                  className="group block text-xs"
-                >
-                  <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
-                    Exercise While Fasting
-                  </span>
-                  <span className="text-on-surface-variant text-[11px] leading-relaxed block">
-                    Timing workouts, strength training, and hydration around your fasting window.
-                  </span>
-                </Link>
-              </div>
+              {protocol.relatedGuides && protocol.relatedGuides.length > 0 ? (
+                protocol.relatedGuides.map((guide, gIdx) => (
+                  <div
+                    key={guide.href}
+                    className={gIdx > 0 ? "border-t border-surface-container/60 pt-2" : ""}
+                  >
+                    <Link href={guide.href} className="group block text-xs">
+                      <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
+                        {guide.title}
+                      </span>
+                      <span className="text-on-surface-variant text-[11px] leading-relaxed block">
+                        {guide.description}
+                      </span>
+                    </Link>
+                  </div>
+                ))
+              ) : (
+                <>
+                  <Link
+                    href="/guides/how-does-intermittent-fasting-work"
+                    className="group block text-xs"
+                  >
+                    <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
+                      How Does Fasting Work?
+                    </span>
+                    <span className="text-on-surface-variant text-[11px] leading-relaxed block">
+                      Understand metabolic switching &amp; fat utilization during {protocol.ratio}.
+                    </span>
+                  </Link>
+                  <div className="border-t border-surface-container/60 pt-2">
+                    <Link
+                      href="/guides/exercise-while-fasting"
+                      className="group block text-xs"
+                    >
+                      <span className="font-semibold text-on-surface group-hover:text-primary transition-colors block">
+                        Exercise While Fasting
+                      </span>
+                      <span className="text-on-surface-variant text-[11px] leading-relaxed block">
+                        Timing workouts, strength training, and hydration around your fasting window.
+                      </span>
+                    </Link>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>

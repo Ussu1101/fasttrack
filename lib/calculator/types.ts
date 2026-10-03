@@ -22,6 +22,11 @@ export interface ProtocolDefinition {
   fastingDaysPerWeek?: number;
   fastingDaysPattern?: string;
   recommendedReducedCalories?: string;
+  mealStructureGuide?: string;
+  whoShouldChoose?: string;
+  faqs?: { question: string; answer: string }[];
+  relatedGuides?: { title: string; href: string; description: string }[];
+  relatedProtocols?: { id: ProtocolId; name: string; relation: string }[];
 }
 
 export interface CalculatorInputs {
