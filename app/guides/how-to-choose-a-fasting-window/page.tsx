@@ -56,7 +56,42 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    question: "What is the best fasting window?",
+    answer:
+      "There is no single fasting window that is best for everyone. The appropriate schedule depends on the routine you are trying to follow, including meal timing, work, sleep, exercise, and social commitments.",
+  },
+  {
+    question: "Is 16:8 the only fasting schedule?",
+    answer:
+      "No. Common daily schedules include 12:12, 14:10, 16:8, 18:6, 20:4, and OMAD. There are also weekly approaches such as 5:2, which do not use the same daily fasting-window structure.",
+  },
+  {
+    question: "Can I change my fasting window?",
+    answer:
+      "Yes. The clock times can be adjusted while keeping the same fasting duration. For example, a 16:8 schedule can be 10 AM–6 PM or 12 PM–8 PM.",
+  },
+  {
+    question: "Should I choose a longer fasting window?",
+    answer:
+      "Longer is not automatically better. A longer fasting period also creates a shorter eating window, which may make the schedule harder to fit around meals and daily activities.",
+  },
+  {
+    question: "What if my work schedule changes?",
+    answer:
+      "Choose a schedule that works on your normal days and adjust the timing when necessary. If your routine changes frequently, a less restrictive window may provide more flexibility.",
+  },
+  {
+    question: "Can I calculate my fasting and eating times automatically?",
+    answer:
+      "Yes. FastTrack lets you choose a fasting protocol and starting meal time, then calculates the corresponding eating and fasting windows.",
+  },
+];
+
 export default function HowToChooseAFastingWindowPage() {
+  const siteUrl = getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -72,12 +107,50 @@ export default function HowToChooseAFastingWindowPage() {
     publisher: {
       "@type": "Organization",
       name: "FastTrack",
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${getSiteUrl()}/guides/how-to-choose-a-fasting-window`,
+      "@id": `${siteUrl}/guides/how-to-choose-a-fasting-window`,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "How to Choose a Fasting Window",
+        item: `${siteUrl}/guides/how-to-choose-a-fasting-window`,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
@@ -85,6 +158,14 @@ export default function HowToChooseAFastingWindowPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Back Link */}

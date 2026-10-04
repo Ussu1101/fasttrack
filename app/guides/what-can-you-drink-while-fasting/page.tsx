@@ -55,7 +55,57 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    question: "Can I drink water all day while intermittent fasting?",
+    answer:
+      "Yes. Water is a calorie-free beverage and is the simplest choice during fasting hours.",
+  },
+  {
+    question: "Can I drink coffee during a fast?",
+    answer:
+      "Plain black coffee can fit a zero-calorie intermittent fasting routine. Adding sugar, milk, cream, or syrup changes the drink.",
+  },
+  {
+    question: "Can I drink tea during a fast?",
+    answer:
+      "Plain, unsweetened tea can fit a zero-calorie fasting approach. Avoid calorie-containing additions if you want to keep the fast calorie-free.",
+  },
+  {
+    question: "Can I drink milk while fasting?",
+    answer:
+      "Milk contains calories and nutrients, so it does not fit a strict zero-calorie fast.",
+  },
+  {
+    question: "Can I drink electrolytes while fasting?",
+    answer:
+      "Check the product. Some electrolyte drinks contain calories or sugar, while others contain little or no energy. Your fasting goal and the product's ingredients both matter.",
+  },
+  {
+    question: "Can I drink lemon water while fasting?",
+    answer:
+      "Plain water is calorie-free. Lemon adds a small amount of calories, so lemon water is not identical to plain water. For a strict zero-calorie fast, plain water is the simpler choice.",
+  },
+  {
+    question: "Can I drink diet soda while fasting?",
+    answer:
+      "Some diet sodas contain little or no energy, but formulations vary. They are therefore a context-dependent choice rather than a universal fasting recommendation.",
+  },
+  {
+    question: "Can I drink alcohol while fasting?",
+    answer:
+      "No. Alcoholic beverages contain caloric energy (~7 kcal per gram from ethanol, plus sugars in beer, wine, and mixers) and end a zero-calorie fast. Drinking on an empty stomach also causes alcohol to be absorbed much faster into the bloodstream, increasing the risk of sudden intoxication, dizziness, and gastric irritation. If you choose to drink, keep alcoholic beverages inside your eating window and consume them moderately with a balanced meal.",
+  },
+  {
+    question: "What is the safest drink during a fast?",
+    answer:
+      "For an ordinary intermittent fasting routine, plain water is the simplest choice. If you have been given medical fasting instructions, follow those instructions instead.",
+  },
+];
+
 export default function WhatCanYouDrinkWhileFastingPage() {
+  const siteUrl = getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -71,12 +121,50 @@ export default function WhatCanYouDrinkWhileFastingPage() {
     publisher: {
       "@type": "Organization",
       name: "FastTrack",
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${getSiteUrl()}/guides/what-can-you-drink-while-fasting`,
+      "@id": `${siteUrl}/guides/what-can-you-drink-while-fasting`,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "What Can You Drink While Fasting?",
+        item: `${siteUrl}/guides/what-can-you-drink-while-fasting`,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
@@ -84,6 +172,14 @@ export default function WhatCanYouDrinkWhileFastingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Back Link */}
@@ -487,7 +583,11 @@ export default function WhatCanYouDrinkWhileFastingPage() {
             <li>Flavored mixes that include calorie-containing ingredients</li>
           </ul>
           <p className="text-on-surface-variant leading-relaxed">
-            A zero-calorie product may fit a practical zero-calorie fasting approach, but ingredient lists and formulations vary.
+            A zero-calorie product may fit a practical zero-calorie fasting approach, but ingredient lists and formulations vary. For an in-depth breakdown of sodium, potassium, and magnesium requirements during short vs extended fasts, read our dedicated guide to{" "}
+            <Link href="/electrolytes-while-fasting" className="text-primary font-semibold hover:underline">
+              Electrolytes While Fasting
+            </Link>
+            .
           </p>
           <p className="text-on-surface-variant leading-relaxed">
             For medical or laboratory fasting, do not assume an electrolyte product is allowed. Follow the instructions you were given.

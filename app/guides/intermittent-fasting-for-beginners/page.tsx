@@ -41,7 +41,42 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    question: "What is the easiest fasting schedule to understand?",
+    answer:
+      "Daily time-based schedules such as 12:12, 14:10, and 16:8 are straightforward because the same fasting and eating windows repeat each day.",
+  },
+  {
+    question: "What is a fasting window?",
+    answer:
+      "A fasting window is the period in your schedule when you are not eating.",
+  },
+  {
+    question: "What is an eating window?",
+    answer:
+      "An eating window is the planned period during which your meals and other food intake occur.",
+  },
+  {
+    question: "Can the same fasting schedule have different start times?",
+    answer:
+      "Yes. A 16:8 schedule can start at different times while keeping the same 16-hour fasting and 8-hour eating durations.",
+  },
+  {
+    question: "Is intermittent fasting the same as calorie restriction?",
+    answer:
+      "No. They describe different concepts. Intermittent fasting primarily organizes when food is consumed, while calorie restriction focuses on reducing overall calorie intake.",
+  },
+  {
+    question: "Is intermittent fasting suitable for everyone?",
+    answer:
+      "Not necessarily. Intermittent fasting is not appropriate for everyone, and individual circumstances can matter. When appropriate, consider discussing it with a healthcare professional.",
+  },
+];
+
 export default function IntermittentFastingForBeginnersPage() {
+  const siteUrl = getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -57,12 +92,50 @@ export default function IntermittentFastingForBeginnersPage() {
     publisher: {
       "@type": "Organization",
       name: "FastTrack",
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${getSiteUrl()}/guides/intermittent-fasting-for-beginners`,
+      "@id": `${siteUrl}/guides/intermittent-fasting-for-beginners`,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Intermittent Fasting for Beginners",
+        item: `${siteUrl}/guides/intermittent-fasting-for-beginners`,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
@@ -70,6 +143,14 @@ export default function IntermittentFastingForBeginnersPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Back Link */}

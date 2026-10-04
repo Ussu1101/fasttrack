@@ -119,7 +119,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-secondary"></span>
             <span className="font-label-md text-label-md text-on-surface-variant">
-              FastTrack Metabolic Scheduling Engine • Transferable Starter Platform
+              FastTrack Metabolic Scheduling Engine • Circadian Timing Utility
             </span>
           </div>
           <p className="font-body-sm text-body-sm text-on-surface-variant text-center md:text-right">

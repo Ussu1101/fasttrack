@@ -329,6 +329,22 @@ export default function FastingMethodsIndexPage() {
               condenses daily nutrition into one hour. Requires strict attention to electrolyte balance and nutrient density.
             </p>
           </div>
+
+          <div className="p-6 rounded-2xl bg-surface-container-lowest border border-surface-container shadow-sm space-y-3">
+            <span className="px-3 py-1 rounded-full bg-surface-container text-primary font-label-sm text-xs font-semibold inline-block">
+              For Advanced Metabolic Modulation
+            </span>
+            <h3 className="font-headline text-lg font-bold text-on-surface">
+              Alternate-Day Fasting (ADF)
+            </h3>
+            <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+              When daily time-restricted eating plateaus or you prefer whole-day rhythm cycles, explore our in-depth{" "}
+              <Link href="/alternate-day-fasting" className="text-primary font-semibold hover:underline">
+                Alternate-Day Fasting (ADF) Guide
+              </Link>
+              . Learn the clinical differences between complete 36-hour fasts and modified 500 kcal fasting days, dropout rates, and meal structures.
+            </p>
+          </div>
         </div>
       </section>
 

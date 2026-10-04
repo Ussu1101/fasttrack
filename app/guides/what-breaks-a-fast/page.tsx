@@ -53,7 +53,57 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    question: "Does coffee break a fast?",
+    answer:
+      "Plain black coffee contains very little energy and is commonly used during intermittent fasting. Coffee with sugar, milk, cream, or other calorie-containing additions does not fit a strict zero-calorie fast.",
+  },
+  {
+    question: "Does tea break a fast?",
+    answer:
+      "Plain, unsweetened tea contains very little energy and is commonly used during intermittent fasting. Sugar, honey, milk, and other caloric additions change the answer.",
+  },
+  {
+    question: "Does milk break a fast?",
+    answer:
+      "Yes. Milk contains calories and nutrients, so it breaks a strict zero-calorie fast.",
+  },
+  {
+    question: "Does sugar break a fast?",
+    answer:
+      "Yes. Sugar provides calories and breaks a strict zero-calorie fast.",
+  },
+  {
+    question: "Does sugar-free gum break a fast?",
+    answer:
+      "It depends on the formulation and how strictly you define the fast. If you want a simple zero-calorie rule, skip gum during the fasting window.",
+  },
+  {
+    question: "Do electrolytes break a fast?",
+    answer:
+      "It depends on the product. Electrolytes containing sugar or other calories break a strict zero-calorie fast. Zero-calorie products do not add calories, but you should still check the label and consider the reason for your fast.",
+  },
+  {
+    question: "Can I drink water while fasting?",
+    answer:
+      "Yes. Plain water contains no calories and is the simplest drink during a fasting window.",
+  },
+  {
+    question: "Can I use artificial sweeteners while fasting?",
+    answer:
+      "Many non-nutritive sweeteners provide little or no energy, but different products and sweeteners are not identical. If you want the simplest fasting routine, water, plain tea, or black coffee avoid most of this uncertainty.",
+  },
+  {
+    question: "What breaks a fast the fastest?",
+    answer:
+      "There is no useful need to rank foods or drinks by how quickly they “break” a fast. For a strict zero-calorie definition, consuming calories means the zero-calorie fast has ended.",
+  },
+];
+
 export default function WhatBreaksAFastPage() {
+  const siteUrl = getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -69,12 +119,50 @@ export default function WhatBreaksAFastPage() {
     publisher: {
       "@type": "Organization",
       name: "FastTrack",
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${getSiteUrl()}/guides/what-breaks-a-fast`,
+      "@id": `${siteUrl}/guides/what-breaks-a-fast`,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "What Breaks a Fast?",
+        item: `${siteUrl}/guides/what-breaks-a-fast`,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
@@ -82,6 +170,14 @@ export default function WhatBreaksAFastPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Back Link */}

@@ -55,7 +55,42 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    question: "Does intermittent fasting slow your metabolism?",
+    answer:
+      "Intermittent fasting should not be described as simply “slowing” or “speeding up” metabolism. The body changes how it uses available and stored energy during periods without food, and the effects vary by person and fasting pattern.",
+  },
+  {
+    question: "What happens after 12 hours of fasting?",
+    answer:
+      "There is no universal metabolic event that happens exactly at the 12-hour mark. The body continues using energy and gradually changes its relative use of available and stored fuel as fasting continues.",
+  },
+  {
+    question: "Is 16:8 the same as intermittent fasting?",
+    answer:
+      "Yes. 16:8 is one form of intermittent fasting, specifically a daily time-restricted eating schedule with a 16-hour fasting window and an 8-hour eating window.",
+  },
+  {
+    question: "Can I drink coffee while fasting?",
+    answer:
+      "Black coffee contains very few calories and is commonly included in practical zero-calorie fasting routines. Coffee with milk, cream, sugar, or other calorie-containing additions is different. See What Breaks a Fast? for the practical distinctions.",
+  },
+  {
+    question: "Is intermittent fasting the same as starvation?",
+    answer:
+      "No. Intermittent fasting is a planned eating pattern with defined periods for eating and fasting. Starvation is a state of prolonged inadequate energy and nutrient intake.",
+  },
+  {
+    question: "Is a longer fasting window always better?",
+    answer:
+      "No. A longer fasting window is not automatically better, and some longer fasting practices may be inappropriate or risky. The most practical schedule depends on the person and the context.",
+  },
+];
+
 export default function HowDoesIntermittentFastingWorkPage() {
+  const siteUrl = getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -71,12 +106,50 @@ export default function HowDoesIntermittentFastingWorkPage() {
     publisher: {
       "@type": "Organization",
       name: "FastTrack",
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${getSiteUrl()}/guides/how-does-intermittent-fasting-work`,
+      "@id": `${siteUrl}/guides/how-does-intermittent-fasting-work`,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "How Does Intermittent Fasting Work?",
+        item: `${siteUrl}/guides/how-does-intermittent-fasting-work`,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
@@ -84,6 +157,14 @@ export default function HowDoesIntermittentFastingWorkPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Back Link */}
@@ -324,6 +405,14 @@ export default function HowDoesIntermittentFastingWorkPage() {
             <div className="p-2.5 rounded-lg bg-surface-container text-[11px] text-on-surface-variant flex items-center justify-center text-center font-medium">
               Conceptual educational visual • Not a medical measurement or clinical diagnostic tool
             </div>
+
+            <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed pt-1">
+              For a detailed timeline examining the fed state, post-absorptive transition, metabolic shift, and extended fasting backed by clinical physiology, read our guide to{" "}
+              <Link href="/fasting-stages" className="text-primary font-semibold hover:underline">
+                The 4 Real Stages of Intermittent Fasting
+              </Link>
+              .
+            </p>
           </div>
         </section>
 

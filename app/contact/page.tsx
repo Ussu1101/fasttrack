@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Mail, User, ShieldCheck } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { getSiteUrl } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "Contact FastTrack — Support & Inquiries",
@@ -13,8 +14,29 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const siteUrl = getSiteUrl();
+
+  const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${siteUrl}/contact#webpage`,
+    "url": `${siteUrl}/contact`,
+    "name": "Contact FastTrack — Support & Inquiries",
+    "description":
+      "Get in touch with FastTrack site owner Muhammad Usama for questions regarding the fasting calculator, calculation methodology, or platform inquiries.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Muhammad Usama",
+      "email": "mailto:Usssamaa@gmail.com",
+    },
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
       {/* Page Header */}
       <header className="max-w-2xl mb-8">
         <span className="font-label-sm text-xs sm:text-sm text-secondary font-bold uppercase tracking-widest flex items-center gap-1.5">

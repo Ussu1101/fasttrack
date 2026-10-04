@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Compass, Sparkles, ShieldCheck, HeartHandshake, Mail, User, AlertCircle, ArrowRight } from "lucide-react";
+import { getSiteUrl } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "About FastTrack — Independent Fasting Platform",
@@ -13,8 +14,30 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const siteUrl = getSiteUrl();
+
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${siteUrl}/about#webpage`,
+    "url": `${siteUrl}/about`,
+    "name": "About FastTrack — Independent Fasting Platform",
+    "description":
+      "Learn about FastTrack, an independent, private intermittent fasting schedule calculator founded and maintained by Muhammad Usama.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Muhammad Usama",
+      "jobTitle": "Independent Software Developer & Platform Creator",
+      "email": "mailto:Usssamaa@gmail.com",
+    },
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       {/* Page Header */}
       <header className="max-w-2xl mb-10">
         <span className="font-label-sm text-xs sm:text-sm text-secondary font-bold uppercase tracking-widest flex items-center gap-1.5">

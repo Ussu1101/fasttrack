@@ -296,7 +296,7 @@ export const GUIDES: GuideArticle[] = [
   },
   {
     slug: "exercise-while-fasting",
-    title: "Exercise While Fasting: Workouts, Timing & Practical Tips",
+    title: "Exercise While Fasting: A Practical Guide to Workouts and Fasting Windows",
     shortDescription:
       "Learn how to exercise while fasting, including workout timing, hydration, intensity, cardio, and strength training. Build a fasting and exercise routine that fits your schedule.",
     category: "Movement",
@@ -545,39 +545,104 @@ export const GUIDES: GuideArticle[] = [
     title: "The 6 Most Common Intermittent Fasting Mistakes",
     shortDescription: "Avoid the traps that cause burnout, nutrient deficiencies, binge eating, and stalled progress.",
     category: "Best Practices",
-    readTime: "7 min read",
+    readTime: "8 min read",
     publishedAt: "2026-09-30",
-    updatedAt: "2026-09-30",
+    updatedAt: "2026-10-04",
     author: "Muhammad Usama",
     content: {
       leadParagraph:
-        "While intermittent fasting is structurally straightforward, small behavioral missteps can derail comfort, consistency, and daily energy.",
+        "While intermittent fasting is structurally straightforward, small behavioral missteps can derail comfort, consistency, and daily energy. By recognizing and avoiding these six frequent pitfalls, you can build a sustainable routine that supports long-term metabolic health.",
       sections: [
         {
           heading: "1. Treating the Eating Window as a Caloric Free-for-All",
           body: [
-            "Fasting does not negate the laws of energy balance. Consuming predominantly ultra-processed, highly refined foods during your feeding window can leave you nutrient-depleted and fatigued.",
+            "Fasting does not negate the fundamental laws of energy balance. Consuming predominantly ultra-processed, highly refined foods during your feeding window can leave you nutrient-depleted, provoke sharp blood sugar volatility, and prevent fat loss.",
             "Structuring your refeeding intentionally with nutrient-dense proteins and vegetables makes a critical difference—learn [how to break an intermittent fast correctly](/guides/how-to-break-a-fast) to maintain comfort and avoid sluggishness.",
           ],
+          keyTakeaway: "Food quality and energy balance within the eating window remain the primary determinants of health outcomes.",
         },
         {
           heading: "2. Chronically Inadequate Protein Intake",
           body: [
-            "Limiting your meals to a condensed window requires deliberate planning to ensure adequate overall protein intake suited to your body weight, activity level, and lean tissue preservation goals.",
+            "Limiting your daily meals to a condensed window requires deliberate planning to ensure adequate overall protein intake suited to your body weight, activity level, and lean tissue preservation goals.",
+            "Spreading high-quality protein across two balanced meals (aiming for roughly 25 to 40 grams per meal from poultry, fish, eggs, tofu, or legumes) helps protect skeletal muscle mass and sustains satiety.",
           ],
+          keyTakeaway: "Prioritize complete protein in every meal to preserve lean body mass while fasting.",
         },
         {
-          heading: "3. Skipping Electrolyte Replacement",
+          heading: "3. Skipping Mineral & Fluid Replacement on Extended Fasts",
           body: [
-            "Paying attention to both fluid and mineral balance is helpful during extended fasts. If mild sluggishness arises, ensuring adequate dietary electrolytes alongside water may support overall well-being. Persistent dizziness or discomfort should be evaluated by a healthcare professional.",
-            "To understand which zero-calorie beverages, waters, and unsweetened teas are permitted without adding calories, check our complete reference on [what you can drink while fasting](/guides/what-can-you-drink-while-fasting).",
+            "As circulating insulin levels decline during fasting, the kidneys naturally excrete sodium and water (a physiological process termed natriuresis of fasting). For shorter fasts (14:10, 16:8), standard meals replenish minerals; on longer fasts or during hot workouts, inadequate sodium can lead to headaches and fatigue.",
+            "To understand which zero-calorie beverages, waters, and unsweetened teas are permitted without adding calories, check our complete reference on [what you can drink while fasting](/guides/what-can-you-drink-while-fasting) and our dedicated guide on [electrolytes while fasting](/electrolytes-while-fasting).",
           ],
+          keyTakeaway: "Maintain adequate hydration and consider light culinary salt if practicing condensed fasts.",
         },
         {
-          heading: "4. Rigid Inflexibility",
+          heading: "4. Rigid Inflexibility Around Daily Social Schedules",
           body: [
-            "Life happens. If family dinner or an event runs late, shift your window forward. Consistency over weeks and months matters far more than single-day perfection.",
+            "Life happens. If a family dinner, work event, or celebration runs late, do not abandon your lifestyle out of frustration. Simply shift your eating window forward or backward by 1 to 2 hours, or revert to a gentle 14:10 window for the day.",
+            "Consistency over months matters far more than single-day perfection. Recalculate your target hours anytime using the [FastTrack Schedule Calculator](/#calculator).",
           ],
+          keyTakeaway: "A sustainable fasting routine bends with real life rather than breaking under social friction.",
+        },
+        {
+          heading: "5. Eating Heavy Meals Late at Night Before Sleep",
+          body: [
+            "Finishing large, calorie-dense dinners immediately before bed conflicts directly with your circadian biology. Digestion generates metabolic heat and keeps digestive organs active, delaying the natural nocturnal core body temperature drop required for restorative deep sleep.",
+            "Leave a practical 2- to 3-hour buffer between your final bite and bedtime. Review our circadian guide on [Intermittent Fasting and Sleep Quality](/guides/fasting-and-sleep) to align meal timing with restful recovery.",
+          ],
+          keyTakeaway: "Conclude food intake 2 to 3 hours before sleep to support circadian temperature drop and sleep quality.",
+        },
+        {
+          heading: "6. Jumping Directly into Extreme Windows (20:4 or OMAD) on Day One",
+          body: [
+            "Attempting advanced, aggressive fasting schedules without an adaptation phase frequently triggers severe compensatory hunger waves, brain fog, and early burnout.",
+            "Build baseline behavioral consistency on gentle schedules like the [14:10 Gentle Reset](/fasting-methods/14-10) or [16:8 Protocol](/fasting-methods/16-8) for 2 to 4 weeks before evaluating more condensed formats like [OMAD (23:1)](/fasting-methods/omad).",
+          ],
+          keyTakeaway: "Start with an approachable window like 14:10 or 16:8 to allow hormonal and behavioral adaptation.",
+        },
+      ],
+      table: {
+        caption: "The 6 Common Fasting Mistakes & Actionable Solutions",
+        headers: ["Mistake", "Underlying Cause", "Actionable Solution", "Recommended Guide"],
+        rows: [
+          ["Overeating at Window Open", "Unrestrained rebound hunger", "Paced two-phase refeeding with lean protein & veggies", "How to Break a Fast"],
+          ["Inadequate Daily Protein", "Condensed meal frequency", "Anchor each meal around 25–40g of protein", "16:8 Practical Guide"],
+          ["Ignoring Mineral Balance", "Fasting natriuresis / low insulin", "Hydrate with water; light salt on extended fasts", "Electrolytes Guide"],
+          ["Rigid All-or-Nothing Mindset", "Unrealistic perfectionism", "Shift window by 1–2 hours for social dinners", "Choosing a Window"],
+          ["Late-Night Heavy Meals", "Circadian misalignment", "Finish eating 2–3 hours before bedtime", "Fasting & Sleep Quality"],
+          ["Rushing to Extreme Fasts", "Overzealous goal setting", "Adapt on 14:10 or 16:8 for 2–4 weeks first", "Beginners Guide"],
+        ],
+      },
+      faqs: [
+        {
+          question: "How do I know if I am eating enough calories during a condensed window?",
+          answer:
+            "Track your weekly energy levels, sleep quality, and physical performance. If you experience persistent lethargy, brain fog, or hair thinning, your daily caloric or protein intake may be excessively low. Focus on nutrient-dense whole foods rather than severe restriction.",
+        },
+        {
+          question: "What should I do if a social dinner finishes past my target eating window?",
+          answer:
+            "Enjoy the dinner without stress. Either shift your fasting window forward the next morning to preserve your target fasting duration, or simply resume your normal schedule the following day. Long-term metabolic consistency outweighs a single shifted evening.",
+        },
+        {
+          question: "Is it safe to start with a 20:4 or OMAD schedule immediately?",
+          answer:
+            "Jumping directly into a 20-hour or 23-hour fast from a standard grazing diet is not recommended. It frequently provokes acute lightheadedness, nausea, and intense evening bingeing. Allow your body 2 to 3 weeks on 14:10 or 16:8 to adapt comfortably.",
+        },
+      ],
+      clinicalNotice:
+        "Intermittent fasting is intended for healthy adults. Anyone who is pregnant, nursing, under 18, has a history of disordered eating, or takes prescription medications (especially for diabetes or hypertension) must speak with their healthcare provider before modifying their eating schedule.",
+      relatedProtocols: [
+        {
+          id: "14-10",
+          name: "14:10 Gentle Reset",
+          relation: "An approachable beginner schedule that prevents early adaptation mistakes.",
+        },
+        {
+          id: "16-8",
+          name: "16:8 Protocol",
+          relation: "The balanced lifestyle standard for sustainable, mistake-free consistency.",
         },
       ],
     },

@@ -56,7 +56,52 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS = [
+  {
+    question: "Can I exercise while fasting?",
+    answer:
+      "Yes, many people can combine exercise with intermittent fasting. The practical question is whether the workout timing works well with your hydration, nutrition, recovery, and individual tolerance.",
+  },
+  {
+    question: "Is it better to exercise before or after eating?",
+    answer:
+      "There is no single answer for everyone. Some people prefer training during the fasting window, while others perform better after eating. Choose the timing that works with your workout and overall routine.",
+  },
+  {
+    question: "Can I do cardio while fasting?",
+    answer:
+      "Yes. Walking and other cardio can be scheduled during a fasting window or eating window. Adjust the timing if the workout consistently feels difficult when fasted.",
+  },
+  {
+    question: "Can I strength train while fasting?",
+    answer:
+      "Yes, strength training can be combined with intermittent fasting. If demanding sessions repeatedly feel worse during the fasting window, moving them closer to or inside the eating window may be more practical.",
+  },
+  {
+    question: "Should I drink water during a fasted workout?",
+    answer:
+      "For ordinary intermittent fasting, water is the simplest choice for hydration. Exercise and hot conditions can increase fluid needs.",
+  },
+  {
+    question: "Does fasted exercise burn more fat?",
+    answer:
+      "Fasted exercise changes the immediate fuel environment, but that does not establish that it automatically produces better long-term results. Overall nutrition, training, activity, and adherence matter.",
+  },
+  {
+    question: "Can athletes use intermittent fasting?",
+    answer:
+      "Some athletes may find it difficult to fuel and refuel adequately while fasting. If you train heavily or compete, your nutrition and recovery needs deserve particular attention.",
+  },
+  {
+    question: "What if I feel dizzy while exercising fasted?",
+    answer:
+      "Stop the workout rather than trying to push through significant dizziness or other concerning symptoms. If symptoms recur, discuss the fasting and exercise routine with a qualified healthcare professional.",
+  },
+];
+
 export default function ExerciseWhileFastingPage() {
+  const siteUrl = getSiteUrl();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -72,12 +117,50 @@ export default function ExerciseWhileFastingPage() {
     publisher: {
       "@type": "Organization",
       name: "FastTrack",
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${getSiteUrl()}/guides/exercise-while-fasting`,
+      "@id": `${siteUrl}/guides/exercise-while-fasting`,
     },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Guides",
+        item: `${siteUrl}/guides`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Exercise While Fasting",
+        item: `${siteUrl}/guides/exercise-while-fasting`,
+      },
+    ],
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 
   return (
@@ -85,6 +168,14 @@ export default function ExerciseWhileFastingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Back Link */}

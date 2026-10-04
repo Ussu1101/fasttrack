@@ -8,6 +8,7 @@ import { ActionableTips } from "@/components/home/ActionableTips";
 import { SafetyNotice } from "@/components/home/SafetyNotice";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCta } from "@/components/home/FinalCta";
+import { getSiteUrl } from "@/lib/config/site";
 
 import type { Metadata } from "next";
 
@@ -21,8 +22,30 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const siteUrl = getSiteUrl();
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    "name": "FastTrack Fasting Calculator",
+    "url": siteUrl,
+    "description":
+      "Free, private intermittent fasting calculator. Calculate personalized 16:8, 14:10, 18:6, 20:4, OMAD, and 5:2 fasting schedules without an account.",
+    "inLanguage": "en-US",
+    "publisher": {
+      "@type": "Person",
+      "name": "Muhammad Usama",
+      "url": `${siteUrl}/about`,
+    },
+  };
+
   return (
     <div className="flex flex-col w-full pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       {/* 1. Hero Section with Circadian showcase */}
       <Hero />
 

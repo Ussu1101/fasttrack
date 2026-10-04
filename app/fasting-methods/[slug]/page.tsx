@@ -26,16 +26,16 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Protocol Not Found" };
   }
 
-  // Ensure title includes ratio only once (e.g. avoid "OMAD (23:1) (23:1)")
+  // Ensure title emphasizes the interactive calculator tool intent
   const titleDisplay = protocol.name.includes(protocol.ratio)
-    ? `${protocol.name} — Schedule Calculator & Guide`
-    : `${protocol.name} (${protocol.ratio}) — Schedule Calculator & Guide`;
+    ? `${protocol.name} — Schedule Calculator & Generator`
+    : `${protocol.name} (${protocol.ratio}) — Schedule Calculator & Generator`;
 
-  // Provide accurate description for daily vs weekly (5:2) protocols
+  // Provide tool-focused description for daily vs weekly (5:2) protocols
   const descriptionDisplay =
     protocol.type === "weekly"
-      ? "Learn how the 5:2 fasting method works, how its weekly structure differs from daily fasting schedules, and how to plan it around your routine."
-      : `Calculate your personalized ${protocol.name} intermittent fasting schedule. Fast duration: ${protocol.fastHours}h, Eating window: ${protocol.eatingHours}h. Evidence-based guide.`;
+      ? "Calculate your custom 5:2 fasting schedule, plan non-consecutive fasting days, and generate meal timing with FastTrack's interactive calculator."
+      : `Calculate your personalized ${protocol.name} schedule. Interactive ${protocol.ratio} fasting calculator generates exact fasting and eating window hours based on your routine.`;
 
   return {
     title: titleDisplay,
@@ -44,8 +44,8 @@ export function generateMetadata({ params }: Props): Metadata {
       canonical: `/fasting-methods/${protocol.id}`,
     },
     openGraph: {
-      title: `${protocol.name} Calculator | FastTrack`,
-      description: protocol.description,
+      title: `${protocol.name} Fasting Calculator & Schedule Generator | FastTrack`,
+      description: descriptionDisplay,
     },
   };
 }
@@ -79,6 +79,21 @@ function renderParagraphWithLinks(text: string) {
 
   return elements.length > 0 ? elements : text;
 }
+
+const GUIDE_LINKS_BY_PROTOCOL: Record<string, { href: string; label: string }> = {
+  "16-8": {
+    href: "/guides/16-8-intermittent-fasting-guide",
+    label: "Read our in-depth 16:8 Practical Guide",
+  },
+  "14-10": {
+    href: "/guides/14-10-intermittent-fasting-guide",
+    label: "Read our in-depth 14:10 Practical Guide",
+  },
+  "18-6": {
+    href: "/guides/18-6-intermittent-fasting-guide",
+    label: "Read our in-depth 18:6 Practical Guide",
+  },
+};
 
 export default function ProtocolDetailPage({ params }: Props) {
   const protocol = PROTOCOLS[params.slug as ProtocolId];
@@ -165,7 +180,7 @@ export default function ProtocolDetailPage({ params }: Props) {
         </div>
 
         <h1 className="font-headline text-3xl sm:text-5xl font-bold text-primary tracking-tight">
-          {protocol.name}
+          {protocol.name} Fasting Calculator &amp; Schedule Generator
         </h1>
         <p className="font-label-md text-base sm:text-lg text-secondary font-semibold mt-1">
           {protocol.tagline}
@@ -174,6 +189,21 @@ export default function ProtocolDetailPage({ params }: Props) {
         <p className="font-body-lg text-base sm:text-lg text-on-surface-variant mt-4 leading-relaxed">
           {protocol.detailedOverview}
         </p>
+
+        {GUIDE_LINKS_BY_PROTOCOL[protocol.id] && (
+          <div className="mt-4 p-3.5 rounded-xl bg-surface-container-low border border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs sm:text-sm">
+            <span className="text-on-surface-variant">
+              Looking for full evidence, meal planning, and protocols?
+            </span>
+            <Link
+              href={GUIDE_LINKS_BY_PROTOCOL[protocol.id].href}
+              className="text-primary font-semibold hover:underline flex items-center gap-1 flex-shrink-0"
+            >
+              <span>{GUIDE_LINKS_BY_PROTOCOL[protocol.id].label}</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Embedded Dedicated Calculator for this Protocol */}

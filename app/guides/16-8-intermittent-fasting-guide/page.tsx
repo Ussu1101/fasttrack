@@ -573,7 +573,11 @@ export default function SixteenEightFastingGuidePage() {
                 Weight Management and Energy Intake
               </span>
               <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
-                In clinical trials evaluating 16:8 protocols, participants frequently experience modest reductions in body weight (typically 2% to 4% over 8 to 12 weeks). Notably, studies often find that this weight reduction occurs organically because condensing eating hours naturally curtails late-night snacking, rather than through metabolic magic.
+                In clinical trials evaluating 16:8 protocols, participants frequently experience modest reductions in body weight (typically 2% to 4% over 8 to 12 weeks). Notably, studies often find that this weight reduction occurs organically because condensing eating hours naturally curtails late-night snacking, rather than through metabolic magic. If your initial progress has stalled, consult our guide on{" "}
+                <Link href="/intermittent-fasting-plateau" className="text-primary font-semibold hover:underline">
+                  Intermittent Fasting Plateaus
+                </Link>{" "}
+                to troubleshoot metabolic adaptation and calorie creeping.
               </p>
             </div>
 
