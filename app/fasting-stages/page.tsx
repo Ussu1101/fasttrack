@@ -17,7 +17,9 @@ import {
   ArrowRight,
   Layers,
   Scale,
+  Zap,
 } from "lucide-react";
+import { FastingStagesExplorer } from "@/components/tools/FastingStagesExplorer";
 
 export const metadata: Metadata = {
   title: "Fasting Stages: What Real Physiology Shows vs Common Myths",
@@ -77,9 +79,34 @@ const FAQS = [
       "Consuming foods or beverages that supply nutritional energy—including sugars, milk, cream, protein powders, amino acids (BCAAs), or alcohol—triggers nutrient-sensing pathways (such as insulin secretion), returning the body to the fed or postprandial state. Plain water, unflavored mineral water, and unsweetened black coffee or tea provide negligible calories and maintain fasting physiology.",
   },
   {
-    question: "Who should not follow extended fasting stages?",
+    question: "What happens at 16 hours of fasting?",
     answer:
-      "Extended fasting is unsafe for pregnant or breastfeeding women, children and adolescents, individuals with a current or past eating disorder, underweight individuals, and anyone with type 1 diabetes or advanced chronic kidney disease. People taking medications that require food or medications that regulate blood pressure or blood sugar must consult their prescribing physician before altering their eating schedule.",
+      "At approximately 16 hours of fasting, circulating insulin reaches low baseline concentrations, and hepatic glycogen is substantially depleted. The body transitions predominantly to lipid oxidation, mobilizing free fatty acids from adipose tissue for fuel. Mild ketogenesis produces detectable beta-hydroxybutyrate (typically 0.2 to 0.5 mmol/L), and baseline cellular maintenance (autophagy) signaling begins to increase gradually.",
+  },
+  {
+    question: "What happens at 18 hours of fasting?",
+    answer:
+      "By hour 18, whole-body fat oxidation is high and stable. Muscle tissue derives nearly all resting energy from fatty acids, and circulating ketones rise moderately (0.5 to 1.5 mmol/L). In protocols like 18:6, cellular nutrient sensors (such as mTOR) remain deeply downregulated while AMPK pathways coordinate intracellular recycling.",
+  },
+  {
+    question: "What happens at 24 hours of fasting?",
+    answer:
+      "At 24 hours (the threshold of One Meal A Day or OMAD), liver glycogen reserves are largely exhausted. The liver maintains normal blood glucose levels through gluconeogenesis using amino acids, glycerol, and lactate. Circulating ketones generally reach 1.0 to 2.0 mmol/L, supplying a growing percentage of cerebral energy demands.",
+  },
+  {
+    question: "When does fat burning actually start during a fast?",
+    answer:
+      "Fat oxidation does not wait for a single digital switch; the body burns a mixture of fats and carbohydrates continuously. However, a significant physiological shift toward predominant fat burning occurs between hours 12 and 16, as postprandial insulin levels recede and release the natural inhibitory brake on adipose tissue lipolysis.",
+  },
+  {
+    question: "When do ketone levels rise during intermittent fasting?",
+    answer:
+      "Mild ketogenesis usually begins between hours 12 and 16 of fasting. Clinically measurable nutritional ketosis (blood beta-hydroxybutyrate above 0.5 mmol/L) typically becomes evident between hours 16 and 24, depending heavily on the carbohydrate content of your preceding meal and whether you exercised while fasting.",
+  },
+  {
+    question: "Is there an exact hour when fasting stages change?",
+    answer:
+      "No. Human metabolism is a biological continuum, not a digital clock. Factors such as dinner carbohydrate volume, liver glycogen fullness, pre-fast physical movement, and personal insulin sensitivity can shift the onset of fat oxidation and ketogenesis earlier or later by several hours.",
   },
 ];
 
@@ -141,6 +168,26 @@ export default function FastingStagesPage() {
     })),
   };
 
+  const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "FastTrack Fasting Hour Explorer",
+    applicationCategory: "HealthApplication",
+    operatingSystem: "All",
+    url: `${siteUrl}/fasting-stages#explorer`,
+    description:
+      "Interactive 0 to 48-hour fasting stages timeline explorer visualizing physiological fuel shifts, glycogen depletion, insulin dynamics, and ketone elevations.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    author: {
+      "@type": "Person",
+      name: "Muhammad Usama",
+    },
+  };
+
   return (
     <article className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
       <script
@@ -154,6 +201,10 @@ export default function FastingStagesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
       />
 
       {/* Back Link */}
@@ -208,6 +259,96 @@ export default function FastingStagesPage() {
           <p className="text-on-surface-variant leading-relaxed">
             This guide explores what peer-reviewed metabolic science actually demonstrates about the stages of fasting, separates well-documented human findings from animal extrapolations, and provides a realistic framework for understanding what happens in your body during intermittent fasting.
           </p>
+        </section>
+
+        {/* Interactive Tool Section: Fasting Hour Explorer */}
+        <section className="space-y-6">
+          <div>
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+              Explore the Stages Hour by Hour
+            </h2>
+            <p className="text-on-surface-variant leading-relaxed mt-2">
+              Fasting physiology operates along a fluid spectrum rather than rigid on-off switches. While popular infographics assign exact times to cellular milestones, energy transitions occur gradually as insulin falls and liver glycogen is steadily mobilized.
+            </p>
+            <p className="text-on-surface-variant leading-relaxed mt-1">
+              Use the interactive explorer below to observe how hepatic glycogen, insulin dynamics, fat oxidation (lipolysis), and ketone bodies shift across 0 to 48 hours based on your preceding meal size and fasting duration.
+            </p>
+          </div>
+
+          {/* Interactive Slider Widget */}
+          <FastingStagesExplorer />
+
+          {/* Static Hour-by-Hour Summary Table (Search Engine Indexable) */}
+          <div className="space-y-3 pt-2">
+            <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface">
+              Hourly Fasting Summary Reference Table
+            </h3>
+            <p className="text-xs sm:text-sm text-on-surface-variant">
+              The table below outlines the core metabolic transitions across human fasting intervals for quick reference:
+            </p>
+            <div className="overflow-x-auto rounded-2xl border border-surface-container shadow-xs">
+              <table className="w-full text-left text-sm text-on-surface-variant">
+                <thead className="bg-surface-container text-on-surface font-headline text-xs uppercase tracking-wider">
+                  <tr>
+                    <th scope="col" className="p-3.5 sm:p-4">Fasting Hours</th>
+                    <th scope="col" className="p-3.5 sm:p-4">Physiological Stage</th>
+                    <th scope="col" className="p-3.5 sm:p-4">Dominant Energy Substrate</th>
+                    <th scope="col" className="p-3.5 sm:p-4">Subjective Sensation &amp; Notes</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-surface-container/60">
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">0 – 4 Hours</th>
+                    <td className="p-3.5 sm:p-4">Fed / Postprandial State</td>
+                    <td className="p-3.5 sm:p-4">Dietary glucose &amp; fats; elevated insulin</td>
+                    <td className="p-3.5 sm:p-4">Digestion active; full satiety; zero fasting adaptation</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">4 – 12 Hours</th>
+                    <td className="p-3.5 sm:p-4">Post-Absorptive Transition</td>
+                    <td className="p-3.5 sm:p-4">Liver glycogen breakdown; insulin declining</td>
+                    <td className="p-3.5 sm:p-4">Habitual mealtime ghrelin pulses; standard overnight sleep state</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">12 – 16 Hours</th>
+                    <td className="p-3.5 sm:p-4">Early Fat Mobilization</td>
+                    <td className="p-3.5 sm:p-4">Adipose free fatty acids; mild ketogenesis (0.2–0.5 mM)</td>
+                    <td className="p-3.5 sm:p-4">Primary interval for <Link href="/fasting-methods/16-8" className="text-primary font-semibold underline">16:8 schedules</Link>; morning clarity; hunger subsides</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">16 – 20 Hours</th>
+                    <td className="p-3.5 sm:p-4">Deep Fat Oxidation &amp; Ketosis</td>
+                    <td className="p-3.5 sm:p-4">Fatty acids; ketones (0.5–1.5 mM); low basal insulin</td>
+                    <td className="p-3.5 sm:p-4">Enhanced autophagy signaling; light stomach; hydration essential</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">20 – 24 Hours</th>
+                    <td className="p-3.5 sm:p-4">Full Fasting Adaptation</td>
+                    <td className="p-3.5 sm:p-4">Hepatic gluconeogenesis; ketones (1.0–2.0 mM)</td>
+                    <td className="p-3.5 sm:p-4">Boundary of daily <Link href="/fasting-methods/omad" className="text-primary font-semibold underline">OMAD protocols</Link>; stable energy if electrolytes maintained</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">24 – 36 Hours</th>
+                    <td className="p-3.5 sm:p-4">Prolonged Ketogenic Fasting</td>
+                    <td className="p-3.5 sm:p-4">Exhausted liver glycogen; elevated ketones (1.5–3.0 mM)</td>
+                    <td className="p-3.5 sm:p-4">Found in Alternate-Day Fasting; requires deliberate mineral intake</td>
+                  </tr>
+                  <tr className="hover:bg-surface-container/30 transition-colors">
+                    <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">36 – 48 Hours</th>
+                    <td className="p-3.5 sm:p-4">Extended Fasting Domain</td>
+                    <td className="p-3.5 sm:p-4">Systemic ketone combustion; increased autophagic signaling in experimental models</td>
+                    <td className="p-3.5 sm:p-4">Elevated risks of orthostatic dizziness, electrolyte loss, and muscle catabolism; requires clinical supervision</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-on-surface-variant pt-1">
+              Want to dive deeper into the biochemical mechanisms of fasting fuel shifts? Read our complete breakdown on{" "}
+              <Link href="/guides/how-does-intermittent-fasting-work" className="text-primary font-semibold underline">
+                how intermittent fasting works in the body
+              </Link>.
+            </p>
+          </div>
         </section>
 
         {/* Section 1: The Spectrum vs Rigid Clocks */}

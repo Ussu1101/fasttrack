@@ -44,6 +44,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
         description: "Practical strategies for scheduling your 8-hour window around work and family life."
       },
       {
+        title: "Fasting Stages Hour-by-Hour Explorer",
+        href: "/fasting-stages#explorer",
+        description: "Interactive timeline tracking glycogen depletion, insulin drops, and fat oxidation across 16 hours."
+      },
+      {
         title: "What Breaks a Fast?",
         href: "/guides/what-breaks-a-fast",
         description: "Clear breakdown of beverages, creamers, sweeteners, and supplements."
@@ -306,6 +311,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
         title: "What Breaks a Fast?",
         href: "/guides/what-breaks-a-fast",
         description: "Strict zero-calorie rules and beverage guidelines to keep your 23-hour window intact."
+      },
+      {
+        title: "Fasting Stages Hour-by-Hour Explorer",
+        href: "/fasting-stages#explorer",
+        description: "Explore metabolic fuel shifts and ketone elevations as fasting reaches 23-24 hours."
       },
       {
         title: "Exercise While Fasting",

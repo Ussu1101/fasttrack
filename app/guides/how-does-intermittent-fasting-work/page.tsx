@@ -256,7 +256,10 @@ export default function HowDoesIntermittentFastingWorkPage() {
             similarly describes a shift from readily available sugar-based fuel toward fat-derived fuel after hours without food.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
-            The timing and extent of these changes can vary between people and depend on factors such as the fasting duration, previous meal, activity, and individual physiology.
+            The timing and extent of these changes can vary between people and depend on factors such as the fasting duration, previous meal, activity, and individual physiology. To see how these physiological transitions unfold across hours 0 to 48, explore our interactive{" "}
+            <Link href="/fasting-stages#explorer" className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors">
+              Fasting Stages Hour-by-Hour Explorer
+            </Link>.
           </p>
         </section>
 

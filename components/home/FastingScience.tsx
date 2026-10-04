@@ -1,5 +1,6 @@
 import React from "react";
-import { BookOpen, Check, AlertTriangle, Flame, Clock, RefreshCw } from "lucide-react";
+import Link from "next/link";
+import { BookOpen, Check, AlertTriangle, Flame, Clock, RefreshCw, ArrowRight } from "lucide-react";
 
 export function FastingScience() {
   return (
@@ -35,19 +36,24 @@ export function FastingScience() {
             </p>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-surface-container flex flex-wrap items-center gap-4 text-on-surface text-xs sm:text-sm">
-            <div className="flex items-center gap-1.5 font-medium">
-              <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-              <span>Cellular stress response pathways</span>
+          <div className="mt-6 pt-4 border-t border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-on-surface text-xs sm:text-sm">
+            <div className="flex flex-wrap items-center gap-4">
+              <div className="flex items-center gap-1.5 font-medium">
+                <Check className="w-4 h-4 text-secondary flex-shrink-0" />
+                <span>Cellular stress response pathways</span>
+              </div>
+              <div className="flex items-center gap-1.5 font-medium">
+                <Check className="w-4 h-4 text-secondary flex-shrink-0" />
+                <span>Substantial individual variation</span>
+              </div>
             </div>
-            <div className="flex items-center gap-1.5 font-medium">
-              <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-              <span>Studied in translational models</span>
-            </div>
-            <div className="flex items-center gap-1.5 font-medium">
-              <Check className="w-4 h-4 text-secondary flex-shrink-0" />
-              <span>Substantial individual variation</span>
-            </div>
+            <Link
+              href="/fasting-stages#explorer"
+              className="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary/80 transition-colors text-xs flex-shrink-0"
+            >
+              <span>Explore Hour-by-Hour Stages</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </div>
         </div>
 
