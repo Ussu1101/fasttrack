@@ -611,7 +611,14 @@ export default function HowToChooseAFastingWindowPage() {
             That can make a schedule easier to follow than trying to place the entire fasting period during your waking hours.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
-            Your eating window also determines when your last meal ends. If eating very late conflicts with your sleep routine, you can move the entire window earlier while keeping the same fasting duration.
+            Your eating window also determines when your last meal ends. If eating very late conflicts with your sleep routine, you can move the entire window earlier while keeping the same fasting duration. For a deeper breakdown of nocturnal core temperature and digestive buffers, read our guide on{" "}
+            <Link
+              href="/guides/fasting-and-sleep"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              intermittent fasting and sleep quality
+            </Link>
+            .
           </p>
           <p className="text-on-surface-variant leading-relaxed">
             Research on time-restricted eating continues to examine whether the timing of an eating window matters independently of its length. A 2025{" "}
@@ -654,7 +661,14 @@ export default function HowToChooseAFastingWindowPage() {
                 Exercise
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Think about when you normally train and when you prefer to eat around training. If your schedule makes it difficult to plan meals around exercise, a narrower window may add unnecessary complexity.
+                Think about when you normally train and when you prefer to eat around training. If your schedule makes it difficult to plan meals around exercise, a narrower window may add unnecessary complexity. Check our complete guide on{" "}
+                <Link
+                  href="/guides/exercise-while-fasting"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  exercising while fasting
+                </Link>{" "}
+                to optimize workout timing, hydration, and recovery.
               </p>
             </div>
 

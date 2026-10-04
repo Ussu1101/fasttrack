@@ -50,6 +50,36 @@ export function generateMetadata({ params }: Props): Metadata {
   };
 }
 
+function renderParagraphWithLinks(text: string) {
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const elements = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      elements.push(text.substring(lastIndex, match.index));
+    }
+    const [_, label, href] = match;
+    elements.push(
+      <Link
+        key={`${match.index}-${href}`}
+        href={href}
+        className="text-primary font-medium hover:text-primary-container underline underline-offset-2 transition-colors"
+      >
+        {label}
+      </Link>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    elements.push(text.substring(lastIndex));
+  }
+
+  return elements.length > 0 ? elements : text;
+}
+
 export default function ProtocolDetailPage({ params }: Props) {
   const protocol = PROTOCOLS[params.slug as ProtocolId];
   if (!protocol) {
@@ -94,7 +124,7 @@ export default function ProtocolDetailPage({ params }: Props) {
             name: f.question,
             acceptedAnswer: {
               "@type": "Answer",
-              text: f.answer,
+              text: f.answer.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
             },
           })),
         }
@@ -238,9 +268,9 @@ export default function ProtocolDetailPage({ params }: Props) {
                     <h3 className="font-headline text-base font-semibold text-primary mb-1.5">
                       {faq.question}
                     </h3>
-                    <p className="font-body-sm text-sm text-on-surface-variant leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <div className="font-body-sm text-sm text-on-surface-variant leading-relaxed">
+                      {renderParagraphWithLinks(faq.answer)}
+                    </div>
                   </div>
                 ))}
               </div>

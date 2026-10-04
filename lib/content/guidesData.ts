@@ -382,7 +382,7 @@ export const GUIDES: GuideArticle[] = [
           heading: "Evening Hydration and Preventing Nighttime Awakenings",
           body: [
             "A common challenge for intermittent fasters is consuming excessive fluids immediately before sleep in an attempt to curb evening appetite. This frequently leads to nocturia (waking multiple times to urinate), fragmenting rapid eye movement (REM) and deep sleep cycles.",
-            "Taper fluid intake 90 to 120 minutes before bedtime. Sip only modest amounts of warm water or unsweetened herbal teas if needed, and front-load your primary hydration earlier in the day.",
+            "Taper fluid intake 90 to 120 minutes before bedtime. Sip only modest amounts of warm water or unsweetened herbal teas if needed, and front-load your primary hydration earlier in the day—check our complete guide on [what you can drink while fasting](/guides/what-can-you-drink-while-fasting) for full evening beverage guidelines.",
           ],
         },
       ],
@@ -409,7 +409,7 @@ export const GUIDES: GuideArticle[] = [
         {
           question: "What should I do if evening hunger prevents me from falling asleep?",
           answer:
-            "If hunger feels distracting near bedtime, try sipping warm chamomile or peppermint tea, or a small glass of water. If the problem persists for multiple nights, consider shifting your eating window forward so your final meal concludes closer to 2 hours before bed, or transition temporarily to a gentler 14:10 schedule.",
+            "If hunger feels distracting near bedtime, try sipping warm chamomile or peppermint tea, or a small glass of water. If hunger signals remain intense or frequent, explore our physiological strategies to [manage evening hunger waves](/guides/how-to-handle-hunger), or consider shifting your eating window forward so your final meal concludes closer to 2 hours before bed.",
         },
       ],
       clinicalNotice:
@@ -557,6 +557,7 @@ export const GUIDES: GuideArticle[] = [
           heading: "1. Treating the Eating Window as a Caloric Free-for-All",
           body: [
             "Fasting does not negate the laws of energy balance. Consuming predominantly ultra-processed, highly refined foods during your feeding window can leave you nutrient-depleted and fatigued.",
+            "Structuring your refeeding intentionally with nutrient-dense proteins and vegetables makes a critical difference—learn [how to break an intermittent fast correctly](/guides/how-to-break-a-fast) to maintain comfort and avoid sluggishness.",
           ],
         },
         {
@@ -569,6 +570,7 @@ export const GUIDES: GuideArticle[] = [
           heading: "3. Skipping Electrolyte Replacement",
           body: [
             "Paying attention to both fluid and mineral balance is helpful during extended fasts. If mild sluggishness arises, ensuring adequate dietary electrolytes alongside water may support overall well-being. Persistent dizziness or discomfort should be evaluated by a healthcare professional.",
+            "To understand which zero-calorie beverages, waters, and unsweetened teas are permitted without adding calories, check our complete reference on [what you can drink while fasting](/guides/what-can-you-drink-while-fasting).",
           ],
         },
         {

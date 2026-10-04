@@ -400,9 +400,25 @@ export default function ExerciseWhileFastingPage() {
           <ul className="space-y-2 pl-6 list-disc text-on-surface-variant">
             <li>You can consistently make the workout.</li>
             <li>You can stay hydrated.</li>
-            <li>The workout feels manageable.</li>
+            <li>The workout feels manageable, and you know how to{" "}
+              <Link
+                href="/guides/how-to-handle-hunger"
+                className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+              >
+                manage hunger waves
+              </Link>{" "}
+              during training.
+            </li>
             <li>You can fit food around training when needed.</li>
-            <li>It does not interfere with sleep.</li>
+            <li>It does not interfere with your evening wind-down or restorative rest (see our circadian guide on{" "}
+              <Link
+                href="/guides/fasting-and-sleep"
+                className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+              >
+                intermittent fasting and sleep
+              </Link>
+              ).
+            </li>
             <li>You can recover adequately.</li>
             <li>The schedule works with your job, family, and other responsibilities.</li>
           </ul>
@@ -565,7 +581,14 @@ export default function ExerciseWhileFastingPage() {
             recommends nutritious foods such as fruits, vegetables, whole grains, low-fat dairy, and lean protein when following intermittent fasting.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
-            If your eating window is so short that you regularly struggle to fit adequate nutrition around training, the schedule may not be a good fit for your activity level.
+            If your eating window is so short that you regularly struggle to fit adequate nutrition around training, the schedule may not be a good fit for your activity level. To select gentle whole foods and structure digestion after workouts, see our guide on{" "}
+            <Link
+              href="/guides/how-to-break-a-fast"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              how to break an intermittent fast correctly
+            </Link>
+            .
           </p>
         </section>
 

@@ -389,37 +389,65 @@ export default function HowDoesIntermittentFastingWorkPage() {
               </thead>
               <tbody className="divide-y divide-surface-container font-body-sm text-on-surface-variant">
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">12:12</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/12-12" className="text-primary hover:underline">
+                      12:12
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">12 hours</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">12 hours</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">14:10</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/14-10" className="text-primary hover:underline">
+                      14:10
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">14 hours</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">10 hours</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">16:8</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/16-8" className="text-primary hover:underline">
+                      16:8
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">16 hours</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">8 hours</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">18:6</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/18-6" className="text-primary hover:underline">
+                      18:6
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">18 hours</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">6 hours</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">20:4</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/20-4" className="text-primary hover:underline">
+                      20:4
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">20 hours</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">4 hours</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">OMAD / 23:1</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/omad" className="text-primary hover:underline">
+                      OMAD / 23:1
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">about 23 hours</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">about 1 hour</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">5:2</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">
+                    <Link href="/fasting-methods/5-2" className="text-primary hover:underline">
+                      5:2
+                    </Link>
+                  </th>
                   <td className="p-3.5 sm:p-4 text-right">2 restricted days per week</td>
                   <td className="p-3.5 sm:p-4 text-right font-medium text-primary">5 regular days per week</td>
                 </tr>

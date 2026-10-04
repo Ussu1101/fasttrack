@@ -597,7 +597,14 @@ export default function IntermittentFastingForBeginnersPage() {
             The duration is the same; only the clock times change.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
-            This is why a fasting schedule should be considered in terms of <strong>duration and timing</strong>, rather than simply copying someone else&apos;s meal times.
+            This is why a fasting schedule should be considered in terms of <strong>duration and timing</strong>, rather than simply copying someone else&apos;s meal times. For step-by-step guidance on structuring your daily schedule around work, sleep, and social commitments, read our complete guide on{" "}
+            <Link
+              href="/guides/how-to-choose-a-fasting-window"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              how to choose a fasting window
+            </Link>
+            .
           </p>
         </section>
 

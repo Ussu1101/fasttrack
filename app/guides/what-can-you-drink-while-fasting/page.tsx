@@ -600,6 +600,28 @@ export default function WhatCanYouDrinkWhileFastingPage() {
                 Bone broth can contain calories, protein, and other nutrients. It therefore should not be treated as a zero-calorie fasting drink.
               </p>
             </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-1">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight text-error">
+                Alcohol (Beer, Wine, Spirits)
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Alcoholic beverages do not belong in a fasting window. Pure ethanol provides approximately 7 kcal per gram, and beers, wines, and mixed cocktails frequently contribute additional carbohydrates and sugars.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Crucially, consuming alcohol while fasting poses direct health and safety concerns. As detailed in the{" "}
+                <a
+                  href="https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/basics-defining-how-much-alcohol-too-much"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  <span>National Institute on Alcohol Abuse and Alcoholism (NIAAA) Core Resource on Alcohol</span>
+                  <ExternalLink className="w-3.5 h-3.5 inline flex-shrink-0" />
+                </a>
+                , alcohol is absorbed significantly faster when the stomach is empty, leading to a much more rapid spike in blood alcohol concentration (BAC), impaired motor coordination, and an increased risk of gastrointestinal irritation. If you choose to drink alcoholic beverages, do so moderately, exclusively within your scheduled eating window, and alongside balanced meals.
+              </p>
+            </div>
           </div>
 
           <p className="text-on-surface-variant leading-relaxed pt-2">
@@ -951,6 +973,16 @@ export default function WhatCanYouDrinkWhileFastingPage() {
               </h3>
               <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
                 Some diet sodas contain little or no energy, but formulations vary. They are therefore a context-dependent choice rather than a universal fasting recommendation.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Can I drink alcohol while fasting?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                No. Alcoholic beverages contain caloric energy (~7 kcal per gram from ethanol, plus sugars in beer, wine, and mixers) and end a zero-calorie fast. Drinking on an empty stomach also causes alcohol to be absorbed much faster into the bloodstream, increasing the risk of sudden intoxication, dizziness, and gastric irritation. If you choose to drink, keep alcoholic beverages inside your eating window and consume them moderately with a balanced meal.
               </p>
             </div>
 

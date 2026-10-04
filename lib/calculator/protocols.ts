@@ -236,6 +236,10 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
         answer: "Gentle, easily digestible whole foods rich in healthy fats and proteins—such as soft-boiled eggs, light broths, steamed greens, or avocado—prevent digestive cramps and avoid rapid blood glucose spikes."
       },
       {
+        question: "How does 20:4 intermittent fasting differ from the original 'Warrior Diet'?",
+        answer: "Modern 20:4 is a strict daily time-restricted feeding protocol involving 20 hours of zero-calorie fasting followed by a 4-hour eating window. In contrast, the original 'Warrior Diet' (developed by Ori Hofmekler in 2001) incorporated 20 hours of daytime undereating—permitting small servings of raw fruits, raw vegetables, fresh juices, and light protein—culminating in a large 4-hour evening feast. Modern 20:4 emphasizes clean zero-calorie fasting during the 20 hours rather than controlled daytime snacking."
+      },
+      {
         question: "How do I manage headaches or fatigue during the 20 hours?",
         answer: "Headaches or fatigue during extended fasting hours can stem from several factors, including dehydration, electrolyte shifts as insulin drops, caffeine withdrawal, or temporary blood sugar adjustments. Sipping water consistently and considering mineral-rich fluids or unsweetened electrolytes can often help. If severe fatigue or dizziness develops, discontinue the fast and consult a healthcare provider."
       }
@@ -299,12 +303,22 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
         description: "Essential gentle refeeding rules for single-meal protocols."
       },
       {
+        title: "What Breaks a Fast?",
+        href: "/guides/what-breaks-a-fast",
+        description: "Strict zero-calorie rules and beverage guidelines to keep your 23-hour window intact."
+      },
+      {
         title: "Exercise While Fasting",
         href: "/guides/exercise-while-fasting",
         description: "Workout timing and safety for OMAD practitioners."
       }
     ],
     relatedProtocols: [
+      {
+        id: "18-6",
+        name: "18:6 Accelerated",
+        relation: "A balanced 2-meal daily progression before attempting single-meal fasting."
+      },
       {
         id: "20-4",
         name: "20:4 Warrior",
@@ -329,12 +343,12 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
     fastingDaysPerWeek: 2,
     fastingDaysPattern: "Non-consecutive (e.g., Monday & Thursday)",
     recommendedReducedCalories: "Approx. 500–600 kcal on fasting days",
-    mealStructureGuide: "On the 5 standard days, eat balanced meals according to natural appetite without observing hourly fasting timers. On the 2 non-consecutive fasting days (such as Monday and Thursday), research protocols conventionally budget a reduced intake of roughly 500 to 600 kcal depending on individual nutritional requirements. This can be enjoyed as two modest meals (e.g., lunch and dinner) or as a single evening meal emphasizing lean protein, vegetables, and light broth.",
+    mealStructureGuide: "On the 5 standard days, eat balanced meals according to natural appetite without observing hourly fasting timers. On the 2 non-consecutive fasting days (such as Monday and Thursday), research protocols conventionally budget a reduced intake of roughly 500 to 600 kcal depending on individual nutritional requirements. To maximize satiety and preserve lean tissue within this caloric budget, emphasize nutrient-dense, high-protein, and fiber-forward whole foods rather than rigid meal plans. Practical examples include steamed eggs with leafy greens, grilled poultry breast with roasted broccoli, tofu and vegetable stir-fries, or warm vegetable and bone broths. These foods slow gastric emptying and provide volume, preventing sharp hunger spikes throughout reduced-intake days.",
     whoShouldChoose: "The 5:2 protocol is ideal for individuals who dislike daily hourly eating clocks, work unpredictable shift schedules, or travel frequently during the week and prefer a weekly lifestyle rhythm over daily time restriction.",
     faqs: [
       {
         question: "Do the two fasting days need to be consecutive?",
-        answer: "No. In fact, consecutive fasting days are not recommended on 5:2. Separating them—such as fasting on Monday and Thursday—ensures sustainable recovery, steady energy, and prevents excessive fatigue."
+        answer: "No. In fact, consecutive fasting days are not recommended on 5:2. Separating them—such as fasting on Monday and Thursday—ensures sustainable recovery, steady energy, and prevents excessive fatigue. You can adjust the exact days to match your schedule using our principles on [choosing your fasting window](/guides/how-to-choose-a-fasting-window)."
       },
       {
         question: "What can I drink on the 5:2 reduced-intake days?",
@@ -342,7 +356,7 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
       },
       {
         question: "Can I combine 5:2 with 16:8 daily intermittent fasting?",
-        answer: "Yes, many experienced fasters combine the two by maintaining a 16:8 eating window on their standard days while keeping calories to 500-600 kcal on their two designated weekly fasting days."
+        answer: "Yes, many experienced fasters combine the two by maintaining a [16:8 daily intermittent fasting](/fasting-methods/16-8) eating window on their standard days while keeping calories to 500-600 kcal on their two designated weekly fasting days."
       }
     ],
     relatedGuides: [

@@ -248,40 +248,44 @@ export default function WhatBreaksAFastPage() {
                   <td className="p-3.5 sm:p-4 text-error font-medium">Adds calories; breaks a strict zero-calorie fast</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Sweetened tea</th>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Diet soda / Artificial sweeteners</th>
+                  <td className="p-3.5 sm:p-4">Minimal/no calories; compatible with caloric fasts, check tolerance</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Juice &amp; regular soft drinks</th>
                   <td className="p-3.5 sm:p-4 text-error font-medium">Breaks a zero-calorie fast</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Juice</th>
-                  <td className="p-3.5 sm:p-4 text-error font-medium">Breaks a zero-calorie fast</td>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Mouthwash &amp; toothpaste (swallowed vs spit)</th>
+                  <td className="p-3.5 sm:p-4">Does not break a fast when spit out normally; negligible absorption</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Regular soft drinks</th>
-                  <td className="p-3.5 sm:p-4 text-error font-medium">Breaks a zero-calorie fast</td>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Pre-workout supplements</th>
+                  <td className="p-3.5 sm:p-4">Check label: zero-calorie versions maintain calorie fast; BCAAs/sugars break it</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Protein shakes</th>
-                  <td className="p-3.5 sm:p-4 text-error font-medium">Breaks a fast</td>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Prescription medication</th>
+                  <td className="p-3.5 sm:p-4 font-medium text-primary">Always take as prescribed; clinical health overrides lifestyle fasting rules</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Protein shakes &amp; BCAAs</th>
+                  <td className="p-3.5 sm:p-4 text-error font-medium">Inconsistent with a strict zero-calorie fast; definitions vary by protocol</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
                   <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Bone broth</th>
                   <td className="p-3.5 sm:p-4 text-error font-medium">Contains energy/protein; not a zero-calorie fast</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Calorie-containing electrolytes</th>
-                  <td className="p-3.5 sm:p-4 text-error font-medium">Break a zero-calorie fast</td>
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Sugar-free gum &amp; mints</th>
+                  <td className="p-3.5 sm:p-4">Check label; typically minor trace calories/sweeteners, caution on digestive rest</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Vitamins &amp; Supplements</th>
+                  <td className="p-3.5 sm:p-4">Check Supplement Facts; dry tablets differ from gummies (added sugars) or softgels (oils)</td>
                 </tr>
                 <tr className="hover:bg-surface-container/50 transition-colors">
                   <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Zero-calorie electrolytes</th>
-                  <td className="p-3.5 sm:p-4">No calories, but check the label and purpose of the fast</td>
-                </tr>
-                <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Sugar-free gum</th>
-                  <td className="p-3.5 sm:p-4">Depends on formulation and your definition of fasting</td>
-                </tr>
-                <tr className="hover:bg-surface-container/50 transition-colors">
-                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Non-nutritive sweeteners</th>
-                  <td className="p-3.5 sm:p-4">Little/no energy in many products, but effects beyond calories are not identical</td>
+                  <td className="p-3.5 sm:p-4">Maintains zero-calorie fast; verify no added sugar or maltodextrin</td>
                 </tr>
               </tbody>
             </table>
@@ -558,26 +562,96 @@ export default function WhatBreaksAFastPage() {
           </p>
         </section>
 
-        {/* Section 11: Do Vitamins and Supplements Break a Fast? */}
+        {/* Section 11: Do Vitamins, Supplements, and Medications Break a Fast? */}
         <section className="space-y-4">
           <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
-            Do Vitamins and Supplements Break a Fast?
+            Do Vitamins, Supplements, and Medications Break a Fast?
           </h2>
           <p className="text-on-surface-variant leading-relaxed">
-            There is no single rule for every supplement because formulations differ.
+            There is no single rule for every supplement because formulations and delivery formats differ substantially.
           </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            A capsule may contain very little energy, while a gummy supplement can contain sugar or other calorie-containing ingredients. Protein powders, collagen products, amino-acid products, and meal-replacement supplements are clearly not equivalent to a calorie-free drink.
-          </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            If a supplement contains meaningful calories, protein, carbohydrate, or fat, it does not fit a strict zero-calorie fasting window.
-          </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            Also consider the instructions for the supplement itself. Some products are intended to be taken with food, and changing when you take medication or supplements can have practical consequences.
-          </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            Don&apos;t change prescribed medication timing just to maintain a fasting window without discussing it with your healthcare professional.
-          </p>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Vitamins &amp; Minerals: Inspecting the Supplement Facts Panel
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Dietary supplements vary widely in their active ingredients, delivery formats, and inactive binders. Because formulations differ significantly across brands, no single caloric rule applies to all vitamins. Always inspect the product&apos;s Supplement Facts panel and ingredient list, as recommended by the{" "}
+                <a
+                  href="https://ods.od.nih.gov/HealthInformation/ODS_Frequently_Asked_Questions.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  <span>National Institutes of Health Office of Dietary Supplements (ODS)</span>
+                  <ExternalLink className="w-3.5 h-3.5 inline flex-shrink-0" />
+                </a>{" "}
+                and the{" "}
+                <a
+                  href="https://ods.od.nih.gov/Research/Dietary_Supplement_Label_Database.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  <span>Dietary Supplement Label Database (DSLD)</span>
+                  <ExternalLink className="w-3.5 h-3.5 inline flex-shrink-0" />
+                </a>
+                .
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                As a practical guide: unflavored mineral tablets, dry multivitamin tablets, and plain capsules without caloric fillers generally contain negligible nutritional energy and are commonly taken during fasting windows if tolerated on an empty stomach. However, <strong>gummy vitamins</strong> routinely contain added sugars, syrups, or gelatin, providing measurable caloric energy that breaks a zero-calorie fast. Similarly, softgel capsules delivering fat-soluble vitamins (such as Vitamin D, E, or omega-3 fish oils) contain carrier oils that provide caloric energy and are best absorbed when taken alongside meals in your eating window.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Toothpaste and Mouthwash: Oral Care in Lifestyle Fasting
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                In ordinary lifestyle intermittent fasting, standard oral hygiene habits—such as brushing your teeth and rinsing with mouthwash—are widely practiced and considered acceptable during fasting windows when products are rinsed and spit out normally rather than swallowed.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                However, fasting rules and definitions vary across different contexts:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Pre-procedural or surgical fasting:</strong> Clinical instructions from your healthcare facility or anesthesia team strictly override lifestyle fasting practices. Healthcare facilities provide specific pre-procedure instructions regarding oral intake, sipping water, or rinsing prior to surgery or sedation; always follow your facility&apos;s exact instructions.</li>
+                <li><strong>Religious fasting traditions:</strong> Cultural and religious fasting traditions maintain specific theological rules regarding oral contact, tasting, or inadvertent swallowing. Follow the authoritative rules established by your specific religious tradition or community guidance.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-primary tracking-tight">
+                Prescription Medications: Clinical Health Always Overrides Fasting
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                <strong>Never pause, delay, skip, or alter the timing of prescribed medications</strong> to preserve an intermittent fasting schedule.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                As emphasized in clinical intermittent fasting guidance from{" "}
+                <a
+                  href="https://www.hopkinsmedicine.org/health/expert-qa/intermittent-fasting-what-is-it-and-how-does-it-work"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  <span>Johns Hopkins Medicine</span>
+                  <ExternalLink className="w-3.5 h-3.5 inline flex-shrink-0" />
+                </a>{" "}
+                and the{" "}
+                <a
+                  href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/intermittent-fasting/faq-20441303"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  <span>Mayo Clinic</span>
+                  <ExternalLink className="w-3.5 h-3.5 inline flex-shrink-0" />
+                </a>
+                , personal health and medical safety always take precedence over fasting timers. If a prescription specifies that it must be taken with food, consume it with food. If you take medications for blood glucose regulation, blood pressure, thyroid replacement, or cardiovascular health, consult your prescribing physician or pharmacist to discuss safe administration timing alongside any eating pattern.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Section 12: Does Lemon Water Break a Fast? */}
@@ -623,23 +697,40 @@ export default function WhatBreaksAFastPage() {
           </p>
         </section>
 
-        {/* Section 14: What About Protein Powder, BCAAs, or Collagen? */}
+        {/* Section 14: What About Protein Powder, BCAAs, Collagen, and Pre-Workout? */}
         <section className="space-y-4">
           <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
-            What About Protein Powder, BCAAs, or Collagen?
+            What About Protein Powder, BCAAs, Collagen, and Pre-Workout?
           </h2>
           <p className="text-on-surface-variant leading-relaxed">
-            These products contain nutrients that are intended to be consumed, not simply used as hydration.
+            These fitness products are designed to deliver targeted nutrients or ergogenic aids, but their ingredients determine whether they belong in the fasting or eating window.
           </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            Protein powder provides protein and calories. Collagen products can provide protein. BCAA products provide amino acids.
-          </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            They therefore do not belong in a strict zero-calorie fasting window.
-          </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            If you use these products around exercise, place them within your eating window if maintaining the fasting period is important to you.
-          </p>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Protein Powder, BCAAs, and Collagen
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Protein powders (such as whey, casein, or plant-based proteins) and collagen peptides provide dietary protein and calories per serving. Consuming them clearly provides nutritional energy, ending a zero-calorie fasting window.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Branched-Chain Amino Acids (BCAAs) are individual amino acids that serve as the building blocks of protein. Amino-acid supplements are inconsistent with a strict zero-calorie fast because amino acids are metabolizable macronutrients that yield energy. However, fasting definitions vary depending on your specific protocol: some athletic or modified fasting approaches permit targeted amino acids prior to training, while strict zero-calorie and metabolic fasts exclude them. Furthermore, product composition and labeling differ substantially across brands—some powders declare zero calories on the label because free-form amino acids are not categorized as intact protein under certain regulatory labeling conventions, whereas others include flavorings, carbohydrates, or additional ingredients. Always check the label, and if your goal is an unambiguous zero-calorie fast, place amino-acid supplements inside your eating window.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Pre-Workout Formulations: Label Inspection Required
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Pre-workout supplements differ substantially by manufacturer and formulation. Some products contain only active stimulants or ergogenic ingredients (such as caffeine or beta-alanine) with non-nutritive sweeteners and negligible caloric energy.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                However, many pre-workout drinks incorporate added carbohydrates (like maltodextrin or dextrose), fruit powders, or free-form amino acids (including BCAAs) that contribute energy and break a zero-calorie fast. Always inspect both the Supplement Facts panel and the &ldquo;Other Ingredients&rdquo; list before taking a pre-workout drink during fasting hours.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Section 15: What About Diet Soda? */}
@@ -694,37 +785,49 @@ export default function WhatBreaksAFastPage() {
           <div className="space-y-4">
             <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
               <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
-                Strict zero-calorie fast
+                Strict Zero-Calorie &amp; &ldquo;Clean Fasting&rdquo; Conventions
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                The rule is straightforward: <strong>No calories.</strong>
+                The term &ldquo;clean fasting&rdquo; is a popular lifestyle convention rather than a standardized medical diagnosis. In practice, it describes an uncomplicated, zero-energy approach: <strong>no calories, no non-nutritive sweeteners, and no food flavorings.</strong>
               </p>
               <p className="text-on-surface-variant leading-relaxed">
-                Water is the simplest option. Caloric drinks, food, protein, sugar, milk, cream, and broth do not fit this definition.
+                Plain water, unflavored sparkling water, black coffee, and plain unsweetened black or green tea are the standard choices. Caloric drinks, food, protein, sugar, milk, cream, broth, and artificial sweeteners do not fit this convention. It is favored by fasters who prefer clear, uncomplicated behavioral boundaries.
               </p>
             </div>
 
             <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
               <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
-                Typical intermittent fasting
+                Fasting for Digestive Rest
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Time-restricted eating focuses on keeping food intake within a defined eating window. During the fasting period, people commonly choose water, plain tea, or black coffee.
+                If your reason for fasting is temporary gastrointestinal rest (allowing digestive secretion and motor activity to pause between meals), anything that stimulates gastric acid secretion, digestive enzyme production, or gastrointestinal motility may interfere with that rest.
               </p>
               <p className="text-on-surface-variant leading-relaxed">
-                This is a practical routine rather than a laboratory protocol.
+                This can include acidic drinks, broths, and potentially non-caloric sweeteners or chewing gum that trigger sensory or digestive responses. For fasters prioritizing a quiet digestive tract, plain water and mild herbal infusions minimize sensory and digestive stimulation.
               </p>
             </div>
 
             <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
               <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
-                Medical or laboratory fasting
+                Weight Management &amp; &ldquo;Dirty Fasting&rdquo; Conventions
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Medical tests and procedures can have their own instructions. If a healthcare professional tells you to fast before a test, procedure, or medication, <strong>follow those instructions rather than using an internet fasting guide</strong>.
+                Similarly, &ldquo;dirty fasting&rdquo; is an informal community term, not a clinical definition. It refers to allowing small, trace amounts of energy (such as a splash of unsweetened plant milk in coffee, a piece of sugar-free gum, or a zero-calorie sweetened beverage) during fasting hours.
               </p>
               <p className="text-on-surface-variant leading-relaxed">
-                The rules for a medical fast can be different from the rules for a lifestyle intermittent-fasting schedule.
+                If your primary goal is an overall daily caloric deficit or managing eating windows, a trivial amount of trace calories (typically under 10–15 kcal) does not significantly derail a broader energy deficit or prevent long-term weight loss. While trace calories technically mean the fast is not strictly zero-calorie, individual flexibility can sometimes make the routine more sustainable in daily life.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Medical or Laboratory Fasting
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Medical tests and procedures have strict clinical instructions that supersede lifestyle fasting entirely. If a healthcare professional directs you to fast before a blood lipid panel, fasting glucose test, surgery, or procedure, <strong>follow those specific instructions exclusively</strong>.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Black coffee, tea, or supplements may alter lab values (e.g. liver enzymes, blood glucose, or hydration markers), even when they fit lifestyle intermittent fasting.
               </p>
             </div>
           </div>
