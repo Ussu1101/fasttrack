@@ -376,6 +376,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
         description: "Compare 5:2 with whole-day alternating fasting schedules and 14-day protocol cycles."
       },
       {
+        title: "Eat Stop Eat (24-Hour) Fasting Guide",
+        href: "/fasting-methods/eat-stop-eat",
+        description: "Compare 5:2 with single-day 24-hour dinner-to-dinner periodic fasting."
+      },
+      {
         title: "How to Break an Intermittent Fast",
         href: "/guides/how-to-break-a-fast",
         description: "Healthy morning refeeding routines after a reduced-intake 5:2 fasting day."

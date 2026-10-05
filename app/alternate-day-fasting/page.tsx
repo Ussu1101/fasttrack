@@ -361,6 +361,10 @@ export default function AlternateDayFastingPage() {
               5:2 weekly guide
             </Link>
             , our{" "}
+            <Link href="/fasting-methods/eat-stop-eat" className="text-primary font-semibold underline">
+              Eat Stop Eat (24-hour) guide
+            </Link>
+            , our{" "}
             <Link href="/fasting-methods/omad" className="text-primary font-semibold underline">
               OMAD (One Meal a Day) guide
             </Link>

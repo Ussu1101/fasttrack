@@ -12,6 +12,10 @@ import {
   DEFAULT_NIGHT_SHIFT_INPUTS,
   calculateIntervalDuration,
 } from "../components/tools/NightShiftFastingScheduler";
+import {
+  calculateEatStopEatSchedule,
+  DEFAULT_EAT_STOP_EAT_INPUTS,
+} from "../components/tools/EatStopEatScheduleTool";
 
 describe("FastTrack Calculation Engine", () => {
   describe("Critical Requirement: 16:8 Protocol starting at 20:00", () => {
@@ -528,6 +532,79 @@ describe("FastTrack Calculation Engine", () => {
       });
       expect(split.workSchedule.eatingWindowStart).toBe("17:00");
       expect(split.workSchedule.eatingWindowEnd).toBe("01:00");
+    });
+  });
+
+  describe("Eat Stop Eat 24-Hour Schedule Tool Calculation Logic", () => {
+    it("handles default dinner-to-dinner 19:00 schedule with 24-hour duration", () => {
+      const { schedule, validationError } = calculateEatStopEatSchedule(DEFAULT_EAT_STOP_EAT_INPUTS);
+
+      expect(validationError).toBeUndefined();
+      expect(schedule.durationHours).toBe(24);
+      expect(schedule.startFormatted12).toBe("7:00 PM");
+      expect(schedule.startFormatted24).toBe("19:00");
+      expect(schedule.endFormatted12).toBe("7:00 PM");
+      expect(schedule.endFormatted24).toBe("19:00");
+      expect(schedule.fastDayName).toBe("Monday");
+      expect(schedule.endDayName).toBe("Tuesday");
+      expect(schedule.explanation).toContain("Monday dinner at 7:00 PM");
+      expect(schedule.explanation).toContain("Tuesday at 7:00 PM");
+      expect(schedule.secondFast).toBeUndefined();
+    });
+
+    it("handles 2x weekly schedule with second non-consecutive fast day", () => {
+      const { schedule } = calculateEatStopEatSchedule({
+        ...DEFAULT_EAT_STOP_EAT_INPUTS,
+        frequency: "2x",
+        fastingDay2: "Thursday",
+      });
+
+      expect(schedule.durationHours).toBe(24);
+      expect(schedule.secondFast).toBeDefined();
+      expect(schedule.secondFast?.fastDayName).toBe("Thursday");
+      expect(schedule.secondFast?.endDayName).toBe("Friday");
+      expect(schedule.secondFast?.startFormatted12).toBe("7:00 PM");
+      expect(schedule.secondFast?.endFormatted12).toBe("7:00 PM");
+    });
+
+    it("handles lunch-to-lunch anchor at 13:00 correctly", () => {
+      const { schedule } = calculateEatStopEatSchedule({
+        anchorType: "lunch-to-lunch",
+        startTime: "13:00",
+        fastingDay1: "Wednesday",
+        frequency: "1x",
+      });
+
+      expect(schedule.durationHours).toBe(24);
+      expect(schedule.startFormatted12).toBe("1:00 PM");
+      expect(schedule.endFormatted12).toBe("1:00 PM");
+      expect(schedule.fastDayName).toBe("Wednesday");
+      expect(schedule.endDayName).toBe("Thursday");
+      expect(schedule.explanation).toContain("Wednesday lunch");
+    });
+
+    it("handles breakfast-to-breakfast anchor at 08:00 correctly", () => {
+      const { schedule } = calculateEatStopEatSchedule({
+        anchorType: "breakfast-to-breakfast",
+        startTime: "08:00",
+        fastingDay1: "Sunday",
+        frequency: "1x",
+      });
+
+      expect(schedule.durationHours).toBe(24);
+      expect(schedule.startFormatted12).toBe("8:00 AM");
+      expect(schedule.endFormatted12).toBe("8:00 AM");
+      expect(schedule.fastDayName).toBe("Sunday");
+      expect(schedule.endDayName).toBe("Monday");
+    });
+
+    it("validates malformed start time inputs gracefully", () => {
+      const { validationError } = calculateEatStopEatSchedule({
+        ...DEFAULT_EAT_STOP_EAT_INPUTS,
+        startTime: "invalid-time",
+      });
+
+      expect(validationError).toBe("Please enter a valid start time in HH:mm format.");
     });
   });
 });

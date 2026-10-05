@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/electrolytes-while-fasting",
     "/intermittent-fasting-plateau",
     "/fasting-for-night-shift-workers",
+    "/fasting-methods/eat-stop-eat",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: now,

@@ -85,6 +85,16 @@ const PROTOCOL_COMPARISON_DATA = [
     difficulty: "Weekly Pattern",
     slug: "5-2",
   },
+  {
+    name: "Eat Stop Eat (24-Hour)",
+    ratio: "24h (1–2x/wk)",
+    fastHours: "24h",
+    eatHours: "Normal",
+    meals: "Meal on every calendar day; 24h dinner-to-dinner pause",
+    bestFor: "Practitioners wanting weekly calorie control without daily hourly timers",
+    difficulty: "Advanced",
+    slug: "eat-stop-eat",
+  },
 ];
 
 const DIRECT_FAQS = [
@@ -189,6 +199,49 @@ export default function FastingMethodsIndexPage() {
             </div>
           </div>
         ))}
+
+        {/* Eat Stop Eat Card */}
+        <div className="bg-surface-container-lowest rounded-2xl p-6 border border-surface-container hover:border-surface-container-high shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div>
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <span className="font-headline text-xl font-bold text-on-surface">
+                Eat Stop Eat (24-Hour)
+              </span>
+              <span className="px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-xs font-semibold tabular-numbers">
+                24h (1–2x/wk)
+              </span>
+            </div>
+
+            <span className="text-xs font-semibold text-secondary block mb-3">
+              Periodic 24-Hour Fasting Rhythm
+            </span>
+
+            <p className="font-body-sm text-sm text-on-surface-variant mb-4 leading-relaxed">
+              Incorporate one or two non-consecutive 24-hour fasts into a normal week. Meals are consumed on every calendar day, typically on a dinner-to-dinner schedule.
+            </p>
+
+            <div className="space-y-2 mb-4 text-xs text-on-surface-variant">
+              <div className="flex items-start gap-2">
+                <Clock className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <span className="text-on-surface font-medium">Fast Mon 7:00 PM → Tue 7:00 PM</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Activity className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Extended digestive rest without daily hourly restrictions</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4 border-t border-surface-container/60 flex items-center justify-between gap-2">
+            <Link
+              href="/fasting-methods/eat-stop-eat"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-primary-container transition-colors"
+            >
+              <span>Method Guide &amp; Schedule</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Protocol Comparison Table Matrix */}
