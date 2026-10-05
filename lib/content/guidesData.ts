@@ -375,7 +375,7 @@ export const GUIDES: GuideArticle[] = [
           heading: "Which Fasting Windows Work Best for Sleep Quality?",
           body: [
             "Not all fasting windows interact with sleep equally. An early time-restricted eating window (eTRE, e.g., 8:00 AM to 4:00 PM) or a balanced midday schedule (e.g., 11:30 AM to 7:30 PM) often yields superior sleep comfort compared to late-evening windows that conclude right before bed.",
-            "Schedules such as the [14:10 Gentle Reset](/fasting-methods/14-10) or [16:8 Protocol](/fasting-methods/16-8) ending between 6:00 PM and 7:30 PM provide an effective balance between social dining and nighttime digestive rest. You can model your sleep buffer using the [FastTrack Schedule Calculator](/#calculator).",
+            "Schedules such as the [14:10 Gentle Reset](/fasting-methods/14-10) or [16:8 Protocol](/fasting-methods/16-8) ending between 6:00 PM and 7:30 PM provide an effective balance between social dining and nighttime digestive rest. For individuals working overnight rosters, see our dedicated guide and tool on [intermittent fasting for night shift workers](/fasting-for-night-shift-workers) to coordinate eating around daytime sleep windows. You can also model your sleep buffer using the [FastTrack Schedule Calculator](/#calculator).",
           ],
         },
         {

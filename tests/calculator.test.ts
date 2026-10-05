@@ -7,6 +7,11 @@ import { PROTOCOLS } from "../lib/calculator/protocols";
 import { generateFourteenDaySchedule } from "../components/tools/AdfComparisonWidget";
 import { evaluateElectrolyteNeeds } from "../components/tools/PersonalElectrolyteEvaluator";
 import { evaluatePlateau, DEFAULT_DIAGNOSTIC_ANSWERS } from "../components/tools/FastingPlateauDiagnostic";
+import {
+  calculateNightShiftSchedule,
+  DEFAULT_NIGHT_SHIFT_INPUTS,
+  calculateIntervalDuration,
+} from "../components/tools/NightShiftFastingScheduler";
 
 describe("FastTrack Calculation Engine", () => {
   describe("Critical Requirement: 16:8 Protocol starting at 20:00", () => {
@@ -412,6 +417,117 @@ describe("FastTrack Calculation Engine", () => {
       const res = evaluatePlateau(DEFAULT_DIAGNOSTIC_ANSWERS);
       expect(res.category).toBe("measurement-artifact");
       expect(res.badge).toBe("Measurement Artifact");
+    });
+  });
+
+  describe("Night-Shift Fasting Scheduler Calculation Engine", () => {
+    it("handles default 19:00–07:00 shift with 16:8 protocol and before-shift pattern", () => {
+      const { workSchedule, offSchedule, validationError } = calculateNightShiftSchedule(DEFAULT_NIGHT_SHIFT_INPUTS);
+
+      expect(validationError).toBeUndefined();
+      expect(workSchedule.dayType).toBe("work");
+      expect(workSchedule.eatingWindowStart).toBe("16:00");
+      expect(workSchedule.eatingWindowEnd).toBe("00:00");
+      expect(workSchedule.eatingWindowFormatted).toContain("8h");
+      expect(workSchedule.fastingWindowFormatted).toContain("16h");
+      expect(workSchedule.caffeineCutoffFormatted).toContain("2:30 AM");
+      expect(workSchedule.blocks.length).toBeGreaterThan(0);
+
+      expect(offSchedule.dayType).toBe("off");
+      expect(offSchedule.eatingWindowStart).toBe("12:00");
+      expect(offSchedule.eatingWindowEnd).toBe("20:00");
+      expect(offSchedule.workWindowFormatted).toContain("No Scheduled Shift");
+    });
+
+    it("handles 14:10 protocol with accurate 10h eating duration", () => {
+      const { workSchedule } = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        protocol: "14-10",
+      });
+
+      expect(workSchedule.eatingWindowStart).toBe("16:00");
+      expect(workSchedule.eatingWindowEnd).toBe("02:00");
+      expect(workSchedule.eatingWindowFormatted).toContain("10h");
+      expect(workSchedule.fastingWindowFormatted).toContain("14h");
+    });
+
+    it("handles 12:12 protocol with accurate 12h eating duration", () => {
+      const { workSchedule } = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        protocol: "12-12",
+      });
+
+      expect(workSchedule.eatingWindowStart).toBe("16:00");
+      expect(workSchedule.eatingWindowEnd).toBe("04:00");
+      expect(workSchedule.eatingWindowFormatted).toContain("12h");
+      expect(workSchedule.fastingWindowFormatted).toContain("12h");
+    });
+
+    it("correctly computes overnight cross-midnight intervals", () => {
+      // 19:00 to 07:00 is 12 hours (720 min)
+      expect(calculateIntervalDuration(19 * 60, 7 * 60)).toBe(720);
+      // 23:00 to 07:00 is 8 hours (480 min)
+      expect(calculateIntervalDuration(23 * 60, 7 * 60)).toBe(480);
+      // Daytime 08:30 to 15:30 is 7 hours (420 min)
+      expect(calculateIntervalDuration(8 * 60 + 30, 15 * 60 + 30)).toBe(420);
+    });
+
+    it("supports sleep windows crossing midnight", () => {
+      const { workSchedule, validationError } = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        shiftStart: "14:00",
+        shiftEnd: "22:00",
+        sleepStart: "23:30",
+        sleepEnd: "07:00",
+      });
+
+      expect(validationError).toBeUndefined();
+      expect(workSchedule.sleepWindowFormatted).toBe("11:30 PM – 7:00 AM");
+    });
+
+    it("validates equal shift times and ambiguous inputs", () => {
+      const { validationError } = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        shiftStart: "19:00",
+        shiftEnd: "19:00",
+      });
+
+      expect(validationError).toBe("Shift start and end times cannot be identical.");
+    });
+
+    it("validates equal sleep times", () => {
+      const { validationError } = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        sleepStart: "08:00",
+        sleepEnd: "08:00",
+      });
+
+      expect(validationError).toBe("Sleep start and end times cannot be identical.");
+    });
+
+    it("validates malformed time inputs safely", () => {
+      const { validationError } = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        shiftStart: "invalid-time",
+      });
+
+      expect(validationError).toContain("valid shift start and end times");
+    });
+
+    it("handles during-early-shift and split meal patterns", () => {
+      const earlyShift = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        eatingPattern: "during-early-shift",
+      });
+      expect(earlyShift.workSchedule.eatingWindowStart).toBe("19:00");
+      expect(earlyShift.workSchedule.eatingWindowEnd).toBe("03:00");
+
+      const split = calculateNightShiftSchedule({
+        ...DEFAULT_NIGHT_SHIFT_INPUTS,
+        eatingPattern: "split",
+      });
+      expect(split.workSchedule.eatingWindowStart).toBe("17:00");
+      expect(split.workSchedule.eatingWindowEnd).toBe("01:00");
     });
   });
 });

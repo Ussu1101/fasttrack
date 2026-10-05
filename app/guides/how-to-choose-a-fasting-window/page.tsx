@@ -558,7 +558,11 @@ export default function HowToChooseAFastingWindowPage() {
                 “Can this schedule fit most of my normal days?”
               </blockquote>
               <p className="text-on-surface-variant leading-relaxed">
-                If the answer is no, change the timing or consider a less restrictive schedule.
+                If the answer is no, change the timing or consider a less restrictive schedule. For non-traditional hours, overnight shifts, or rotating rosters, see our specialized guide on{" "}
+                <Link href="/fasting-for-night-shift-workers" className="text-primary font-semibold underline">
+                  Intermittent Fasting for Night Shift Workers
+                </Link>{" "}
+                to build a schedule around daytime sleep and work nights.
               </p>
             </div>
           </div>
