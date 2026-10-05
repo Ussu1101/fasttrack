@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getSiteUrl } from "@/lib/config/site";
+import PersonalElectrolyteEvaluator from "@/components/tools/PersonalElectrolyteEvaluator";
 import {
   ArrowLeft,
   Clock,
@@ -17,6 +18,7 @@ import {
   AlertTriangle,
   Heart,
   Scale,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -73,6 +75,11 @@ const FAQS = [
     question: "Do electrolyte powders break a fast?",
     answer:
       "Pure mineral salts (sodium chloride, potassium citrate, magnesium malate) contain zero calories and do not break a zero-calorie fast. However, many commercial electrolyte packets incorporate added sugars, maltodextrin, dextrose, or branched-chain amino acids (BCAAs) that supply nutritional energy and break a strict fast. Always inspect the Supplement Facts and 'Other Ingredients' panel to verify that the product is completely calorie-free.",
+  },
+  {
+    question: "How do fasting duration and workout sweat rates affect mineral requirements?",
+    answer:
+      "Shorter daily fasting periods (12 to 16 hours) allow full dietary replenishment within your eating window. When fasting extends past 20 to 24 hours, the continuous absence of dietary sodium coupled with ongoing urinary excretion increases mineral turnover. Additionally, strenuous exercise and hot climates accelerate dermal sodium loss through sweat, increasing the practical likelihood that extra fluid and mineral attention is warranted.",
   },
   {
     question: "Should I 'push through' severe dizziness or palpitations while fasting?",
@@ -139,6 +146,22 @@ export default function ElectrolytesWhileFastingPage() {
     })),
   };
 
+  const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "FastTrack Personal Electrolyte Evaluator",
+    applicationCategory: "HealthApplication",
+    operatingSystem: "All",
+    url: `${siteUrl}/electrolytes-while-fasting#electrolyte-evaluator`,
+    description:
+      "Interactive personal electrolyte evaluator for intermittent fasters. Evaluate sodium, potassium, and magnesium considerations based on fasting duration, exercise sweat loss, climate, and symptoms.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <article className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
       <script
@@ -152,6 +175,10 @@ export default function ElectrolytesWhileFastingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
       />
 
       {/* Back Link */}
@@ -206,6 +233,85 @@ export default function ElectrolytesWhileFastingPage() {
           <p className="text-on-surface-variant leading-relaxed">
             This guide explains the physiology of mineral handling during fasting, outlines who truly needs extra minerals versus who is already covered by daily meals, provides a rigorous label inspection checklist, and highlights non-negotiable safety limits for kidney and heart health.
           </p>
+        </section>
+
+        {/* Interactive Tool Section: Personal Electrolyte Evaluator */}
+        <section className="space-y-6">
+          <div className="space-y-3">
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+              Evaluate Your Personal Electrolyte Needs
+            </h2>
+            <p className="text-on-surface-variant leading-relaxed">
+              Every fasting schedule places different physiological demands on hydration and mineral turnover. Use the interactive evaluator below to assess whether your daily eating windows supply adequate sodium, potassium, and magnesium, or whether specific factors—such as longer fasting durations, hot climates, or strenuous workouts—warrant extra attention.
+            </p>
+          </div>
+
+          <PersonalElectrolyteEvaluator />
+
+          {/* Indexable Static Educational Subsections */}
+          <div className="space-y-6 pt-4">
+            <h3 className="font-headline text-xl sm:text-2xl font-bold text-on-surface tracking-tight">
+              Electrolyte Dynamics Across Different Fasting Durations &amp; Activities
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Subsection 1: 16:8 / 12-16 Hours */}
+              <div className="p-5 rounded-2xl bg-surface-container border border-surface-container-high space-y-2.5">
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                  Baseline Window: 12–16 Hours (16:8 / 14:10)
+                </span>
+                <h4 className="font-headline text-lg font-bold text-on-surface">
+                  Daily Intermittent Fasting (16:8)
+                </h4>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  During standard daily time-restricted feeding, your digestive pause is brief. Because you consume balanced whole meals every day within an 8- to 10-hour window, continuous dietary intake replenishes circulating electrolytes. For healthy adults, plain water, mineral water, and normal culinary seasoning are completely sufficient. Purchasing specialized electrolyte packets for standard 16:8 is an unnecessary expense for the vast majority of individuals.
+                </p>
+              </div>
+
+              {/* Subsection 2: 20:4 / 18-20 Hours */}
+              <div className="p-5 rounded-2xl bg-surface-container border border-surface-container-high space-y-2.5">
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                  Condensed Window: 18–20 Hours (20:4 / Warrior)
+                </span>
+                <h4 className="font-headline text-lg font-bold text-on-surface">
+                  Narrow Feeding Windows (20:4)
+                </h4>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  As the fasting period extends to 18–20 hours, the eating window narrows to just 4 to 6 hours. Consuming sufficient micronutrients and dietary fluids in a compressed timeframe requires deliberate meal planning. Individuals may notice mild afternoon fatigue or postural lightheadedness if dietary salt is overly restricted. Focusing on nutrient-dense meals with adequate seasoning easily covers mineral demands without commercial supplements.
+                </p>
+              </div>
+
+              {/* Subsection 3: 24h+ Extended Fasting */}
+              <div className="p-5 rounded-2xl bg-surface-container border border-surface-container-high space-y-2.5">
+                <span className="text-xs font-bold text-secondary uppercase tracking-wider">
+                  Extended Protocol: 24 Hours or Longer
+                </span>
+                <h4 className="font-headline text-lg font-bold text-on-surface">
+                  Extended Fasting (24+ Hours / OMAD / ADF)
+                </h4>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  When fasting exceeds 24 consecutive hours, the body receives zero incoming dietary fluids or sodium for a full circadian cycle. Continuous renal excretion (the natriuresis of fasting) gradually reduces extracellular fluid volume. During whole-day fasts, non-caloric fluids and modest culinary salt in water or bone broths are commonly used to mitigate orthostatic drops in blood pressure. However, mineral intake cannot make extended fasting safe for unmonitored individuals with underlying clinical contraindications.
+                </p>
+              </div>
+
+              {/* Subsection 4: Exercise While Fasting */}
+              <div className="p-5 rounded-2xl bg-surface-container border border-surface-container-high space-y-2.5">
+                <span className="text-xs font-bold text-secondary uppercase tracking-wider">
+                  Physiological Variable: Exercise While Fasted
+                </span>
+                <h4 className="font-headline text-lg font-bold text-on-surface">
+                  Workout Sweat Loss &amp; Exercise
+                </h4>
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Physical exercise—especially strenuous cardio or lifting in warm conditions—rapidly accelerates fluid and sodium loss through sweat. While light exercise (such as walking or gentle mobility) poses negligible electrolyte strain, heavy sweating while fasted warrants proactive hydration. Review our dedicated guide on{" "}
+                  <Link href="/guides/exercise-while-fasting" className="text-primary font-semibold underline">
+                    exercise while fasting
+                  </Link>{" "}
+                  for workout timing strategies.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Section 1: The Physiology of Minerals During Fasting */}
@@ -408,6 +514,10 @@ export default function ElectrolytesWhileFastingPage() {
             For more details on fasting drink ingredients, read our comprehensive guide on{" "}
             <Link href="/guides/what-can-you-drink-while-fasting" className="text-primary font-semibold underline">
               what you can drink while fasting
+            </Link>{" "}
+            and our analysis on{" "}
+            <Link href="/guides/what-breaks-a-fast" className="text-primary font-semibold underline">
+              whether electrolytes break a fast
             </Link>
             .
           </p>

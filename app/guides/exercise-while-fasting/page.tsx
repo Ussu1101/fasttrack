@@ -617,9 +617,14 @@ export default function ExerciseWhileFastingPage() {
               What Can You Drink While Fasting?
             </Link>{" "}
             guide explains how water, plain tea, black coffee, electrolytes, and calorie-containing drinks differ during a fasting window.
-          </p>
-          <p className="text-on-surface-variant leading-relaxed">
-            For exercise, hydration becomes especially important when you are sweating or exercising in hot conditions.
+            For exercise, hydration becomes especially important when you are sweating or exercising in hot conditions. Read our clinical guide on{" "}
+            <Link
+              href="/electrolytes-while-fasting"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              Electrolytes While Fasting
+            </Link>{" "}
+            to evaluate whether strenuous workouts or warm climates warrant extra mineral awareness.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
             Do not confuse intermittent-fasting rules with medical or laboratory fasting instructions. If you have been instructed to fast for a medical test or procedure, follow the specific instructions you were given.

@@ -651,7 +651,11 @@ export default function WhatBreaksAFastPage() {
             Read the nutrition label and ingredient list.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
-            There is also an important safety distinction: electrolyte needs are not identical for everyone, and longer or medically supervised fasts can raise questions that a simple intermittent-fasting guide cannot answer.
+            There is also an important safety distinction: electrolyte needs are not identical for everyone, and longer or medically supervised fasts can raise questions that a simple intermittent-fasting guide cannot answer. Explore our clinical guide on{" "}
+            <Link href="/electrolytes-while-fasting" className="text-primary font-semibold hover:underline">
+              Electrolytes While Fasting
+            </Link>{" "}
+            to evaluate sodium, potassium, and magnesium requirements for your specific schedule.
           </p>
           <p className="text-on-surface-variant leading-relaxed">
             For an ordinary daily fasting schedule, plain water is usually the simplest default.

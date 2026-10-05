@@ -5,6 +5,7 @@ import { parseTimeToMinutes } from "../lib/time/parser";
 import { minutesTo12Hour, minutesTo24Hour } from "../lib/time/format";
 import { PROTOCOLS } from "../lib/calculator/protocols";
 import { generateFourteenDaySchedule } from "../components/tools/AdfComparisonWidget";
+import { evaluateElectrolyteNeeds } from "../components/tools/PersonalElectrolyteEvaluator";
 
 describe("FastTrack Calculation Engine", () => {
   describe("Critical Requirement: 16:8 Protocol starting at 20:00", () => {
@@ -308,6 +309,34 @@ describe("FastTrack Calculation Engine", () => {
           expect(schedule[1].calories).toBe("Ad libitum (normal)");
         }
       }
+    });
+  });
+
+  describe("Personal Electrolyte Evaluator Decision Logic", () => {
+    it("returns 'normal-meals' for the default 12-16h sedentary temperate profile", () => {
+      const res = evaluateElectrolyteNeeds("12-16", "none", "temperate", ["none"]);
+      expect(res.category).toBe("normal-meals");
+      expect(res.title).toBe("Most people in your situation get enough from normal meals");
+      expect(res.safetyAlert).toBeUndefined();
+    });
+
+    it("returns 'extra-electrolytes' for 24+ hour extended fasting", () => {
+      const res = evaluateElectrolyteNeeds("24+", "none", "temperate", ["none"]);
+      expect(res.category).toBe("extra-electrolytes");
+      expect(res.title).toBe("Extra sodium/potassium is worth considering");
+    });
+
+    it("returns 'extra-electrolytes' for sweaty strenuous exercise even during 12-16h fasting", () => {
+      const res = evaluateElectrolyteNeeds("12-16", "sweaty", "temperate", ["none"]);
+      expect(res.category).toBe("extra-electrolytes");
+      expect(res.title).toBe("Extra sodium/potassium is worth considering");
+    });
+
+    it("triggers explicit safety warning when dizziness is selected without reassuring user to continue", () => {
+      const res = evaluateElectrolyteNeeds("12-16", "none", "temperate", ["dizziness"]);
+      expect(res.safetyAlert).toBeDefined();
+      expect(res.safetyAlert).toContain("dizziness upon standing is an important warning signal");
+      expect(res.safetyAlert).toContain("break your fast with water and balanced food");
     });
   });
 });
