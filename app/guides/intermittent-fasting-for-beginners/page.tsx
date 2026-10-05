@@ -72,6 +72,11 @@ const FAQS = [
     answer:
       "Not necessarily. Intermittent fasting is not appropriate for everyone, and individual circumstances can matter. When appropriate, consider discussing it with a healthcare professional.",
   },
+  {
+    question: "What should I do if my weight loss stops after several weeks of fasting?",
+    answer:
+      "Weight loss plateaus are a normal physiological adaptation as your body becomes lighter. Rather than jumping immediately into severe restriction or multi-day fasts, evaluate whether your stall is driven by fluid shifts, unmeasured calorie creep, or smaller-body energy needs using our dedicated Intermittent Fasting Plateau Guide & Self-Diagnostic.",
+  },
 ];
 
 export default function IntermittentFastingForBeginnersPage() {
@@ -853,6 +858,20 @@ export default function IntermittentFastingForBeginnersPage() {
                   <ExternalLink className="w-3 h-3 flex-shrink-0" />
                 </a>
               </div>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>What should I do if my weight loss stops after several weeks of fasting?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Weight loss plateaus are a normal physiological adaptation as your body becomes lighter. Rather than jumping immediately into severe restriction or multi-day fasts, evaluate whether your stall is driven by fluid shifts, unmeasured calorie creep, or smaller-body energy needs using our dedicated{" "}
+                <Link href="/intermittent-fasting-plateau" className="text-primary font-semibold underline">
+                  Intermittent Fasting Plateau Guide &amp; Self-Diagnostic
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">

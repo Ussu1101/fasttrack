@@ -597,7 +597,7 @@ export const GUIDES: GuideArticle[] = [
           heading: "6. Jumping Directly into Extreme Windows (20:4 or OMAD) on Day One",
           body: [
             "Attempting advanced, aggressive fasting schedules without an adaptation phase frequently triggers severe compensatory hunger waves, brain fog, and early burnout.",
-            "Build baseline behavioral consistency on gentle schedules like the [14:10 Gentle Reset](/fasting-methods/14-10) or [16:8 Protocol](/fasting-methods/16-8) for 2 to 4 weeks before evaluating more condensed formats like [OMAD (23:1)](/fasting-methods/omad).",
+            "Build baseline behavioral consistency on gentle schedules like the [14:10 Gentle Reset](/fasting-methods/14-10) or [16:8 Protocol](/fasting-methods/16-8) for 2 to 4 weeks before evaluating more condensed formats like [OMAD (23:1)](/fasting-methods/omad). If you encounter a weight stall later in your journey, avoid reacting with extreme fasting windows—use our dedicated [intermittent fasting plateau troubleshooting guide](/intermittent-fasting-plateau) to assess fluid shifts and metabolic changes safely.",
           ],
           keyTakeaway: "Start with an approachable window like 14:10 or 16:8 to allow hormonal and behavioral adaptation.",
         },

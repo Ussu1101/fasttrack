@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getSiteUrl } from "@/lib/config/site";
+import FastingPlateauDiagnostic from "@/components/tools/FastingPlateauDiagnostic";
 import {
   ArrowLeft,
   Clock,
@@ -19,6 +20,10 @@ import {
   Heart,
   Moon,
   AlertTriangle,
+  Compass,
+  Flame,
+  Droplets,
+  Layers,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -81,6 +86,31 @@ const FAQS = [
     answer:
       "You should consult a healthcare professional if a weight stall is accompanied by persistent extreme fatigue, unexplained cold intolerance, hair thinning, chronic constipation, irregular menstrual cycles, or leg swelling. These can be clinical signs of underlying thyroid dysfunction (hypothyroidism), hormonal imbalances, medication interactions, or fluid retention that require medical diagnosis rather than diet alterations.",
   },
+  {
+    question: "What is the difference between a measurement artifact and a true biological stall?",
+    answer:
+      "A measurement artifact occurs when daily hydration shifts, intestinal contents, sodium intake, or inconsistent scale conditions mask fat loss even though you remain in an energy deficit. A true biological stall occurs when your energy intake matches your current total daily energy expenditure over multiple consecutive weeks.",
+  },
+  {
+    question: "Why does losing weight reduce my daily maintenance calories?",
+    answer:
+      "A lighter body physically requires less energy to sustain basic cellular functions and less kinetic energy to move through daily tasks. When you lose 15 to 20 pounds, your basal metabolic rate and physical expenditure naturally decrease, meaning the calorie level that previously drove fat loss may now represent your new maintenance balance.",
+  },
+  {
+    question: "How can subtle calorie creep happen if I keep the same fasting window?",
+    answer:
+      "Fasting controls the timing of food intake rather than caloric density. Over weeks of consistent fasting, natural hunger signals can cause portion sizes to expand, cooking oils to become heavier, and liquid calories or snacks to increase without conscious awareness, easily erasing a modest caloric deficit.",
+  },
+  {
+    question: "How does a planned diet break at maintenance help resolve a plateau?",
+    answer:
+      "A structured 1- to 2-week diet break at current maintenance calories provides psychological relief, helps alleviate diet fatigue, and supports exercise performance. By temporarily removing caloric deficit pressure, it improves long-term dietary adherence without promoting fat regain.",
+  },
+  {
+    question: "Why is tracking waist circumference often more informative than the scale alone?",
+    answer:
+      "Bathroom scales measure total body mass, which includes muscle, bones, gut contents, and fluctuating water weight. Tracking waist circumference, clothing fit, and strength markers helps detect body recomposition where body fat decreases while water or muscle tissue is preserved, keeping scale weight temporarily flat.",
+  },
 ];
 
 export default function IntermittentFastingPlateauPage() {
@@ -141,6 +171,22 @@ export default function IntermittentFastingPlateauPage() {
     })),
   };
 
+  const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Intermittent Fasting Plateau Self-Diagnostic",
+    url: `${siteUrl}/intermittent-fasting-plateau#plateau-diagnostic`,
+    applicationCategory: "HealthApplication",
+    operatingSystem: "All",
+    description:
+      "An interactive 5-step self-diagnostic tool to identify whether a fasting weight stall is driven by water shifts, smaller-body energy needs, calorie creep, measurement artifacts, or adherence drift.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <article className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
       <script
@@ -154,6 +200,10 @@ export default function IntermittentFastingPlateauPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
       />
 
       {/* Back Link */}
@@ -210,8 +260,146 @@ export default function IntermittentFastingPlateauPage() {
           </p>
         </section>
 
+        {/* Section: Interactive Diagnostic Tool */}
+        <section className="space-y-4">
+          <div>
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+              Evaluate Your Stall: 5-Step Plateau Diagnostic
+            </h2>
+            <p className="text-on-surface-variant leading-relaxed mt-2">
+              Before altering your nutrition plan or extending your fasting hours, use this structured self-diagnostic to identify which physiological or behavioural pattern is most likely stalling your scale weight. Review common pitfalls in our guide on{" "}
+              <Link href="/guides/common-fasting-mistakes" className="text-primary font-semibold underline">
+                common fasting mistakes
+              </Link>
+              , explore baseline protocols like{" "}
+              <Link href="/fasting-methods/16-8" className="text-primary font-semibold underline">
+                16:8 intermittent fasting
+              </Link>
+              , or audit sleep recovery with our guide on{" "}
+              <Link href="/guides/fasting-and-sleep" className="text-primary font-semibold underline">
+                fasting and sleep
+              </Link>
+              .
+            </p>
+          </div>
+
+          <FastingPlateauDiagnostic />
+
+          {/* Static HTML Summary of All 5 Possible Causes */}
+          <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-surface-container border border-surface-container-high space-y-5">
+            <div className="space-y-1">
+              <span className="text-xs font-bold text-primary uppercase tracking-wider">
+                Comprehensive Diagnostic Reference
+              </span>
+              <h3 className="font-headline text-xl sm:text-2xl font-bold text-on-surface">
+                The Five Primary Drivers of Weight Loss Stalls
+              </h3>
+              <p className="text-xs sm:text-sm text-on-surface-variant">
+                Every fasting plateau stems from one or more of these physiological or behavioral mechanisms:
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div className="p-4 rounded-xl bg-surface-container-low border border-surface-container space-y-2">
+                <div className="flex items-center gap-2">
+                  <Droplets className="w-4 h-4 text-secondary flex-shrink-0" />
+                  <h4 className="font-headline text-sm sm:text-base font-bold text-on-surface">
+                    1. Water &amp; Fluid Shifts
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  High cortisol from sleep debt or psychological stress elevates aldosterone, while heavy resistance workouts create muscular inflammation holding 2 to 5 lbs of temporary water weight.
+                </p>
+                <a
+                  href="#water-fluid-shifts"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline pt-1"
+                >
+                  <span>Explore fluid shifts below</span>
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+
+              <div className="p-4 rounded-xl bg-surface-container-low border border-surface-container space-y-2">
+                <div className="flex items-center gap-2">
+                  <Flame className="w-4 h-4 text-primary flex-shrink-0" />
+                  <h4 className="font-headline text-sm sm:text-base font-bold text-on-surface">
+                    2. Smaller-Body Energy Needs
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Losing mass lowers resting metabolic rate and the energy cost of movement. Calorie targets that previously created a deficit now match your lighter body&apos;s maintenance balance.
+                </p>
+                <a
+                  href="#smaller-body-energy-needs"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline pt-1"
+                >
+                  <span>Explore metabolic adaptation below</span>
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+
+              <div className="p-4 rounded-xl bg-surface-container-low border border-surface-container space-y-2">
+                <div className="flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-tertiary flex-shrink-0" />
+                  <h4 className="font-headline text-sm sm:text-base font-bold text-on-surface">
+                    3. Subtle Calorie Creep
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Unmeasured cooking fats, salad dressings, liquid calories in coffees, or gradual portion expansion during feeding windows quietly erase a modest daily deficit.
+                </p>
+                <a
+                  href="#calorie-creep"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline pt-1"
+                >
+                  <span>Explore calorie creep below</span>
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+
+              <div className="p-4 rounded-xl bg-surface-container-low border border-surface-container space-y-2">
+                <div className="flex items-center gap-2">
+                  <Scale className="w-4 h-4 text-primary flex-shrink-0" />
+                  <h4 className="font-headline text-sm sm:text-base font-bold text-on-surface">
+                    4. Measurement Artifact
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Sporadic weighing times, fluctuating gut contents, or relying exclusively on bathroom scales without waist circumference measurements obscure true body recomposition.
+                </p>
+                <a
+                  href="#measurement-artifact"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline pt-1"
+                >
+                  <span>Explore scale measurement below</span>
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+
+              <div className="p-4 rounded-xl bg-surface-container-low border border-surface-container space-y-2 md:col-span-2">
+                <div className="flex items-center gap-2">
+                  <Layers className="w-4 h-4 text-secondary flex-shrink-0" />
+                  <h4 className="font-headline text-sm sm:text-base font-bold text-on-surface">
+                    5. Behavioral Adherence Drift
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                  Gradual relaxation of fasting boundaries—such as weekend eating window expansion or shifting meal schedules—disrupts circadian digestive consistency and weekly energy balance.
+                </p>
+                <a
+                  href="#adherence-drift"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline pt-1"
+                >
+                  <span>Explore adherence drift below</span>
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: The Physiology of a Plateau */}
-        <section className="space-y-6">
+        <section id="smaller-body-energy-needs" className="space-y-6 scroll-mt-24">
           <div>
             <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
               Why Weight Loss Naturally Slows Down
@@ -264,7 +452,7 @@ export default function IntermittentFastingPlateauPage() {
           </p>
 
           <div className="space-y-4 pt-2">
-            <div className="p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+            <div id="calorie-creep" className="p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2 scroll-mt-24">
               <h3 className="font-headline text-base sm:text-lg font-bold text-on-surface">
                 1. Subtle Energy Intake Creep During the Eating Window
               </h3>
@@ -282,7 +470,7 @@ export default function IntermittentFastingPlateauPage() {
               </p>
             </div>
 
-            <div className="p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+            <div id="water-fluid-shifts" className="p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2 scroll-mt-24">
               <h3 className="font-headline text-base sm:text-lg font-bold text-on-surface">
                 3. Water Retention Masking True Adipose Loss
               </h3>
@@ -356,7 +544,7 @@ export default function IntermittentFastingPlateauPage() {
         </section>
 
         {/* Section 4: What NOT to Do */}
-        <section className="space-y-4">
+        <section id="measurement-artifact" className="space-y-4 scroll-mt-24">
           <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
             Harmful Responses to Avoid
           </h2>
@@ -373,6 +561,24 @@ export default function IntermittentFastingPlateauPage() {
               <AlertTriangle className="w-4 h-4 text-error flex-shrink-0 mt-1" />
               <span><strong>Do not rely exclusively on bathroom scale numbers:</strong> Track waist circumference, clothing fit, energy levels, and strength markers. Many people experience &ldquo;body recomposition&rdquo; where fat drops while muscle water increases, keeping scale weight unchanged.</span>
             </div>
+          </div>
+        </section>
+
+        {/* Section: Behavioral Adherence Drift */}
+        <section id="adherence-drift" className="space-y-4 p-6 sm:p-8 rounded-2xl bg-surface-container border border-surface-container-high scroll-mt-24">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Managing Behavioral Adherence Drift
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            One of the subtlest contributors to long-term stalls is behavioral adherence drift—the natural human tendency for boundaries to loosen gradually over time. What begins as a strict 16-hour fast can slowly become a 14-hour fast, with weekend eating windows extending late into the night.
+          </p>
+          <div className="space-y-2 text-sm sm:text-base text-on-surface-variant">
+            <p><strong>To re-establish boundary discipline without restrictive burnout:</strong></p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Lock in fixed eating window start and cut-off times for a continuous 14-day re-alignment period.</li>
+              <li>Maintain weekend window consistency within 60 minutes of your weekday schedule.</li>
+              <li>Avoid reactionary compensatory fasts if a social meal runs late; simply resume normal hours the following day.</li>
+            </ul>
           </div>
         </section>
 

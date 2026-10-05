@@ -6,6 +6,7 @@ import { minutesTo12Hour, minutesTo24Hour } from "../lib/time/format";
 import { PROTOCOLS } from "../lib/calculator/protocols";
 import { generateFourteenDaySchedule } from "../components/tools/AdfComparisonWidget";
 import { evaluateElectrolyteNeeds } from "../components/tools/PersonalElectrolyteEvaluator";
+import { evaluatePlateau, DEFAULT_DIAGNOSTIC_ANSWERS } from "../components/tools/FastingPlateauDiagnostic";
 
 describe("FastTrack Calculation Engine", () => {
   describe("Critical Requirement: 16:8 Protocol starting at 20:00", () => {
@@ -337,6 +338,80 @@ describe("FastTrack Calculation Engine", () => {
       expect(res.safetyAlert).toBeDefined();
       expect(res.safetyAlert).toContain("dizziness upon standing is an important warning signal");
       expect(res.safetyAlert).toContain("break your fast with water and balanced food");
+    });
+  });
+
+  describe("Fasting Plateau Self-Diagnostic Decision Logic", () => {
+    it("returns 'measurement-artifact' for sporadic weighing conditions", () => {
+      const res = evaluatePlateau({
+        stallDuration: "under-2-weeks",
+        protocol: "14-10-or-16-8",
+        weighingMethod: "sporadic-uncontrolled",
+        calorieIntake: "unmeasured-eating-window",
+        sleepStress: "poor-sleep-high-stress",
+      });
+      expect(res.category).toBe("measurement-artifact");
+      expect(res.articleAnchor).toBe("#measurement-artifact");
+      expect(res.actionPlan.length).toBeGreaterThanOrEqual(3);
+      expect(res.whatToObserve.length).toBeGreaterThanOrEqual(2);
+    });
+
+    it("returns 'water-fluid-shifts' for short stall with standardized weighing and stress/workout soreness", () => {
+      const res = evaluatePlateau({
+        stallDuration: "under-2-weeks",
+        protocol: "14-10-or-16-8",
+        weighingMethod: "daily-fasted-average",
+        calorieIntake: "strictly-measured",
+        sleepStress: "poor-sleep-high-stress",
+      });
+      expect(res.category).toBe("water-fluid-shifts");
+      expect(res.articleAnchor).toBe("#water-fluid-shifts");
+      expect(res.explanation).toContain("cortisol");
+    });
+
+    it("returns 'calorie-creep' for 2-4 week stall with unmeasured eating window and good sleep", () => {
+      const res = evaluatePlateau({
+        stallDuration: "2-to-4-weeks",
+        protocol: "14-10-or-16-8",
+        weighingMethod: "daily-fasted-average",
+        calorieIntake: "unmeasured-eating-window",
+        sleepStress: "rested-low-stress",
+      });
+      expect(res.category).toBe("calorie-creep");
+      expect(res.articleAnchor).toBe("#calorie-creep");
+      expect(res.explanation).toContain("energy balance");
+    });
+
+    it("returns 'smaller-body-energy-needs' for 4+ week established stall with strict tracking adherence", () => {
+      const res = evaluatePlateau({
+        stallDuration: "over-4-weeks",
+        protocol: "14-10-or-16-8",
+        weighingMethod: "daily-fasted-average",
+        calorieIntake: "strictly-measured",
+        sleepStress: "rested-low-stress",
+      });
+      expect(res.category).toBe("smaller-body-energy-needs");
+      expect(res.articleAnchor).toBe("#smaller-body-energy-needs");
+      expect(res.explanation).toContain("lighter body requires less basal and kinetic energy");
+    });
+
+    it("returns 'adherence-drift' for established stall with structured deficit and irregular schedules", () => {
+      const res = evaluatePlateau({
+        stallDuration: "2-to-4-weeks",
+        protocol: "14-10-or-16-8",
+        weighingMethod: "daily-fasted-average",
+        calorieIntake: "structured-deficit",
+        sleepStress: "irregular-schedule",
+      });
+      expect(res.category).toBe("adherence-drift");
+      expect(res.articleAnchor).toBe("#adherence-drift");
+      expect(res.actionPlan[0]).toContain("fixed start and end times");
+    });
+
+    it("handles the default answers state deterministically", () => {
+      const res = evaluatePlateau(DEFAULT_DIAGNOSTIC_ANSWERS);
+      expect(res.category).toBe("measurement-artifact");
+      expect(res.badge).toBe("Measurement Artifact");
     });
   });
 });
