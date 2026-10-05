@@ -4,6 +4,7 @@ import { validateCalculatorInputs } from "../lib/validation/inputValidation";
 import { parseTimeToMinutes } from "../lib/time/parser";
 import { minutesTo12Hour, minutesTo24Hour } from "../lib/time/format";
 import { PROTOCOLS } from "../lib/calculator/protocols";
+import { generateFourteenDaySchedule } from "../components/tools/AdfComparisonWidget";
 
 describe("FastTrack Calculation Engine", () => {
   describe("Critical Requirement: 16:8 Protocol starting at 20:00", () => {
@@ -274,6 +275,39 @@ describe("FastTrack Calculation Engine", () => {
 
       expect(res.isValid).toBe(false);
       expect(res.errors.weightKg).toBeDefined();
+    });
+  });
+
+  describe("Alternate-Day Fasting (ADF) 14-Day Calendar Generator", () => {
+    it("generates 14 strictly alternating days for both modified and strict protocols", () => {
+      for (const startDay of ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"] as const) {
+        for (const protocol of ["modified", "strict"] as const) {
+          const schedule = generateFourteenDaySchedule(startDay, protocol);
+
+          expect(schedule).toHaveLength(14);
+          expect(schedule[0].weekday).toBe(startDay);
+          expect(schedule[0].isFastDay).toBe(true);
+
+          // Verify strict alternation across all 14 days
+          for (let i = 0; i < 14; i++) {
+            expect(schedule[i].isFastDay).toBe(i % 2 === 0);
+          }
+
+          // Verify Week 1 has 4 fast days, Week 2 has 3 fast days
+          const week1Fast = schedule.slice(0, 7).filter(d => d.isFastDay).length;
+          const week2Fast = schedule.slice(7, 14).filter(d => d.isFastDay).length;
+          expect(week1Fast).toBe(4);
+          expect(week2Fast).toBe(3);
+
+          // Verify protocol calorie markings
+          if (protocol === "strict") {
+            expect(schedule[0].calories).toBe("0 kcal");
+          } else {
+            expect(schedule[0].calories).toBe("~500 kcal");
+          }
+          expect(schedule[1].calories).toBe("Ad libitum (normal)");
+        }
+      }
     });
   });
 });

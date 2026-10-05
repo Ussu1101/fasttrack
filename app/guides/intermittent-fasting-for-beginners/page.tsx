@@ -530,12 +530,19 @@ export default function IntermittentFastingForBeginnersPage() {
             <p className="text-on-surface-variant leading-relaxed">
               Because it is a weekly pattern, it should not be calculated in the same way as a 16:8 or 18:6 daily schedule.
             </p>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-4">
               <Link
                 href="/fasting-methods/5-2"
                 className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
               >
                 <span>Explore 5:2 Weekly Pattern</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                href="/alternate-day-fasting"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
+              >
+                <span>Compare with Alternate-Day Fasting (ADF)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>

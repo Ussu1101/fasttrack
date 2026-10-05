@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getSiteUrl } from "@/lib/config/site";
+import AdfComparisonWidget from "@/components/tools/AdfComparisonWidget";
 import {
   ArrowLeft,
   Clock,
@@ -17,6 +18,7 @@ import {
   CalendarDays,
   Utensils,
   AlertTriangle,
+  CalendarRange,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -56,24 +58,24 @@ export const metadata: Metadata = {
 
 const FAQS = [
   {
+    question: "Can you eat 500 calories on ADF fast days?",
+    answer:
+      "Yes. In modified alternate-day fasting (mADF)—the protocol most widely investigated in randomized trials—individuals consume roughly 20% to 25% of baseline caloric needs (typically 500 kcal for women, 600 kcal for men) on designated fast days. This energy is usually consumed as a single midday or early evening nutrient-dense meal, which dramatically relieves hunger while preserving the weekly net energy deficit.",
+  },
+  {
+    question: "ADF vs 5:2 — which is harder?",
+    answer:
+      "Alternate-day fasting is substantially more demanding than 5:2. The 5:2 protocol involves only 2 non-consecutive fasting days per week, allowing 5 days of normal eating on a predictable weekly schedule. In contrast, ADF alternates every other day, requiring 3 to 4 fasting days every single week. Clinical trials consistently reflect this adherence gap, with ADF showing attrition rates around 38% compared to lower dropout in less frequent fasting regimens.",
+  },
+  {
     question: "Is alternate-day fasting more effective for weight loss than daily calorie restriction?",
     answer:
       "Clinical trials, such as the landmark 1-year randomized trial led by Dr. John Trepanowski and published in JAMA Internal Medicine (2017), found that alternate-day fasting produced equivalent—not superior—weight loss compared to standard daily calorie restriction. In addition, the trial reported significantly higher dropout rates in the ADF group (38%) compared to daily restriction (29%), demonstrating that ADF poses substantial adherence challenges for many individuals.",
   },
   {
-    question: "What is the difference between complete ADF and modified ADF?",
+    question: "How long is each fast window in alternate-day fasting?",
     answer:
-      "In complete (zero-calorie) alternate-day fasting, no caloric food or beverages are consumed on fast days (only water, black coffee, and unsweetened tea). In modified alternate-day fasting (mADF), individuals consume a small, nutrient-dense meal supplying roughly 20–25% of baseline daily energy needs (typically 500 kcal) during the fast day, which substantially improves compliance, social sustainability, and reduces severe hunger spikes.",
-  },
-  {
-    question: "How does alternate-day fasting differ from the 5:2 diet?",
-    answer:
-      "Both protocols use reduced-calorie fast days, but their weekly frequency differs substantially. The 5:2 protocol incorporates only 2 non-consecutive fast days per week (and 5 standard eating days). In contrast, alternate-day fasting alternates every other day, resulting in 3 to 4 fast days every single week. This makes ADF substantially more intensive with nearly double the weekly caloric restriction volume.",
-  },
-  {
-    question: "Can I exercise on the fasting days of an ADF schedule?",
-    answer:
-      "Light to moderate physical activity (such as walking, yoga, or easy cycling) is generally well tolerated. However, high-intensity interval training (HIIT) or heavy resistance training on zero-calorie fasting days can lead to acute dizziness, reduced force output, and impaired muscle recovery. Many athletes schedule heavy training on feast days when muscle glycogen and hydration are fully replenished.",
+      "In complete zero-calorie ADF, each fasting window spans approximately 36 contiguous hours—from dinner on Day 1, across the entirety of Day 2, until breakfast on Day 3. In modified ADF, consuming a ~500 kcal meal divides this window into two shorter overnight and daytime fasting segments, reducing continuous fasting duration while maintaining the overall energy deficit.",
   },
   {
     question: "Who should avoid alternate-day fasting?",
@@ -140,6 +142,22 @@ export default function AlternateDayFastingPage() {
     })),
   };
 
+  const webAppJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "FastTrack ADF Schedule & Protocol Planner",
+    applicationCategory: "HealthApplication",
+    operatingSystem: "All",
+    url: `${siteUrl}/alternate-day-fasting#schedule-builder`,
+    description:
+      "Interactive Alternate-Day Fasting (ADF) schedule builder and protocol comparator. Plan 14-day alternating cycles, compare strict zero-calorie and modified 500-kcal approaches, and evaluate adherence demands.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  };
+
   return (
     <article className="max-w-4xl mx-auto px-4 md:px-8 py-10 sm:py-16">
       <script
@@ -153,6 +171,10 @@ export default function AlternateDayFastingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppJsonLd) }}
       />
 
       {/* Back Link */}
@@ -265,6 +287,26 @@ export default function AlternateDayFastingPage() {
           </div>
         </section>
 
+        {/* New Section: Build Your ADF Schedule (Interactive Comparison Widget) */}
+        <section className="space-y-6">
+          <div className="space-y-3">
+            <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+              Build Your ADF Schedule
+            </h2>
+            <p className="text-on-surface-variant leading-relaxed">
+              Planning an alternate-day fasting regimen requires understanding how the alternating rhythm interfaces with the 7-day calendar week. Because a standard week contains an odd number of days, an every-other-day pattern never falls on the same weekdays from one week to the next.
+            </p>
+            <p className="text-on-surface-variant leading-relaxed">
+              During Week 1, you will complete four fast days and three feast days. In Week 2, the pattern inverts to three fast days and four feast days, averaging 3.5 fasting days per week. For beginners exploring periodic fasting, understanding this rotating structure prevents scheduling conflicts with social commitments, weekend meals, and workout routines.
+            </p>
+            <p className="text-on-surface-variant leading-relaxed">
+              Use the interactive schedule builder below to select between <strong>Strict zero-calorie ADF</strong> (36-hour water fasting) and <strong>Modified ADF</strong> (~500 kcal fast-day meal), choose your starting weekday, and visualize your full 14-day protocol calendar.
+            </p>
+          </div>
+
+          <AdfComparisonWidget />
+        </section>
+
         {/* Section 2: Comparing ADF with 5:2 and Daily TRE */}
         <section className="space-y-4">
           <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
@@ -314,13 +356,17 @@ export default function AlternateDayFastingPage() {
           </div>
 
           <p className="text-xs sm:text-sm text-on-surface-variant pt-1">
-            Compare other schedules with our{" "}
+            Compare other protocols with our{" "}
             <Link href="/fasting-methods/5-2" className="text-primary font-semibold underline">
               5:2 weekly guide
-            </Link>{" "}
-            and{" "}
-            <Link href="/guides/how-to-choose-a-fasting-window" className="text-primary font-semibold underline">
-              how to choose a fasting window guide
+            </Link>
+            , our{" "}
+            <Link href="/fasting-methods/omad" className="text-primary font-semibold underline">
+              OMAD (One Meal a Day) guide
+            </Link>
+            , and our foundational{" "}
+            <Link href="/guides/intermittent-fasting-for-beginners" className="text-primary font-semibold underline">
+              intermittent fasting for beginners guide
             </Link>
             .
           </p>

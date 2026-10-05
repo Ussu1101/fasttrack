@@ -371,6 +371,11 @@ export const PROTOCOLS: Record<ProtocolId, ProtocolDefinition> = {
     ],
     relatedGuides: [
       {
+        title: "Alternate-Day Fasting (ADF) Clinical Guide",
+        href: "/alternate-day-fasting",
+        description: "Compare 5:2 with whole-day alternating fasting schedules and 14-day protocol cycles."
+      },
+      {
         title: "How to Break an Intermittent Fast",
         href: "/guides/how-to-break-a-fast",
         description: "Healthy morning refeeding routines after a reduced-intake 5:2 fasting day."
