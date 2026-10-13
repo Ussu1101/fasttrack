@@ -915,7 +915,14 @@ export default function WhatBreaksAFastPage() {
                 Similarly, &ldquo;dirty fasting&rdquo; is an informal community term, not a clinical definition. It refers to allowing small, trace amounts of energy (such as a splash of unsweetened plant milk in coffee, a piece of sugar-free gum, or a zero-calorie sweetened beverage) during fasting hours.
               </p>
               <p className="text-on-surface-variant leading-relaxed">
-                If your primary goal is an overall daily caloric deficit or managing eating windows, a trivial amount of trace calories (typically under 10–15 kcal) does not significantly derail a broader energy deficit or prevent long-term weight loss. While trace calories technically mean the fast is not strictly zero-calorie, individual flexibility can sometimes make the routine more sustainable in daily life.
+                If your primary goal is an overall daily caloric deficit or managing eating windows, a trivial amount of trace calories (typically under 10–15 kcal) does not significantly derail a broader energy deficit or prevent long-term weight loss. While trace calories technically mean the fast is not strictly zero-calorie, individual flexibility can sometimes make the routine more sustainable in daily life. For an in-depth breakdown of how these community definitions compare, explore our guide on{" "}
+                <Link
+                  href="/guides/dirty-fasting-vs-clean-fasting"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  dirty fasting vs clean fasting
+                </Link>
+                .
               </p>
             </div>
 

@@ -838,7 +838,14 @@ export default function WhatCanYouDrinkWhileFastingPage() {
                 Many people use intermittent fasting primarily to establish a consistent eating schedule. In this context, zero-calorie drinks such as water, black coffee, and plain tea are commonly used during fasting hours.
               </p>
               <p className="text-on-surface-variant leading-relaxed">
-                The important thing is consistency. If you regularly add calorie-containing drinks during the fasting window, your actual eating window is different from the schedule you calculated.
+                The important thing is consistency. If you regularly add calorie-containing drinks during the fasting window, your actual eating window is different from the schedule you calculated. To understand how strict routines differ from flexible approaches, read our detailed guide on{" "}
+                <Link
+                  href="/guides/dirty-fasting-vs-clean-fasting"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  dirty fasting vs clean fasting
+                </Link>
+                .
               </p>
             </div>
 

@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/intermittent-fasting-plateau",
     "/fasting-for-night-shift-workers",
     "/fasting-methods/eat-stop-eat",
+    "/guides/dirty-fasting-vs-clean-fasting",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: now,
