@@ -24,7 +24,7 @@ import {
 export const metadata: Metadata = {
   title: "Alternate-Day Fasting: How ADF Works, Protocol Types & Evidence",
   description:
-    "A clinical guide to Alternate-Day Fasting (ADF): zero-calorie vs modified 500-kcal protocols, comparison with 5:2 and 16:8, trial evidence on weight loss and adherence, and safety boundaries.",
+    "An evidence-grounded guide to Alternate-Day Fasting (ADF): zero-calorie vs modified 500-kcal protocols, comparison with 5:2 and 16:8, trial evidence on weight loss and adherence, and safety boundaries.",
   keywords: [
     "alternate day fasting",
     "alternate-day fasting",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Alternate-Day Fasting: How ADF Works, Protocol Types & Evidence | FastTrack",
     description:
-      "A clinical guide to Alternate-Day Fasting (ADF): zero-calorie vs modified 500-kcal protocols, comparison with 5:2 and 16:8, trial evidence on weight loss and adherence, and safety boundaries.",
+      "An evidence-grounded guide to Alternate-Day Fasting (ADF): zero-calorie vs modified 500-kcal protocols, comparison with 5:2 and 16:8, trial evidence on weight loss and adherence, and safety boundaries.",
     url: `${getSiteUrl()}/alternate-day-fasting`,
     type: "article",
     publishedTime: "2026-10-04",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Alternate-Day Fasting: How ADF Works, Protocol Types & Evidence | FastTrack",
     description:
-      "A clinical guide to Alternate-Day Fasting (ADF): zero-calorie vs modified protocols, comparison with 5:2 and 16:8, trial evidence, and safety boundaries.",
+      "An evidence-grounded guide to Alternate-Day Fasting (ADF): zero-calorie vs modified protocols, comparison with 5:2 and 16:8, trial evidence, and safety boundaries.",
   },
 };
 
@@ -92,7 +92,7 @@ export default function AlternateDayFastingPage() {
     "@type": "Article",
     headline: "Alternate-Day Fasting: How ADF Works, Protocol Types & Evidence",
     description:
-      "A clinical guide to Alternate-Day Fasting (ADF): zero-calorie vs modified 500-kcal protocols, comparison with 5:2 and 16:8, trial evidence on weight loss and adherence, and safety boundaries.",
+      "An evidence-grounded guide to Alternate-Day Fasting (ADF): zero-calorie vs modified 500-kcal protocols, comparison with 5:2 and 16:8, trial evidence on weight loss and adherence, and safety boundaries.",
     author: {
       "@type": "Person",
       name: "Muhammad Usama",

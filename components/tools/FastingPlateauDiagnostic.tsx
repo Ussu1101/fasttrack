@@ -150,11 +150,11 @@ export function evaluatePlateau(answers: DiagnosticAnswers): DiagnosticResult {
       actionPlan: [
         "Recalculate your total daily energy expenditure (TDEE) based on your current body weight rather than your starting baseline.",
         "Increase spontaneous daily movement by establishing a 7,500 to 10,000 daily step baseline to counteract subconscious drops in NEAT.",
-        "If in a continuous deficit for 12+ weeks, take a structured 7- to 14-day diet break at your new maintenance calories to restore dietary adherence before establishing a gentle 250–350 kcal deficit.",
+        "If in a continuous deficit for 12+ weeks, take a structured 7- to 14-day diet break at your new maintenance calories to alleviate diet fatigue and support adherence before establishing a gentle 250–350 kcal deficit.",
       ],
       whatToObserve: [
         "Renewed fat loss once daily energy expenditure is boosted by step targets and adjusted intake boundaries.",
-        "Enhanced workout energy and reduced metabolic fatigue following a structured maintenance break.",
+        "Enhanced workout energy and reduced dietary fatigue following a structured maintenance break.",
       ],
     };
   }

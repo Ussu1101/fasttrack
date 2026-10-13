@@ -87,7 +87,7 @@ export function getStageDataForHour(hour: number, mealSize: MealSize = "normal")
         ketones: "Mild nutritional ketosis develops; circulating beta-hydroxybutyrate typically reaches 0.5 to 1.5 mmol/L."
       },
       howYouFeel: "Light stomach emptiness. Staying hydrated and consuming modest mineral electrolytes prevents mild fatigue or orthostatic dizziness.",
-      evidenceNote: "Observed in 18:6 and 20:4 protocols. Tissue autophagy markers show elevation in animal models, though precise human clinical measurement remains difficult."
+      evidenceNote: "Observed in 18:6 and 20:4 protocols. Cellular recycling (autophagy) markers show elevation in animal models, though precise human clinical measurement and hourly timing remain uncertain."
     };
   } else if (effectiveHour < 24) {
     return {
@@ -95,10 +95,10 @@ export function getStageDataForHour(hour: number, mealSize: MealSize = "normal")
       stageName: "Full Fasting Physiology & Ketone Elevation",
       category: "OMAD & 24-Hour Transition",
       whatHappens: {
-        glycogen: "Liver glycogen is nearly exhausted; systemic glucose relies on endogenous glycerol, amino acids, and lactate gluconeogenesis.",
-        insulin: "Basal insulin remains minimal; AMPK phosphorylation and cellular recycling pathways are strongly engaged.",
-        fatOxidation: "Maximum baseline physiological fat oxidation; systemic metabolism is thoroughly adapted to lipid utilization.",
-        ketones: "Circulating ketones generally reach 1.0 to 2.0 mmol/L, supplying an increasing share of brain energy requirements."
+        glycogen: "Liver glycogen is substantially depleted; systemic glucose relies on endogenous glycerol, amino acids, and lactate gluconeogenesis.",
+        insulin: "Basal insulin remains minimal; cellular energy-sensing and recycling pathways are engaged as part of a biological continuum.",
+        fatOxidation: "High baseline physiological fat oxidation; systemic metabolism is adapted to lipid utilization.",
+        ketones: "Circulating ketones may reach 1.0 to 2.0 mmol/L, supplying an increasing share of brain energy requirements."
       },
       howYouFeel: "Hunger tends to be episodic rather than constant. Physical energy is stable if hydration is maintained.",
       evidenceNote: "This marks the boundary of daily One Meal a Day (OMAD) routines. Going beyond 24 hours increases the necessity of medical supervision."
@@ -110,7 +110,7 @@ export function getStageDataForHour(hour: number, mealSize: MealSize = "normal")
       category: "Alternate-Day Fasting Continuum",
       whatHappens: {
         glycogen: "Liver glycogen is effectively depleted; muscle glycogen remains reserved strictly for internal skeletal muscle contraction.",
-        insulin: "Minimal baseline insulin; growth hormone (GH) secretion pulses upward to help preserve lean structural tissue.",
+        insulin: "Minimal baseline insulin; counter-regulatory hormone signaling adjusts to help preserve structural tissue.",
         fatOxidation: "Sustained high-rate lipolysis; whole-body respiratory exchange ratio (RER) reflects near-total lipid combustion.",
         ketones: "Circulating beta-hydroxybutyrate typically ranges from 1.5 to 3.0 mmol/L, providing substantial cerebral fuel."
       },
@@ -124,9 +124,9 @@ export function getStageDataForHour(hour: number, mealSize: MealSize = "normal")
       category: "Extended Medical Fasting Domain",
       whatHappens: {
         glycogen: "Hepatic glycogen stores are completely depleted; gluconeogenesis rates stabilize to match minimal obligatory glucose demands.",
-        insulin: "Sustained baseline suppression; experimental models show increased intracellular recycling pathways (autophagic signaling), though exact human timing and extent vary.",
+        insulin: "Sustained baseline suppression; experimental models show increased intracellular recycling pathways (autophagic signaling), though human clinical rates vary considerably across individuals.",
         fatOxidation: "Near-exclusive reliance on free fatty acids and ketone oxidation across peripheral tissues.",
-        ketones: "Elevated nutritional ketosis (2.0 to 4.0 mmol/L). Blood pH is tightly buffered in non-diabetic individuals."
+        ketones: "Elevated nutritional ketosis (typically 2.0 to 4.0 mmol/L in non-diabetic individuals). Blood pH is tightly buffered."
       },
       howYouFeel: "Deep metabolic shift. High vulnerability to orthostatic lightheadedness, cold sensitivity, and sleep disruption. Resting is required.",
       evidenceNote: "Clinical safety warning: fasts exceeding 36 hours carry elevated risks of refeeding syndrome upon meal resumption, electrolyte loss, and cardiac strain."

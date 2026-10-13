@@ -81,12 +81,12 @@ const FAQS = [
   {
     question: "What happens at 16 hours of fasting?",
     answer:
-      "At approximately 16 hours of fasting, circulating insulin reaches low baseline concentrations, and hepatic glycogen is substantially depleted. The body transitions predominantly to lipid oxidation, mobilizing free fatty acids from adipose tissue for fuel. Mild ketogenesis produces detectable beta-hydroxybutyrate (typically 0.2 to 0.5 mmol/L), and baseline cellular maintenance (autophagy) signaling begins to increase gradually.",
+      "At approximately 16 hours of fasting, circulating insulin reaches low baseline concentrations, and hepatic glycogen is substantially depleted. The body transitions predominantly to lipid oxidation, mobilizing free fatty acids from adipose tissue for fuel. Mild ketogenesis produces detectable beta-hydroxybutyrate (typically 0.2 to 0.5 mmol/L), and baseline cellular maintenance signaling shifts along a gradual continuum.",
   },
   {
     question: "What happens at 18 hours of fasting?",
     answer:
-      "By hour 18, whole-body fat oxidation is high and stable. Muscle tissue derives nearly all resting energy from fatty acids, and circulating ketones rise moderately (0.5 to 1.5 mmol/L). In protocols like 18:6, cellular nutrient sensors (such as mTOR) remain deeply downregulated while AMPK pathways coordinate intracellular recycling.",
+      "By hour 18, whole-body fat oxidation is high and stable. Muscle tissue derives nearly all resting energy from fatty acids, and circulating ketones rise moderately (typically 0.5 to 1.5 mmol/L). In protocols like 18:6, cellular nutrient sensors remain downregulated while baseline cellular recycling pathways coordinate intracellular maintenance.",
   },
   {
     question: "What happens at 24 hours of fasting?",
@@ -319,7 +319,7 @@ export default function FastingStagesPage() {
                     <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">16 – 20 Hours</th>
                     <td className="p-3.5 sm:p-4">Deep Fat Oxidation &amp; Ketosis</td>
                     <td className="p-3.5 sm:p-4">Fatty acids; ketones (0.5–1.5 mM); low basal insulin</td>
-                    <td className="p-3.5 sm:p-4">Enhanced autophagy signaling; light stomach; hydration essential</td>
+                    <td className="p-3.5 sm:p-4">Cellular maintenance signaling active; light stomach; hydration essential</td>
                   </tr>
                   <tr className="hover:bg-surface-container/30 transition-colors">
                     <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">20 – 24 Hours</th>
