@@ -101,6 +101,31 @@ const FAQS = [
     answer:
       "For an ordinary intermittent fasting routine, plain water is the simplest choice. If you have been given medical fasting instructions, follow those instructions instead.",
   },
+  {
+    question: "Can I drink soda water while fasting?",
+    answer:
+      "Yes. Plain soda water and club soda contain zero calories, zero carbohydrates, and zero fat. They do not break a caloric fast for weight loss or metabolic health. Soda water also contains small amounts of dissolved mineral salts (such as sodium bicarbonate and potassium sulfate) that contribute trace electrolytes without adding energy.",
+  },
+  {
+    question: "Can you drink seltzer while fasting?",
+    answer:
+      "Yes. Plain seltzer is simply filtered water infused with carbon dioxide gas and contains zero calories. Naturally flavored “essence” seltzers (like LaCroix, Bubly, and Waterloo) are also zero-calorie and zero-sugar, making them compatible with practical weight-loss fasting. However, check product labels carefully to ensure no fruit juice concentrates or sugars have been added.",
+  },
+  {
+    question: "Does Spindrift break a fast?",
+    answer:
+      "Yes, for a strict zero-calorie fast. Unlike essence-flavored seltzers, Spindrift is made with real squeezed fruit juice. Depending on the flavor, a standard 12-ounce can contains between 2 and 17 calories and 1 to 3 grams of carbohydrates. If you want to maintain a pure zero-calorie fasting window, consume Spindrift during your eating window instead.",
+  },
+  {
+    question: "Can I drink zero-sugar energy drinks like Celsius while fasting?",
+    answer:
+      "It depends on your fasting goal. For weight loss and maintaining a caloric deficit, zero-sugar energy drinks (like Celsius, Monster Zero Ultra, or Red Bull Total Zero) contain negligible calories (0–10 kcal) and will not halt fat burning. However, if your goal is digestive rest or clean fasting, their high caffeine content, non-nutritive sweeteners (sucralose, erythritol), and herbal blends require active metabolic processing and can cause stomach irritation or jitters on an empty stomach.",
+  },
+  {
+    question: "Does carbonated water cause acid reflux or harm teeth during a fast?",
+    answer:
+      "Unflavored carbonated water has a mildly acidic pH (5.0–6.0) due to carbonic acid, which research shows has minimal erosive effect on tooth enamel compared to sodas or fruit juices. However, the carbon dioxide gas causes temporary stomach distension, which can aggravate heartburn or acid reflux in sensitive individuals when consumed on an empty stomach. If you experience reflux while fasting, switch to still water.",
+  },
 ];
 
 export default function WhatCanYouDrinkWhileFastingPage() {
@@ -387,6 +412,26 @@ export default function WhatCanYouDrinkWhileFastingPage() {
                   <td className="p-3.5 sm:p-4 font-medium text-error">No</td>
                   <td className="p-3.5 sm:p-4">Provides calories and is not an appropriate fasting beverage</td>
                 </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Soda water &amp; club soda (unflavored)</th>
+                  <td className="p-3.5 sm:p-4 font-medium text-primary">Yes</td>
+                  <td className="p-3.5 sm:p-4">0 calories; carbonated water containing dissolved mineral salts (sodium bicarbonate, potassium sulfate) for taste and trace electrolytes</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Plain &amp; flavored seltzers (0 cal / essence-only)</th>
+                  <td className="p-3.5 sm:p-4 font-medium text-primary">Usually yes</td>
+                  <td className="p-3.5 sm:p-4">0 calories and 0 carbohydrates; naturally flavored &ldquo;essence&rdquo; seltzers (e.g., LaCroix, Bubly, Waterloo) fit practical fasting for weight loss</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Seltzers with real fruit juice (e.g., Spindrift)</th>
+                  <td className="p-3.5 sm:p-4 font-medium text-error">No</td>
+                  <td className="p-3.5 sm:p-4">Typically contains 2 to 17 calories and 1 to 3 grams of sugar from real squeezed fruit juice; belongs in your eating window</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Zero-sugar energy drinks (e.g., Celsius, Monster Zero)</th>
+                  <td className="p-3.5 sm:p-4 font-medium text-on-surface">Context-dependent</td>
+                  <td className="p-3.5 sm:p-4">0–15 calories sweetened with sucralose or erythritol; compatible with weight loss, but high stimulant doses can irritate an empty stomach. Incompatible with gut rest</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -423,17 +468,152 @@ export default function WhatCanYouDrinkWhileFastingPage() {
           <p className="text-on-surface-variant leading-relaxed">
             There is no need to make plain water complicated. You do not need a special &ldquo;fasting water&rdquo; product for a normal intermittent fasting routine.
           </p>
+        </section>
 
-          <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2 mt-4">
-            <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
-              What About Sparkling Water?
-            </h3>
-            <p className="text-on-surface-variant leading-relaxed">
-              Plain sparkling water can fit a zero-calorie fasting approach when it contains no added sugar or other calorie-containing ingredients.
-            </p>
-            <p className="text-on-surface-variant leading-relaxed">
-              Check the nutrition label if you are unsure. Flavored sparkling beverages vary, so do not assume every flavored product has the same ingredients.
-            </p>
+        {/* Section 3B: Can I Drink Soda Water While Fasting? */}
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Can I Drink Soda Water While Fasting?
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            The short, direct answer is <strong>yes</strong>. Unflavored soda water, seltzer, and plain carbonated water contain <strong>0 calories, 0 grams of carbohydrates, and 0 grams of fat</strong>, making them completely compatible with a strict zero-calorie fasting window.
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            If your primary goal is fat loss, metabolic switching, or maintaining an energy deficit on a{" "}
+            <Link
+              href="/fasting-methods/16-8"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              16:8 schedule
+            </Link>{" "}
+            or{" "}
+            <Link
+              href="/fasting-methods/20-4"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              20:4 protocol
+            </Link>
+            , drinking plain carbonated water will not provide digestible energy, disrupt fatty acid oxidation, or interrupt your fast.
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            However, grocery store beverage aisles use terms like <em>seltzer</em>, <em>soda water</em>, <em>club soda</em>, and <em>sparkling mineral water</em> almost interchangeably. While all four are zero-calorie when unflavored, their mineral content and carbonation sources differ in subtle ways.
+          </p>
+
+          <div className="my-6 overflow-x-auto rounded-xl border border-surface-container shadow-sm">
+            <table className="w-full text-left text-sm border-collapse bg-surface-container-lowest">
+              <caption className="sr-only">
+                Key differences between plain carbonated water categories
+              </caption>
+              <thead className="bg-surface-container-low text-on-surface border-b border-surface-container font-headline">
+                <tr>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Category
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Water Source
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Added Mineral Salts
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Fasting Suitability
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-surface-container font-body-sm text-on-surface-variant">
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Seltzer Water</th>
+                  <td className="p-3.5 sm:p-4">Filtered tap / spring</td>
+                  <td className="p-3.5 sm:p-4">None (pure H2O + CO2)</td>
+                  <td className="p-3.5 sm:p-4">100% Calorie-Free</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Soda Water / Club Soda</th>
+                  <td className="p-3.5 sm:p-4">Filtered water</td>
+                  <td className="p-3.5 sm:p-4">Sodium bicarbonate, potassium sulfate, etc.</td>
+                  <td className="p-3.5 sm:p-4">100% Calorie-Free + trace electrolytes</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Sparkling Mineral Water (e.g., San Pellegrino)</th>
+                  <td className="p-3.5 sm:p-4">Natural spring / well (naturally carbonated)</td>
+                  <td className="p-3.5 sm:p-4">Naturally dissolved calcium, magnesium</td>
+                  <td className="p-3.5 sm:p-4">100% Calorie-Free + natural minerals</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Tonic Water (Warning!)</th>
+                  <td className="p-3.5 sm:p-4">Filtered water</td>
+                  <td className="p-3.5 sm:p-4">Cane sugar or HFCS</td>
+                  <td className="p-3.5 sm:p-4 text-error font-medium">Breaks fast (120 kcal)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Seltzer vs. Club Soda vs. Soda Water vs. Sparkling Mineral Water
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Understanding the labeling helps you choose the right bottle:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Seltzer:</strong> Plain filtered water infused with pressurized carbon dioxide (CO<sub>2</sub>). It contains no added mineral salts, sodium, or flavorings. It delivers pure hydration with zero metabolic impact.</li>
+                <li><strong>Soda Water &amp; Club Soda:</strong> Carbonated water that has small amounts of added mineral salts—typically sodium bicarbonate, sodium chloride, potassium sulfate, or disodium phosphate. These minerals are added by the manufacturer to replicate natural spring water taste and neutralize acidity. For intermittent fasters, these dissolved mineral salts contribute zero calories and supply trace amounts of{" "}
+                <Link
+                  href="/electrolytes-while-fasting"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  electrolytes while fasting
+                </Link>
+                .</li>
+                <li><strong>Sparkling Mineral Water:</strong> Water sourced from a protected underground spring or geological aquifer that naturally contains dissolved minerals (such as calcium, magnesium, and bicarbonate) and either natural or added carbonation (such as San Pellegrino, Perrier, or Gerolsteiner). It provides zero calories and naturally occurring micronutrients.</li>
+                <li><strong>Tonic Water (Caution):</strong> <strong>Tonic water is not soda water.</strong> While tonic water is carbonated and looks clear, standard tonic water is formulated with quinine and heavily sweetened with high-fructose corn syrup or cane sugar—delivering roughly <strong>32 to 36 grams of sugar and 120 to 140 calories per 12-ounce can</strong>. Drinking standard tonic water immediately breaks a fast. (Only diet or zero-sugar tonic waters sweetened with non-nutritive sweeteners are calorie-free).</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Hydration Equivalence: Does Carbonated Water Hydrate as Well as Still Water?
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                A persistent myth claims that carbonated drinks &ldquo;dehydrate&rdquo; the body or fail to hydrate as effectively as regular tap water. Peer-reviewed human trials contradict this myth.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                In a landmark clinical study published in <em>The American Journal of Clinical Nutrition</em> (Maughan et al., 2016), researchers developed the <strong>Beverage Hydration Index (BHI)</strong> to evaluate fluid retention and net fluid balance across 13 common beverages in healthy adults. The trial confirmed that <strong>sparkling water and still water have identical hydration indices</strong>. The dissolved carbon dioxide gas does not impair gastrointestinal absorption, fluid bioavailability, or renal fluid conservation. Drinking soda water hydrates your tissues just as effectively as still water.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Satiety, Gastric Distension, and Appetite Regulation
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Many intermittent fasters find that sipping cold soda water or seltzer makes an extended fasting morning significantly easier than drinking plain tap water. There is a physiological reason for this:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Gastric Distension:</strong> The dissolved carbon dioxide gas (CO<sub>2</sub>) in sparkling water expands slightly within the stomach upon ingestion. This mild physical distension triggers mechanical stretch receptors in the gastric wall, which signal the brain that the stomach contains volume.</li>
+                <li><strong>Subjective Fullness:</strong> For many practitioners, this temporary stomach fullness helps blunt morning hunger waves and reduces the psychological urge to snack while waiting for the eating window to open.</li>
+                <li><strong>Gastric Tolerance &amp; Acid Reflux:</strong> Carbonation is not ideal for everyone. Drinking large volumes of highly carbonated water on an empty stomach can cause bloating, excessive belching, or exacerbate symptoms of gastroesophageal reflux disease (GERD) in individuals prone to heartburn. If you experience acid indigestion during your fasting window, switching to room-temperature still water or herbal tea is generally more comfortable.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Dental Enamel and Acidity: What You Should Know
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                When carbon dioxide is dissolved in water under pressure, it forms dilute carbonic acid (H<sub>2</sub>CO<sub>3</sub>), giving plain sparkling water a slightly acidic pH (typically between 5.0 and 6.0, compared to neutral water at 7.0).
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Dental research indicates that <strong>plain, unflavored carbonated water has minimal erosive potential</strong> on tooth enamel—its erosive risk is orders of magnitude lower than regular sodas, fruit juices, or commercial sports drinks. However, if you drink sparkling water continuously throughout a 16-hour fast, a few basic oral health practices are prudent:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li>Prefer unflavored sparkling water over citrus-infused varieties that contain added citric acid.</li>
+                <li>Drink carbonated beverages in distinct sessions rather than slowly sipping a single can over four hours.</li>
+                <li>Rinse your mouth with plain still water after finishing a carbonated drink to help your saliva quickly restore neutral oral pH.</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -793,6 +973,143 @@ export default function WhatCanYouDrinkWhileFastingPage() {
           </p>
         </section>
 
+        {/* Section 11B: Brand-Specific Drinks: LaCroix, Spindrift, and Zero-Sugar Energy Drinks */}
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Brand-Specific Drinks: LaCroix, Spindrift, and Zero-Sugar Energy Drinks
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            Navigating the canned drink aisle during a fast can be confusing because packaging terms like &ldquo;sparkling water,&rdquo; &ldquo;seltzer,&rdquo; and &ldquo;zero sugar&rdquo; encompass very different formulations. Here is how popular brand-name beverages fit into your fasting routine:
+          </p>
+
+          <div className="my-6 overflow-x-auto rounded-xl border border-surface-container shadow-sm">
+            <table className="w-full text-left text-sm border-collapse bg-surface-container-lowest">
+              <caption className="sr-only">
+                Popular brand fasting compatibility comparison
+              </caption>
+              <thead className="bg-surface-container-low text-on-surface border-b border-surface-container font-headline">
+                <tr>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Brand / Product
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Calories
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Sugars
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Key Ingredients
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Fasting Window Verdict
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-surface-container font-body-sm text-on-surface-variant">
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">LaCroix, Bubly, Waterloo, Polar Seltzer</th>
+                  <td className="p-3.5 sm:p-4">0 kcal</td>
+                  <td className="p-3.5 sm:p-4">0 g</td>
+                  <td className="p-3.5 sm:p-4">Carbonated water, natural essences</td>
+                  <td className="p-3.5 sm:p-4 font-medium text-primary">Yes (caloric fast / practical fasting)</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Spindrift Sparkling Water</th>
+                  <td className="p-3.5 sm:p-4">2–17 kcal</td>
+                  <td className="p-3.5 sm:p-4">1–3 g</td>
+                  <td className="p-3.5 sm:p-4">Carbonated water, real fruit juice</td>
+                  <td className="p-3.5 sm:p-4 font-medium text-error">No (breaks a strict zero-calorie fast)</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Celsius Live Fit / Monster Ultra</th>
+                  <td className="p-3.5 sm:p-4">10 kcal</td>
+                  <td className="p-3.5 sm:p-4">0 g</td>
+                  <td className="p-3.5 sm:p-4">Caffeine, taurine, sucralose/erythritol, B-vitamins</td>
+                  <td className="p-3.5 sm:p-4 font-medium text-on-surface">Context-dependent (fits weight loss; avoids gut rest; may upset empty stomach)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Unsweetened &ldquo;Essence&rdquo; Seltzers (LaCroix, Bubly, Waterloo, Polar)
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Brands like <strong>LaCroix</strong>, <strong>Bubly</strong>, <strong>Waterloo</strong>, and <strong>Polar</strong> are flavored exclusively with &ldquo;natural flavors&rdquo; or &ldquo;cold-pressed fruit essences.&rdquo;
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Nutritional Profile:</strong> These drinks contain <strong>0 calories, 0 grams of sugar, 0 grams of carbohydrates, and no artificial sweeteners</strong> (no aspartame, sucralose, or acesulfame potassium). The flavor compounds are derived by heating fruit peels or botanicals and capturing the concentrated aromatic vapor oils. Always check the Nutrition Facts panel, as some brands produce separate lines (such as &ldquo;lemonades,&rdquo; &ldquo;iced teas,&rdquo; or &ldquo;caffeinated sparkling waters&rdquo;) that may contain sweeteners or different ingredients.</li>
+                <li><strong>Fasting Compatibility:</strong> Because they deliver zero caloric energy and zero digestible carbohydrates, essence-flavored seltzers <strong>do not break a caloric fast for weight loss or metabolic health</strong>.</li>
+                <li><strong>The &ldquo;Clean Fasting&rdquo; Nuance:</strong> In communities that practice strict &ldquo;clean fasting&rdquo; (often inspired by authors like Gin Stephens), purists avoid all fruit-flavored beverages during the fasting window—even zero-calorie ones. The rationale is that sweet or fruity aroma compounds on the tongue could theoretically stimulate cephalic-phase insulin release (CPIR). While robust human clinical data showing significant insulin spikes from zero-calorie fruit aromas alone is lacking, individuals who find that fruit aromas trigger food cravings often choose to stick strictly to plain, unflavored sparkling water.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Seltzers with Real Fruit Juice: Spindrift (Breaks a Fast)
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                <strong>Spindrift</strong> has gained widespread popularity as a premium sparkling water brand that uses &ldquo;real squeezed fruit&rdquo; rather than lab-distilled essences.
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Nutritional Profile:</strong> Because Spindrift uses real fruit juices (such as squeezed lemon, grapefruit, raspberry, or mango juice), it contains <strong>real caloric energy and real carbohydrates</strong>. Depending on the fruit variety, a standard 12-ounce can contains between <strong>2 and 17 calories and 1 to 3 grams of naturally occurring fruit sugars</strong> (for instance, Lemon has approximately 3 kcal and &lt;1 g sugar, while Mango or Pink Lemonade can contain up to 15–17 kcal and 3 g sugar). Always verify the specific can&apos;s Nutrition Facts panel.</li>
+                <li><strong>Fasting Compatibility:</strong> If you are practicing a strict zero-calorie fast, <strong>Spindrift breaks your fast</strong>. Consuming 5 to 15 calories of simple fruit fructose and glucose activates liver metabolic pathways and interrupts a pure water-only fast.</li>
+                <li><strong>Where It Fits:</strong> Spindrift is an outstanding whole-food alternative to sugary sodas inside your <strong>eating window</strong>. If you practice flexible &ldquo;dirty fasting&rdquo; where minor caloric allowances (&lt;20–50 kcal) are tolerated, a single can of low-calorie lemon Spindrift (3 kcal) might fit your personal protocol, but for standard intermittent fasting, save it for mealtime.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Zero-Sugar Energy Drinks (Celsius, Monster Energy Zero Ultra, Red Bull Total Zero)
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Many intermittent fasters use canned energy drinks like <strong>Celsius Live Fit</strong>, <strong>Monster Energy Zero Ultra</strong>, <strong>Red Bull Total Zero</strong>, or <strong>Reign Total Body Fuel</strong> as a substitute for morning coffee.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Whether these drinks fit your fast depends on your fasting framework:
+              </p>
+              <p className="font-semibold text-on-surface">
+                Caloric Deficit &amp; Weight Loss (Generally Compatible)
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Zero-sugar energy drinks are formulated with non-nutritive sweeteners (such as sucralose, acesulfame potassium, or erythritol) and contribute between <strong>0 and 10 calories per can</strong>. Consuming one can will not disrupt your daily energy deficit or derail fat loss. For people practicing intermittent fasting solely for body weight management, zero-sugar energy drinks are functionally compatible.
+              </p>
+              <p className="font-semibold text-on-surface pt-2">
+                Gut Rest, Autophagy &amp; Cellular Cleansing (Incompatible)
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Energy drinks are not just caffeinated water; they are complex chemical formulations containing:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>High Caffeine Doses:</strong> Typically 140 to 300 mg of caffeine per can.</li>
+                <li><strong>Metabolic Blends:</strong> Ingredients like taurine, L-carnitine, guarana extract, ginger root extract, and glucuronolactone.</li>
+                <li><strong>High-Dose B-Vitamin Complexes:</strong> Niacin, pantothenic acid, and vitamin B12.</li>
+                <li><strong>Non-Nutritive Sweeteners:</strong> Sweeteners like sucralose interact with gut sweet-taste receptors (T1R2/T1R3) and require hepatic and gastrointestinal processing.</li>
+              </ul>
+              <p className="text-on-surface-variant leading-relaxed">
+                If your fasting objective is <strong>digestive rest, cellular autophagy, or avoiding synthetic additives</strong>, zero-sugar energy drinks are not compatible. They demand active metabolic breakdown by the liver and kidneys, defeating the purpose of biological rest.
+              </p>
+              <p className="font-semibold text-on-surface pt-2">
+                Tolerance on an Empty Stomach
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Drinking 200–300 mg of concentrated caffeine and acidic carbonation into an empty stomach can trigger acute side effects:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li>Rapid caffeine absorption leading to jitters, heart palpitations, and elevated anxiety.</li>
+                <li>Nausea, gastrointestinal cramping, or loose stools due to osmotic fluid shifts from concentrated artificial sweeteners and herbal stimulants.</li>
+                <li>Severe acid reflux or stomach burning from the combination of high acidity (citric acid, malic acid) and carbonation without food to buffer the stomach lining.</li>
+              </ul>
+              <p className="text-on-surface-variant leading-relaxed">
+                <strong>Recommendation:</strong> If you need a morning energy boost during your fasting window, <strong>plain black coffee</strong> or <strong>unsweetened green tea</strong> provides natural caffeine, beneficial polyphenols, and zero synthetic additives, with far greater digestive tolerance.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Section 12: What About Alcohol While Fasting? */}
         <section className="space-y-4">
           <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
@@ -1100,6 +1417,56 @@ export default function WhatCanYouDrinkWhileFastingPage() {
               </h3>
               <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
                 For an ordinary intermittent fasting routine, plain water is the simplest choice. If you have been given medical fasting instructions, follow those instructions instead.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Can I drink soda water while fasting?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Yes. Plain soda water and club soda contain zero calories, zero carbohydrates, and zero fat. They do not break a caloric fast for weight loss or metabolic health. Soda water also contains small amounts of dissolved mineral salts (such as sodium bicarbonate and potassium sulfate) that contribute trace electrolytes without adding energy.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Can you drink seltzer while fasting?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Yes. Plain seltzer is simply filtered water infused with carbon dioxide gas and contains zero calories. Naturally flavored &ldquo;essence&rdquo; seltzers (like LaCroix, Bubly, and Waterloo) are also zero-calorie and zero-sugar, making them compatible with practical weight-loss fasting. However, check product labels carefully to ensure no fruit juice concentrates or sugars have been added.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Does Spindrift break a fast?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Yes, for a strict zero-calorie fast. Unlike essence-flavored seltzers, Spindrift is made with real squeezed fruit juice. Depending on the flavor, a standard 12-ounce can contains between 2 and 17 calories and 1 to 3 grams of carbohydrates. If you want to maintain a pure zero-calorie fasting window, consume Spindrift during your eating window instead.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Can I drink zero-sugar energy drinks like Celsius while fasting?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                It depends on your fasting goal. For weight loss and maintaining a caloric deficit, zero-sugar energy drinks (like Celsius, Monster Zero Ultra, or Red Bull Total Zero) contain negligible calories (0–10 kcal) and will not halt fat burning. However, if your goal is digestive rest or clean fasting, their high caffeine content, non-nutritive sweeteners (sucralose, erythritol), and herbal blends require active metabolic processing and can cause stomach irritation or jitters on an empty stomach.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Does carbonated water cause acid reflux or harm teeth during a fast?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Unflavored carbonated water has a mildly acidic pH (5.0–6.0) due to carbonic acid, which research shows has minimal erosive effect on tooth enamel compared to sodas or fruit juices. However, the carbon dioxide gas causes temporary stomach distension, which can aggravate heartburn or acid reflux in sensitive individuals when consumed on an empty stomach. If you experience reflux while fasting, switch to still water.
               </p>
             </div>
           </div>
