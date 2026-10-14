@@ -99,6 +99,21 @@ const FAQS = [
     answer:
       "There is no useful need to rank foods or drinks by how quickly they “break” a fast. For a strict zero-calorie definition, consuming calories means the zero-calorie fast has ended.",
   },
+  {
+    question: "Does vaping break a fast?",
+    answer:
+      "Inhaling vapor from electronic cigarettes or vapes does not deliver dietary calories to your digestive tract, so it does not break a caloric fast for weight loss. However, it stimulates heart rate and adrenaline, can cause gastric irritation on an empty stomach, strictly invalidates religious fasts (such as Ramadan), and pre-procedure clinical fasting instructions from your anesthesia care team must always be followed.",
+  },
+  {
+    question: "Does creatine break a fast?",
+    answer:
+      "Pure, unflavored creatine monohydrate contributes negligible dietary energy under standard labeling and does not break a caloric fast for weight loss. However, flavored creatine blends, drink mixes, and creatine gummies with added sugars or carbohydrates do break a fast. For strict fasts focused on cellular autophagy or gut rest, amino-acid derivatives introduce uncertainty. Because creatine accumulates cumulatively in muscle tissue and can cause stomach cramps on an empty stomach, taking it with a meal in your eating window is often the most practical approach.",
+  },
+  {
+    question: "Do cough drops or throat lozenges break a fast?",
+    answer:
+      "Standard cough drops made with sugar, honey, or glucose syrup contain 10 to 15 calories each and break a strict zero-calorie fast. Sugar-free drops and medicated throat sprays contribute minimal trace calories and are generally compatible with fasting for weight management, but they do not fit strict zero-calorie or digestive-rest definitions. Most importantly, if you are acutely sick, symptom relief and recovery always take priority over fasting rules.",
+  },
 ];
 
 export default function WhatBreaksAFastPage() {
@@ -382,6 +397,18 @@ export default function WhatBreaksAFastPage() {
                 <tr className="hover:bg-surface-container/50 transition-colors">
                   <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Zero-calorie electrolytes</th>
                   <td className="p-3.5 sm:p-4">Maintains zero-calorie fast; verify no added sugar or maltodextrin</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Vaping &amp; E-Cigarettes</th>
+                  <td className="p-3.5 sm:p-4">Inhaled vapor contains no ingestible macronutrients or dietary calories; does not break a metabolic calorie fast. Context-dependent: incompatible with religious fasting (Ramadan); prior to surgery or medical procedures, always follow your anesthesia team&apos;s specific instructions</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Creatine Monohydrate</th>
+                  <td className="p-3.5 sm:p-4">Pure unflavored powder contributes negligible dietary energy under standard labeling and does not cause a carbohydrate-like insulin surge; typically compatible with a caloric fast. Check formulation: flavored blends, drink mixes, and creatine gummies with added sugars or carbohydrates break a fast</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Cough Drops &amp; Throat Lozenges</th>
+                  <td className="p-3.5 sm:p-4">Standard sugar-based lozenges contain 10–15 kcal (3–4 g sugar) and break a zero-calorie fast. Sugar-free drops and sprays depend on ingredients and fasting goals. Health priority: when ill, symptom relief and recovery strictly override fasting timers</td>
                 </tr>
               </tbody>
             </table>
@@ -754,6 +781,94 @@ export default function WhatBreaksAFastPage() {
           </div>
         </section>
 
+        {/* Section 11B: Do Cough Drops and Throat Lozenges Break a Fast? */}
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Do Cough Drops and Throat Lozenges Break a Fast?
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            When dealing with a scratchy throat, seasonal allergies, or an acute upper respiratory infection during a fasting window, reaching for a soothing lozenge is a natural instinct. But do cough drops break a fast?
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            The answer depends on the <strong>ingredients in the product</strong>, your <strong>specific fasting goal</strong>, and, most importantly, <strong>your immediate health priorities</strong>.
+          </p>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Sugar-Based vs. Sugar-Free Lozenges
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Throat drops generally fall into two distinct formulation categories:
+              </p>
+              <p className="font-semibold text-on-surface">
+                Standard Sugar-Based Cough Drops (Breaks a Fast)
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Traditional cough drops (such as standard honey-lemon drops, cherry drops, or soothing pectin lozenges) use sugar, glucose syrup, or honey as their main base:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li>A single standard drop contains approximately <strong>10 to 15 calories</strong> and <strong>3 to 4 grams of carbohydrates</strong>.</li>
+                <li>Sucking on three or four lozenges throughout a workday delivers <strong>30 to 60 calories</strong> of fast-absorbing simple sugars into your saliva and bloodstream.</li>
+                <li>Because these sugars are swallowed and digested, they break a strict zero-calorie fast and stimulate a minor insulin response.</li>
+              </ul>
+              <p className="font-semibold text-on-surface pt-2">
+                Sugar-Free Cough Drops (Depends on Ingredients and Fasting Goals)
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Sugar-free cough drops substitute nutritive sugars with sugar alcohols (such as isomalt, sorbitol, or xylitol) or non-nutritive sweeteners (such as acesulfame potassium or sucralose), alongside active soothing ingredients like menthol, eucalyptus oil, or pectin:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>For Weight Management &amp; Practical Fasting:</strong> These drops contain minimal net calories (typically <strong>2 to 5 kcal per drop</strong> from poorly absorbed polyols). They produce negligible blood glucose elevation and do not derail a daily energy deficit. Sucking on a sugar-free menthol drop will not meaningfully disrupt intermittent fasting for weight loss.</li>
+                <li><strong>For Strict Zero-Calorie Fasting &amp; Gut Rest:</strong> Sugar alcohols are still carbohydrate derivatives with minor caloric value, and sucking on a lozenge stimulates saliva flow, swallowing, and digestive secretion. If your protocol requires strict zero calories or total gastrointestinal rest, sugar-free lozenges do not meet that narrow definition. Furthermore, consuming multiple sugar-alcohol drops on an empty stomach can trigger gastrointestinal bloating or laxative effects.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Medicated Sprays vs. Oral Lozenges
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                If you want localized soothing relief, over-the-counter <strong>phenol or benzocaine throat sprays</strong> are another common option:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Ingredients &amp; Application:</strong> Topical throat sprays deliver localized anesthetics directly to the pharyngeal mucosa. However, formulations frequently contain inactive ingredients such as glycerin, saccharin, flavoring agents, or alcohol.</li>
+                <li><strong>Fasting Compatibility:</strong> When used according to label instructions and spit out or swallowed in trace quantities, systemic caloric absorption is negligible. They do not supply meaningful nutritional energy to disrupt a weight-loss fast. However, for individuals practicing a strict water-only fast or observing religious fasts (where nothing may enter the throat), any oral spray falls outside those parameters.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-primary tracking-tight">
+                The Golden FastTrack Rule: Clinical Health Overrides Fasting Timers
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                While understanding the caloric composition of cough drops is helpful, there is a far more fundamental medical principle that must take precedence:
+              </p>
+              <blockquote className="p-4 rounded-xl bg-surface-container-low border-l-4 border-primary font-headline text-base sm:text-lg font-bold text-primary">
+                If you are acutely sick, managing an upper respiratory infection, or experiencing severe throat discomfort, your recovery strictly overrides your fasting timer.
+              </blockquote>
+              <p className="text-on-surface-variant leading-relaxed">
+                Fasting is a voluntary lifestyle tool for healthy individuals; it is <strong>not</strong> a rigid endurance trial to be maintained during illness. When your immune system is actively fighting an infection:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li>Caloric restriction places unnecessary metabolic stress on your body.</li>
+                <li>Staying properly hydrated, resting, and soothing inflamed mucous membranes are your essential medical priorities.</li>
+                <li>Suppressing a disruptive cough so you can rest and sleep is far more beneficial to your health than preserving a fasting window.</li>
+              </ul>
+              <p className="text-on-surface-variant leading-relaxed">
+                If soothing your throat requires a warm tea with honey or a standard medicated lozenge, take it without hesitation. End your fast, nourish your body, and return to your structured intermittent fasting schedule once you have fully recovered. For broader clinical contraindications, review our{" "}
+                <Link
+                  href="/medical-disclaimer"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  Medical Disclaimer
+                </Link>
+                .
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Section 12: Does Lemon Water Break a Fast? */}
         <section className="space-y-4">
           <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
@@ -828,6 +943,151 @@ export default function WhatBreaksAFastPage() {
               </p>
               <p className="text-on-surface-variant leading-relaxed">
                 However, many pre-workout drinks incorporate added carbohydrates (like maltodextrin or dextrose), fruit powders, or free-form amino acids (including BCAAs) that contribute energy and break a zero-calorie fast. Always inspect both the Supplement Facts panel and the &ldquo;Other Ingredients&rdquo; list before taking a pre-workout drink during fasting hours.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 14B: Does Vaping Break a Fast? */}
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Does Vaping Break a Fast?
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            As electronic nicotine delivery systems and disposable vaporizers have proliferated, &ldquo;does vaping break a fast?&rdquo; has become a frequently asked question among intermittent fasters.
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            The direct answer depends on whether you define fasting through the lens of <strong>digestive calories</strong>, <strong>cellular signaling</strong>, <strong>religious doctrine</strong>, or <strong>pre-operative medical safety</strong>.
+          </p>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Ingestion vs. Inhalation: The Caloric Reality
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                From a strict energy-balance perspective, <strong>vaping does not break a caloric fast</strong>.
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                E-liquids are primarily composed of vegetable glycerin (VG), propylene glycol (PG), flavoring agents, and optional nicotine:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Vegetable Glycerin (VG):</strong> Chemically, glycerol is a sugar alcohol derivative with caloric potential when metabolized enterally through the digestive tract. However, when you vape, the liquid is aerosolized into a vapor and inhaled into the respiratory system, where alveolar gas exchange occurs. You are not drinking or digesting the e-liquid.</li>
+                <li><strong>Trace Flavorings:</strong> Although aerosolized flavorings can taste distinctly sweet on the tongue, they do not deliver measurable digestible carbohydrates or macronutrient calories to your gastrointestinal tract.</li>
+              </ul>
+              <p className="text-on-surface-variant leading-relaxed">
+                If your primary objective is time-restricted feeding for fat loss, metabolic switching, or maintaining an energy deficit (such as on a{" "}
+                <Link
+                  href="/fasting-methods/16-8"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  16:8 schedule
+                </Link>{" "}
+                or{" "}
+                <Link
+                  href="/fasting-methods/20-4"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  20:4 protocol
+                </Link>
+                ), inhaling zero-calorie vapor does not supply metabolic energy or halt fatty acid oxidation.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Metabolic Signals, Appetite &amp; Gastrointestinal Effects
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                While vaping does not deliver dietary calories, inhaling nicotine is not physiologically inert:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Sympathetic Nervous System Activation:</strong> Nicotine acts as a central nervous system stimulant. It stimulates the release of epinephrine (adrenaline), which can trigger transient elevations in blood pressure and heart rate.</li>
+                <li><strong>Appetite Fluctuations:</strong> Nicotine has acute appetite-suppressing properties, leading some individuals to use it to mask fasting hunger. However, relying on chemical stimulants to suppress biological hunger cues can lead to rebound cravings, irritability, and irregular eating once the fasting window concludes.</li>
+                <li><strong>Insulin &amp; Glucose Dynamics:</strong> Research on nicotine exposure indicates that chronic nicotine consumption can influence peripheral insulin sensitivity over time. While an individual vape puff does not cause an immediate nutrient-driven insulin surge, regular nicotine intake alters metabolic hormone regulation.</li>
+                <li><strong>Gastric Irritation:</strong> Vaping on an empty stomach frequently induces nausea, heartburn, or acid reflux in sensitive individuals. Without food to buffer gastric acidity, aerosolized nicotine and flavor compounds swallowed in small amounts with saliva can irritate the esophagus and stomach lining.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Specific Contexts: Religious Observance &amp; Pre-Procedure Guidance
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                It is crucial to recognize scenarios where vaping is either strictly invalid or subject to direct medical supervision:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Religious Fasting (e.g., Islamic Ramadan):</strong> In Islamic jurisprudence, inhaling smoke, incense intentionally drawn into the throat, or aerosolized vapors from e-cigarettes invalidates the fast according to consensus among major Islamic legal councils. In this context, fasting requires complete abstention from food, drink, and intentional inhalants from dawn to dusk.</li>
+                <li><strong>Clinical &amp; Pre-Operative Fasting:</strong> If you are instructed to fast prior to surgery, endoscopy, or medical procedures involving conscious sedation or general anesthesia, <strong>always follow the specific instructions of your anesthesia and surgical team</strong>. Many clinical protocols advise or require abstaining from vaping and smoking because inhaled aerosols can increase airway reactivity, stimulate pulmonary secretions, or complicate cardiovascular management during anesthesia. Clinical pre-procedure instructions strictly override general lifestyle fasting practices.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container-low border border-surface-container space-y-2">
+              <p className="text-on-surface-variant leading-relaxed">
+                <strong className="text-on-surface">Practical Takeaway:</strong> Vaping does not break a daily caloric fast for weight loss because it delivers no dietary energy to your digestive tract. However, given its addictive profile, cardiovascular stress, and potential for gastric irritation, vaping should never be viewed as a health-promoting fasting aid. If you practice fasting for holistic wellness, cellular rest, or religious reasons, avoiding vaping aligns far better with your goals.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 14C: Does Creatine Break a Fast? */}
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Does Creatine Break a Fast?
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            Creatine monohydrate is one of the most thoroughly researched, effective sports supplements for supporting strength, muscular power, and exercise performance. For athletes and fitness enthusiasts practicing time-restricted feeding, a frequent scheduling question is whether taking creatine during the morning or pre-workout fasting window breaks the fast.
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            The short answer: <strong>Pure, unflavored creatine monohydrate is generally compatible with a caloric fast, but its suitability depends on the formulation you choose and your specific fasting goal.</strong>
+          </p>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Pure Creatine Monohydrate vs. Blended Formulations
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Not all creatine products on supplement shelves are identical. Inspecting the Supplement Facts panel is essential:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Pure Unflavored Creatine Monohydrate:</strong> Pure creatine is a nitrogenous organic compound synthesized in the body from amino acids (arginine, glycine, and methionine). Under standard nutritional labeling regulations, plain creatine monohydrate is typically declared as containing zero calories because it is not an intact dietary protein, carbohydrate, or fat. Unlike carbohydrates or whole dietary proteins, pure creatine taken on its own does not provoke the substantial insulin surge associated with calorie consumption. For individuals practicing intermittent fasting primarily for energy balance, weight loss, or metabolic switching, consuming pure unflavored creatine in water does not provide significant dietary calories to disrupt an overall deficit.</li>
+                <li><strong>Creatine Gummies (Breaks a Fast):</strong> Creatine gummies are increasingly popular, but they are typically held together with gelatin or pectin and sweetened with cane sugar, tapioca syrup, or glucose. A standard daily serving of 4–6 gummies typically provides <strong>15 to 30 calories and 4 to 6 grams of sugar</strong>, which undeniably ends a strict zero-calorie fast.</li>
+                <li><strong>Pre-Workout Blends &amp; Carbohydrate-Loaded Powders (Breaks a Fast):</strong> Many commercial creatine formulas include fast-digesting carbohydrates (such as dextrose or maltodextrin, sometimes 20–35 g per scoop) intended to support glycogen replenishment or creatine uptake. Consuming these carbohydrate-rich mixes immediately adds significant calories and breaks a fast.</li>
+                <li><strong>Micronized Creatine with Non-Nutritive Sweeteners:</strong> Zero-sugar flavored creatine powders sweetened with stevia or sucralose do not provide significant calories, making them generally compatible with practical weight-loss fasting. However, check that they do not contain added BCAAs or carbohydrate carriers like maltodextrin.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Fasting Goals: Calorie Deficit vs. Autophagy &amp; Gut Rest
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Whether creatine &ldquo;breaks&rdquo; your fast also depends on what you are trying to accomplish:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>For Weight Management &amp; Energy Balance:</strong> Pure creatine contributes negligible dietary energy, so it will not eliminate a broader daily caloric deficit or halt fatty acid oxidation.</li>
+                <li><strong>For Deep Autophagy, Cellular Signaling &amp; Gut Rest:</strong> Autophagy and cellular nutrient sensing involve complex mechanisms (including the mTOR pathway) that respond to amino acids and cellular energy states. Because creatine is an amino-acid derivative, its impact on cellular autophagy in humans remains an area of ongoing scientific inquiry without settled consensus. If your goal is strict gut rest or an unambiguous zero-intake fast, consuming supplemental amino compounds during the fasting window introduces unnecessary ambiguity.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Practical Considerations: Digestive Tolerance &amp; Timing Strategies
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Even though pure creatine provides negligible calories, consuming it on an empty stomach during an extended fast is often practically disadvantageous:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Gastrointestinal Tolerance:</strong> Creatine draws water into the digestive tract through osmotic action. When taken on an empty stomach—particularly if not thoroughly dissolved in ample water—it can cause stomach cramping, mild nausea, or loose stools in some individuals.</li>
+                <li><strong>Cumulative Saturation Rather Than Acute Pre-Workout Timing:</strong> Unlike stimulants such as caffeine, creatine does not exert acute ergogenic effects. It works through cumulative muscle saturation built over days and weeks of consistent daily intake. Therefore, taking creatine at an exact minute relative to a workout is not physiologically required.</li>
+                <li><strong>Timing with Meals:</strong> While some research suggests that co-ingesting creatine with carbohydrate- or protein-containing meals can moderately enhance muscle uptake (mediated by insulin release)—particularly during initial loading—consistent daily intake is the primary driver of tissue stores. Given that taking creatine with food also helps avoid empty-stomach digestive cramping, many practitioners find it practical and convenient to simply <strong>take creatine with a meal inside their eating window</strong>.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container-low border border-surface-container space-y-2">
+              <p className="text-on-surface-variant leading-relaxed">
+                <strong className="text-on-surface">Practical Takeaway:</strong> Pure unflavored creatine monohydrate will not derail a caloric fast for weight loss. However, because creatine accumulates cumulatively, does not require strict pre-workout timing, and can cause stomach cramps on an empty stomach, taking creatine with a meal inside your eating window is often the most practical and comfortable routine.
               </p>
             </div>
           </div>
@@ -1136,6 +1396,36 @@ export default function WhatBreaksAFastPage() {
               </h3>
               <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
                 There is no useful need to rank foods or drinks by how quickly they &ldquo;break&rdquo; a fast. For a strict zero-calorie definition, consuming calories means the zero-calorie fast has ended.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Does vaping break a fast?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Inhaling vapor from electronic cigarettes or vapes does not deliver dietary calories to your digestive tract, so it does not break a caloric fast for weight loss. However, it stimulates heart rate and adrenaline, can cause gastric irritation on an empty stomach, strictly invalidates religious fasts (such as Ramadan), and pre-procedure clinical fasting instructions from your anesthesia care team must always be followed.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Does creatine break a fast?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Pure, unflavored creatine monohydrate contributes negligible dietary energy under standard labeling and does not break a caloric fast for weight loss. However, flavored creatine blends, drink mixes, and creatine gummies with added sugars or carbohydrates do break a fast. For strict fasts focused on cellular autophagy or gut rest, amino-acid derivatives introduce uncertainty. Because creatine accumulates cumulatively in muscle tissue and can cause stomach cramps on an empty stomach, taking it with a meal in your eating window is often the most practical approach.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Do cough drops or throat lozenges break a fast?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Standard cough drops made with sugar, honey, or glucose syrup contain 10 to 15 calories each and break a strict zero-calorie fast. Sugar-free drops and medicated throat sprays contribute minimal trace calories and are generally compatible with fasting for weight management, but they do not fit strict zero-calorie or digestive-rest definitions. Most importantly, if you are acutely sick, symptom relief and recovery always take priority over fasting rules.
               </p>
             </div>
           </div>
