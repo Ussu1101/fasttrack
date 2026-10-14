@@ -87,6 +87,21 @@ const FAQS = [
     answer:
       "Yes. FastTrack lets you choose a fasting protocol and starting meal time, then calculates the corresponding eating and fasting windows.",
   },
+  {
+    question: "Is an early eating window better than a late eating window?",
+    answer:
+      "Neither schedule is universally superior for everyone. Early time-restricted eating (e.g., 8:00 AM–4:00 PM) aligns closely with circadian insulin sensitivity and provides a digestive buffer before sleep, but it frequently conflicts with family dinners and social life. A midday-to-evening window (e.g., 12:00 PM–8:00 PM) is much easier for most working adults to maintain long-term. Clinical research shows that weight loss and metabolic improvements depend far more on consistent adherence and overall calorie balance than on the specific clock hours you choose.",
+  },
+  {
+    question: "Is it better to skip breakfast or skip dinner when intermittent fasting?",
+    answer:
+      "It depends on your daily hunger patterns, work schedule, and social priorities. Skipping breakfast is by far the most popular and socially convenient option because morning hunger is often naturally lower, and skipping breakfast allows you to eat dinner with family or friends. Skipping dinner offers circadian and sleep benefits because your stomach is empty before bed, but it is substantially harder to sustain in modern social settings. Choose the meal you mind skipping least.",
+  },
+  {
+    question: "What if my work or family schedule prevents me from eating dinner before 8:00 PM?",
+    answer:
+      "You do not need to abandon intermittent fasting. You can simply set a later eating window—such as 12:30 PM to 8:30 PM or 1:00 PM to 9:00 PM—or adopt a slightly wider window like 14:10 (e.g., 10:00 AM to 8:00 PM). If you must eat late, keep your evening meal lighter, moderate in dietary fat, and lower in heavy spices to prevent sleep disruptions and indigestion.",
+  },
 ];
 
 export default function HowToChooseAFastingWindowPage() {
@@ -720,6 +735,206 @@ export default function HowToChooseAFastingWindowPage() {
           </p>
         </section>
 
+        {/* Section 6B: Early vs. Late Eating Window: Which Is Better? */}
+        <section className="space-y-4">
+          <h2 className="font-headline text-2xl sm:text-3xl font-bold text-primary tracking-tight">
+            Early vs. Late Eating Window: Which Is Better?
+          </h2>
+          <p className="text-on-surface-variant leading-relaxed">
+            When planning an intermittent fasting schedule—such as a standard{" "}
+            <Link
+              href="/fasting-methods/16-8"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              16:8 protocol
+            </Link>{" "}
+            or a gentle{" "}
+            <Link
+              href="/fasting-methods/14-10"
+              className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+            >
+              14:10 routine
+            </Link>
+            —one of the most common dilemmas is deciding <strong>where on the clock to place your eating hours</strong>.
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            Should your eating window open early in the morning and close by mid-afternoon (skipping dinner), or should it open at midday and close in the evening (skipping breakfast)?
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            The short, honest answer is: <strong>Neither schedule is universally superior for every person. The best eating window is the one you can sustain consistently without sabotaging your sleep, your energy, or your social life.</strong>
+          </p>
+          <p className="text-on-surface-variant leading-relaxed">
+            However, early and late eating windows involve fundamentally different biological and lifestyle trade-offs.
+          </p>
+
+          <div className="my-6 overflow-x-auto rounded-xl border border-surface-container shadow-sm">
+            <table className="w-full text-left text-sm border-collapse bg-surface-container-lowest">
+              <caption className="sr-only">
+                Early vs. late eating window comparison at a glance
+              </caption>
+              <thead className="bg-surface-container-low text-on-surface border-b border-surface-container font-headline">
+                <tr>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Dimension
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Early Eating Window (eTRE)
+                  </th>
+                  <th scope="col" className="p-3.5 sm:p-4 font-bold text-left">
+                    Late / Midday Window (Standard TRF)
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-surface-container font-body-sm text-on-surface-variant">
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Typical Clock Hours</th>
+                  <td className="p-3.5 sm:p-4">8:00 AM – 4:00 PM / 9:00 AM – 5:00 PM</td>
+                  <td className="p-3.5 sm:p-4">12:00 PM – 8:00 PM / 1:00 PM – 9:00 PM</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Skipped Meal</th>
+                  <td className="p-3.5 sm:p-4">Dinner</td>
+                  <td className="p-3.5 sm:p-4">Breakfast</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Circadian Alignment</th>
+                  <td className="p-3.5 sm:p-4">High (syncs with daylight insulin sensitivity)</td>
+                  <td className="p-3.5 sm:p-4">Moderate (meal processing extends into evening)</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Sleep &amp; Digestion</th>
+                  <td className="p-3.5 sm:p-4">Excellent (3–5 hours buffer before sleep; less reflux)</td>
+                  <td className="p-3.5 sm:p-4">Depends on timing (late meals can disrupt deep sleep or cause reflux)</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Social &amp; Family Fit</th>
+                  <td className="p-3.5 sm:p-4">Challenging (conflicts with evening dinners &amp; social events)</td>
+                  <td className="p-3.5 sm:p-4">Excellent (fits family dinners, work lunches, and dining out)</td>
+                </tr>
+                <tr className="hover:bg-surface-container/50 transition-colors">
+                  <th scope="row" className="p-3.5 sm:p-4 font-semibold text-on-surface">Adherence Difficulty</th>
+                  <td className="p-3.5 sm:p-4">Higher for most working adults</td>
+                  <td className="p-3.5 sm:p-4">Lower; easiest long-term adherence</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="space-y-4 pt-2">
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Early Time-Restricted Eating (eTRE): Advantages &amp; Trade-Offs
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Early time-restricted eating typically places your eating window in the first half of the day—for example, <strong>8:00 AM to 4:00 PM</strong> or <strong>9:00 AM to 5:00 PM</strong> on a 16:8 schedule, leaving evening hours for fasting.
+              </p>
+              <p className="font-semibold text-on-surface pt-2">
+                The Circadian &amp; Metabolic Case for Early Windows
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                From a circadian biology perspective, human metabolism is organized around a 24-hour internal clock (the suprachiasmatic nucleus and peripheral tissue clocks in the liver, pancreas, and gut):
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Morning Insulin Sensitivity:</strong> In most individuals, insulin sensitivity and glucose tolerance peak during morning and daylight hours and progressively decline toward late evening. Your pancreas typically secretes insulin more efficiently in response to carbohydrates consumed at 9:00 AM than at 9:00 PM.</li>
+                <li><strong>Sleep Quality &amp; Gastric Clearance:</strong> Finishing your final meal 4 to 5 hours before bedtime allows your stomach to empty and core body temperature to drop naturally. This digestive buffer significantly reduces nocturnal acid reflux and supports restorative deep sleep (see our guide on{" "}
+                <Link
+                  href="/guides/fasting-and-sleep"
+                  className="text-primary font-semibold underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-colors"
+                >
+                  intermittent fasting and sleep quality
+                </Link>
+                ).</li>
+                <li><strong>What Early Trials Show:</strong> Controlled feeding trials (such as Sutton et al., 2018; Jamshed et al., 2019) have observed that when calorie and nutrient intake are strictly matched in laboratory settings, early time-restricted eating can lead to modest improvements in blood pressure, oxidative stress markers, and morning insulin sensitivity compared to late-evening eating schedules.</li>
+              </ul>
+              <p className="font-semibold text-on-surface pt-2">
+                The Practical Reality &amp; Daily Friction
+              </p>
+              <p className="text-on-surface-variant leading-relaxed">
+                Despite physiological advantages on paper, early eating windows have high failure rates in real-world practice:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Social &amp; Family Isolation:</strong> In modern society, dinner is the primary shared meal with partners, children, and friends. Having an eating window close at 4:00 PM means sitting at family dinner tables without eating or declining evening social events.</li>
+                <li><strong>Workday Inconvenience:</strong> Eating substantial meals at 8:00 AM, 12:00 PM, and 3:30 PM requires prepping, transporting, and eating multiple meals during busy working hours.</li>
+                <li><strong>Evening Hunger Waves:</strong> Going to bed 6 to 7 hours after your last meal can lead to bedtime hunger pangs that make falling asleep difficult for some individuals.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                Late / Midday Time-Restricted Eating (Standard TRF): Advantages &amp; Trade-Offs
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                The midday-to-evening window—most commonly <strong>12:00 PM to 8:00 PM</strong> or <strong>1:00 PM to 9:00 PM</strong>—is the schedule followed by the vast majority of intermittent fasters. On this timetable, you skip conventional breakfast, have your first meal around lunch, and finish with evening dinner.
+              </p>
+              <p className="font-semibold text-on-surface pt-2">
+                Why the Midday-to-Evening Window Dominates Real-World Fasting
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Effortless Social Adherence:</strong> You can participate fully in family dinners, evening business meals, and weekend gatherings without explaining why you are not eating.</li>
+                <li><strong>Natural Morning Fasting:</strong> For many people, morning hunger is minimal due to the cortisol awakening response and overnight liver glycogen release. Sipping water, black coffee, or unsweetened tea makes fasting through the morning relatively effortless.</li>
+                <li><strong>Simpler Daily Logistics:</strong> You only need to manage one meal during the workday (lunch) and can enjoy a relaxed dinner at home in the evening.</li>
+              </ul>
+              <p className="font-semibold text-on-surface pt-2">
+                The Potential Pitfalls to Watch For
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Eating Too Close to Bedtime:</strong> If an 8-hour window runs from 1:00 PM to 9:00 PM and you go to sleep at 10:30 PM, digesting a large dinner can elevate your resting heart rate, cause night sweats, and trigger heartburn or gastroesophageal reflux.</li>
+                <li><strong>Late-Night Grazing Creep:</strong> For individuals prone to emotional or boredom eating in front of screens, an evening eating window can easily bleed into late-night snacking, turning an 8-hour window into an unintentional 10- or 12-hour window.</li>
+                <li><strong>Evening Insulin Resistance:</strong> Consuming large, carbohydrate-dense meals late at night when the body is preparing for sleep can lead to prolonged post-meal glucose elevations compared to eating the same meal earlier in the day.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                What the Broader Scientific Evidence Actually Concludes
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                While circadian enthusiasts often claim that early eating is the &ldquo;only scientifically valid&rdquo; way to fast, real-world comparative trials present a far more balanced picture:
+              </p>
+              <ul className="list-disc pl-6 space-y-1 text-on-surface-variant">
+                <li><strong>Weight Loss Is Driven by Overall Energy Balance:</strong> Multiple randomized clinical trials comparing early time-restricted eating (e.g., 8:00 AM–4:00 PM) to late time-restricted eating (e.g., 12:00 PM–8:00 PM) or self-selected windows demonstrate that <strong>weight loss and fat reduction are primarily driven by the overall calorie deficit and adherence</strong>, not the specific clock hours.</li>
+                <li><strong>The 2025 National Institute on Aging (NIA) Summary:</strong> A rigorous trial in adults with obesity evaluated 8-hour time-restricted eating across three different timeframes: morning, afternoon, and self-selected. Over three months, all three groups achieved comparable weight loss and cardiometabolic improvements. The researchers concluded that the specific clock timeframe of an 8-hour window did not produce a decisive clinical advantage over schedule flexibility and adherence.</li>
+                <li><strong>Adherence Trumps Theoretical Perfection:</strong> A theoretically &ldquo;optimal&rdquo; circadian schedule that you abandon after two weeks because you cannot eat dinner with your family is infinitely less effective than a practical 12:00 PM–8:00 PM schedule that you comfortably maintain for two years.</li>
+              </ul>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg sm:text-xl font-bold text-on-surface tracking-tight">
+                How to Choose Your Personal Eating Window: The 3-Question Filter
+              </h3>
+              <p className="text-on-surface-variant leading-relaxed">
+                Instead of agonizing over theoretical perfection, run your lifestyle through these three practical questions:
+              </p>
+              <ol className="list-decimal pl-6 space-y-2 text-on-surface-variant">
+                <li>
+                  <strong>Question 1: Is dinner your primary social, family, or psychological anchor meal?</strong>
+                  <ul className="list-disc pl-6 space-y-1 mt-1">
+                    <li>If yes: Choose a <strong>midday/evening window</strong> (such as 12:00 PM–8:00 PM or 11:00 AM–7:00 PM). Protecting social connection and family harmony makes fasting sustainable.</li>
+                    <li>If no: An early window (8:00 AM–4:00 PM) is a viable option worth testing.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Question 2: Do you experience severe morning hunger or sluggishness without food?</strong>
+                  <ul className="list-disc pl-6 space-y-1 mt-1">
+                    <li>If you wake up starving, physically active, or cognitively depleted without breakfast, forcing a 12:00 PM start time can cause unnecessary morning suffering. Shift your window earlier (e.g., 9:00 AM–5:00 PM).</li>
+                    <li>If you naturally prefer only black coffee or tea until noon, skipping breakfast is the path of least resistance.</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Question 3: Do you experience acid reflux, poor sleep, or indigestion after dinner?</strong>
+                  <ul className="list-disc pl-6 space-y-1 mt-1">
+                    <li>If late meals disrupt your sleep or cause heartburn, pull your eating window back by 2 to 3 hours (e.g., shifting from 1:00 PM–9:00 PM to <strong>10:00 AM–6:00 PM</strong>). This provides the sleep benefits of an early digestive cutoff while still allowing an early dinner.</li>
+                  </ul>
+                </li>
+              </ol>
+              <p className="text-on-surface-variant leading-relaxed pt-2">
+                <strong className="text-on-surface">The Hybrid Sweet Spot (10:00 AM – 6:00 PM):</strong>{" "}
+                For many people seeking the benefits of both worlds, a <strong>10:00 AM to 6:00 PM</strong> window serves as the ideal compromise. It allows a late-morning meal, a standard afternoon lunch, an early dinner, and a clean 4-hour digestive buffer before an ordinary 10:00 PM bedtime.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Section 7: Consider Work, Exercise, and Social Meals */}
         <section className="space-y-6">
           <div className="space-y-3">
@@ -1048,6 +1263,36 @@ export default function HowToChooseAFastingWindowPage() {
               </h3>
               <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
                 Yes. FastTrack lets you choose a fasting protocol and starting meal time, then calculates the corresponding eating and fasting windows.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Is an early eating window better than a late eating window?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                Neither schedule is universally superior for everyone. Early time-restricted eating (e.g., 8:00 AM–4:00 PM) aligns closely with circadian insulin sensitivity and provides a digestive buffer before sleep, but it frequently conflicts with family dinners and social life. A midday-to-evening window (e.g., 12:00 PM–8:00 PM) is much easier for most working adults to maintain long-term. Clinical research shows that weight loss and metabolic improvements depend far more on consistent adherence and overall calorie balance than on the specific clock hours you choose.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>Is it better to skip breakfast or skip dinner when intermittent fasting?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                It depends on your daily hunger patterns, work schedule, and social priorities. Skipping breakfast is by far the most popular and socially convenient option because morning hunger is often naturally lower, and skipping breakfast allows you to eat dinner with family or friends. Skipping dinner offers circadian and sleep benefits because your stomach is empty before bed, but it is substantially harder to sustain in modern social settings. Choose the meal you mind skipping least.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-xl bg-surface-container border border-surface-container-high space-y-2">
+              <h3 className="font-headline text-lg font-bold text-on-surface tracking-tight flex items-start gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                <span>What if my work or family schedule prevents me from eating dinner before 8:00 PM?</span>
+              </h3>
+              <p className="text-on-surface-variant text-sm sm:text-base leading-relaxed pl-7">
+                You do not need to abandon intermittent fasting. You can simply set a later eating window—such as 12:30 PM to 8:30 PM or 1:00 PM to 9:00 PM—or adopt a slightly wider window like 14:10 (e.g., 10:00 AM to 8:00 PM). If you must eat late, keep your evening meal lighter, moderate in dietary fat, and lower in heavy spices to prevent sleep disruptions and indigestion.
               </p>
             </div>
           </div>
