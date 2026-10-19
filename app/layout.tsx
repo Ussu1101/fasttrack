@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/navigation/Header";
 import { Footer } from "@/components/navigation/Footer";
+import { CookieBanner } from "@/components/cookies/CookieBanner";
 import { getSiteUrl } from "@/lib/config/site";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -83,6 +84,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${spaceGrotesk.variable}`}>
       <head>
+        {/* Google Consent Mode v2 defaults: denied until the visitor accepts via the cookie banner */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied'});`,
+          }}
+        />
         {/* Google AdSense verification script (account approval only — no ad units placed yet) */}
         <script
           async
@@ -98,6 +105,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 w-full pt-20">{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
